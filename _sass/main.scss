@@ -72,21 +72,11 @@ figure {
 section {
   margin-top:30px;
   background-color: #2b2b2b;
-  padding: 50px
-}
-
-section:first-child{
-  margin-top:0
-}
-
-section.no-top-margin {
-  margin-top:0;padding-top:0
+  padding: 50px 0;
 }
 
 .wrap {
   position:relative;
-  // max-width:480px;
-  // margin:0 auto;
   padding:0 20px
 }
 
@@ -157,8 +147,8 @@ section.no-top-margin {
   font-size: 200%
 }
 
-.banner , .cta{
-  padding: 30px;
+.banner, .cta{
+  padding: 60px;
 }
 
 .cta {
