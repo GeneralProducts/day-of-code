@@ -214,15 +214,25 @@ hr {
   a {
     background-color: #f9f6ef;
   }
+
+  h1, li {
+    font-size: 44px;
+  }
 }
 
 .section__content--logos {
   margin: 0 auto;
   padding: 30px;
-   
+
   h1 {
     text-align: center;
   }
+}
+
+.logo {
+  width: 30%;
+  padding: 0 10px 10px 0;
+  filter: grayscale(100%);
 }
 
 .section__container--cta {
@@ -243,10 +253,6 @@ hr {
     display: -webkit-flex;
     display: flex;
     align-items: baseline  
-  }
-
-  .section__content {
-    padding: 30px 10px;
   }
 
   .section__heading {    
@@ -297,12 +303,6 @@ hr {
   a {
     color: white
   }
-}
-
-.logo {
-  height: 80px;
-  padding-left: 30px;
-  filter: grayscale(100%);
 }
 
 $shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
