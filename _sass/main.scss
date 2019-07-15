@@ -13,7 +13,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-
 }
 
 p {
@@ -22,7 +21,7 @@ p {
 }
 
 cite {
-  font-size: 32px;
+  font-size: 26px;
   font-style: normal;
 }
 
@@ -49,6 +48,12 @@ a {
 
 hr {
   border:4px solid #2b2b2b
+}
+
+@media (min-width: 840px) {
+  cite {
+    font-size: 32px;
+  }
 }
 
 // Nav
@@ -107,18 +112,6 @@ hr {
   background-color: #2b2b2b;
 }
 
-@media (min-width: 840px) {
-  .hero {
-    padding: 0 50px;
-  }
-
-  .hero__container  {
-    display: -webkit-flex;
-    display: flex;
-    padding: 0px;
-  }
-}
-
 .hero__container  {
   padding: 30px 0;
 }
@@ -137,7 +130,7 @@ hr {
 }
 
 .hero__title h1 {
-  font-size: 130px;
+  font-size: 90px;
   font-family: "Inconsolata", sans-serif;
   margin: 10px 0 0 0;
   background-color: #1e1e1e;
@@ -172,6 +165,21 @@ hr {
   align-self: end;
 }
 
+@media (min-width: 840px) {
+  .hero {
+    padding: 0 50px;
+  }
+  
+  .hero__container  {
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  .hero__title h1 {
+    font-size: 130px;
+  }
+}
+
 // Structure
 .section {
   -webkit-flex-direction: column;
@@ -180,12 +188,11 @@ hr {
 
 .section__container {
   margin-top: 5px;
-  padding: 30px 60px;
+  padding: 20px;
 }
 
 .section__container--secondary {
   background-color: #efede7;
-  padding: 0 60px;
 }
 
 .section__container--inverse {
@@ -199,24 +206,33 @@ hr {
   flex: 1;
   
   h1 {
-    font-size: 90px;
+    font-size: 40px;
     font-family: "Inconsolata", sans-serif;
     color: #2b2b2b;
-    padding: 50px 10px 0;
     display: table;
+    padding: 3px 10px;
   }
 }
 
 .section__content {
   flex: 3;
-  padding: 30px 0 30px;
+  padding: 10px 0;
 
   a {
     background-color: #f9f6ef;
   }
 
-  h1, li {
-    font-size: 44px;
+  h1 {
+    font-size: 40px;
+  }
+
+  h2, li {
+    font-size: 30px;
+    list-style: none;
+  }
+
+  ul {
+    padding-inline-start: 5px;
   }
 }
 
@@ -230,7 +246,7 @@ hr {
 }
 
 .logo {
-  width: 30%;
+  width: 100%;
   padding: 0 10px 10px 0;
   filter: grayscale(100%);
 }
@@ -252,13 +268,27 @@ hr {
   .section__container {
     display: -webkit-flex;
     display: flex;
-    align-items: baseline  
+    align-items: baseline;  
+    padding: 30px 60px;
+  }
+
+  .section__container--secondary {
+    padding: 0 60px;
   }
 
   .section__heading {    
     h1 {
-      padding: 3px 10px;
+      font-size: 90px;
     }
+  }
+
+  .section__content {
+    padding: 0px 0 30px;
+  }
+
+  .logo {
+    width: 30%;
+    padding: 0 30px;
   }
 }
 
@@ -272,12 +302,13 @@ hr {
   box-shadow: inset 0 -4px 0 0 #bb2d00;
   color: #fff;
   cursor: pointer;
-  font: 18px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
   font-weight: 600;
   outline: 0;
   padding: 8px 100px 12px;
   text-shadow: 1px 1px rgba(0,0,0,.4);
   padding: 30px 60px;
+  line-height: 40px;
+  text-align: center;
 
   a {
     color: white;
