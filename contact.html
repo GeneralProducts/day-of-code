@@ -11,8 +11,40 @@ title: Day of Code, 2019
             <h1>Register your interest in the Day of Code</h1>
         </div>
         <form name="contact" method="POST" data-netlify="true" class="feedback-body">
-          <input  name="email" class="feedback-body__email" placeholder="Email" type="email">
-          <textarea   name="message" class="feedback-body__message" placeholder="Optional message" type="text"></textarea>
+          <input name="name" class="feedback-body__email" placeholder="Name" type="text">
+          <br/>
+          <input name="email" class="feedback-body__email" placeholder="Email" type="email">
+          <p>Where do you work?</p>  
+          <div>  
+            <input type="radio" name="org" value="big-publisher">
+            Big publisher
+          </div>
+          <div>  
+            <input type="radio" name="org" value="small-publisher">
+            Small publisher
+          </div>
+          <div>  
+            <input type="radio" name="org" value="big-bookstore">
+            Big bookstore
+          </div>
+          <div>  
+            <input type="radio" name="org" value="small-bookstore">
+            Small bookstore
+          </div>
+          <div>  
+            <input type="radio" name="org" value="litag">
+            Literary agency
+          </div>
+          <div>  
+            <input type="radio" name="org" value="student">
+            Student
+          </div>
+          <div>  
+            <input type="radio" name="org" value="other">
+            Other (please specify if you can)
+          </div>
+
+          <textarea name="message" class="feedback-body__message" placeholder="Optional message" type="text"></textarea>
           <button class="feedback-body__submit">SEND</button> 
         </form>
       </div>
