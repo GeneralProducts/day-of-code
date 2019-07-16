@@ -144,6 +144,7 @@ hr {
 
   @media (min-width: $large-screen) {
     font-size: 130px;
+    font-weight: 800;
   }
 }
 
@@ -151,7 +152,7 @@ hr {
   display: table; //https://css-tricks.com/injecting-line-break/
   margin: 0 0 10px;
   background-color: #1e1e1e;
-  padding: 10px;
+  padding: 0 10px;
 }
 
 .hero__text {
@@ -309,7 +310,7 @@ hr {
   line-height: 40px;
   text-align: center;
   color: #ebe7e3;
-  font-size: 200%;
+  font-size: 150%;
   font-weight: 600;
   padding: 10px;
 
@@ -321,6 +322,7 @@ hr {
   @media (min-width: $large-screen) {
     padding: 30px 60px;
     text-align: center;
+    font-size: 200%;
   }
 }
 
