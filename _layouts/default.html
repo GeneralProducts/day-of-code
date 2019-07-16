@@ -10,8 +10,14 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i|Space+Mono:400,400i,700,700i&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Inconsolata']
+        }
+      });
+    </script>
   </head>
   <body>
     {% include nav.html %}
