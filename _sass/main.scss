@@ -87,8 +87,12 @@ hr {
 
 // Nav
 .navigation__logo {
-  width: 70px;
-  padding: 10px 0 0 10px;
+  height: 50px;
+  padding: 10px 0 0;
+
+  @media (min-width: $large-screen) {
+    height: 70px;
+  }
 }
 
 .navigation__menu {
@@ -99,15 +103,20 @@ hr {
   position: sticky;
   top: 0;
   font-size: 28px;
-  align-items: center !important;
-  display: flex !important;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex !important;
+  flex-direction: column;
+
+  @media (min-width: $large-screen) {
+    flex-direction: row;  
+  }
 }
 
 .navigation__item {
-  float: left;
- 
+  padding: 0 20px 0 10px;
+  align-self: left;
+
   a {
     color: black;
     text-align: center;
@@ -116,6 +125,16 @@ hr {
     font-weight: 600;
     background-color: $white;
   }
+
+  @media (min-width: $large-screen) {
+    align-self: center;
+  }
+}
+
+.navigation__item--secondary {
+  padding-right: 5px;
+  position: absolute;
+  right: 0;
 }
 
 // Hero
@@ -273,24 +292,31 @@ hr {
 .section__content--logos {
   margin: 0 auto;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
 
   h1 {
     text-align: center;
   }
+
+  @media (min-width: $large-screen) {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+
+.section__content--logo {
+  flex: 1;
 }
 
 .logo {
   width: 100%;
-  padding: 0 10px 10px 0;
+  padding: 0 30px;
   filter: grayscale(100%);
 
   &:hover {
     filter: grayscale(0%);
-  }
-
-  @media (min-width: $large-screen) {
-    width: 30%;
-    padding: 0 30px;
   }
 }
 
@@ -302,6 +328,11 @@ hr {
   a {
     background-color: $pale-grey;
   }
+}
+
+.section__container--text-sponsors {
+  margin: 40px 0 0 0;
+  text-align: center;
 }
 
 .section__container--cta {
@@ -415,3 +446,7 @@ button {
     }
   }
 }
+
+
+
+
