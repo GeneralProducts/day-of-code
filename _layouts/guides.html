@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/guides.css">
+  </head>
+  <body>
+    {% include nav.html %}
+    <div class="wrapper">
+      <div class="sidebar">
+        {% assign docs_by_category = site.posts | group_by: "category" %}
+        <ul>  
+          {% for cat in site.categories-order %}
+            {% assign currentCat = docs_by_category | where: 'name', cat | first %}
+            <li>
+              {{ currentCat.name | capitalize }}
+                <ul>
+                  {% assign sorted = currentCat.items | compact | sort: "order"  %}
+                  {% for item in sorted %}                
+                    <li>
+                      <a href="{{ site.baseurl }}{{ item.url }}">
+                        {% if item.url == navurl %}
+                          <u>{{ item.title }}</u>
+                        {% else %}
+                          {{ item.title }}
+                        {% endif %}
+                      </a>
+                    </li>
+                  {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="content">
+        <div class="content__container">              
+          <h1>{{ page.title}}</h1>
+          <p class="toc-header">Table of contents</p>
+          {% toc %}
+          {{ content }}
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      Day of Code is a <a href="https://generalproducts.co">General Products Ltd</a> initiative.
+    </div>
+  </body>
+</html>

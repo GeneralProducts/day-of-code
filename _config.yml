@@ -28,7 +28,8 @@ github_username:  jekyll
 markdown: kramdown
 plugins:
   - jekyll-feed
-
+  - jekyll-toc
+  
 highlighter: rouge
 
 linenos: true
@@ -39,7 +40,11 @@ highlight:
 highlight_options:
   linenos: true
 
-  
+categories-order:
+ - getting started
+ - html
+ - advanced
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
