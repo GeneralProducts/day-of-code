@@ -8,13 +8,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i|Space+Mono:400,400i,700,700i&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
   </head>
   <body>
     {% include nav.html %}
-    {{ content }}
+    <div class="wrapper">
+      {{ content }}
+    </div>
+    <div class="footer">
+      Day of Code is a <a href="https://generalproducts.co">General Products Ltd</a> initiative.
+    </div>
   </body>
 </html>
