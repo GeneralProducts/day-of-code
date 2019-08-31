@@ -144,7 +144,7 @@ hr {
 
 .navigation__item--secondary {
   padding-right: 5px;
-  transform: translate(140%,0); // because safari handles position: absolute different to every other browser.
+  transform: translate(100%,0); // because safari handles position: absolute different to every other browser.
 }
 
 // Hero
