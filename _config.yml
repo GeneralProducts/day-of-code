@@ -29,7 +29,10 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-toc
-  
+
+toc:
+  max_level: 2 # default: 6
+
 highlighter: rouge
 
 linenos: true
@@ -42,7 +45,7 @@ highlight_options:
 
 categories-order:
  - getting started
- - html
+ - creating a web page
  - advanced
 
 # Exclude from processing.

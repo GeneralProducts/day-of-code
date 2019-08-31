@@ -10,28 +10,29 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/guides.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i&display=swap" rel="stylesheet">
   </head>
   <body>
     {% include nav.html %}
     <div class="wrapper">
       <div class="sidebar">
+        <div class="fixed">
         {% assign docs_by_category = site.posts | group_by: "category" %}
-        <ul>  
-          {% for cat in site.categories-order %}
-            {% assign currentCat = docs_by_category | where: 'name', cat | first %}
+        <ul>
+          {% for orderable_category in site.categories-order %}
+            {% assign current_orderable_category = docs_by_category | where: 'name', orderable_category | first %}
             <li>
-              {{ currentCat.name | capitalize }}
+              {{ current_orderable_category.name | capitalize }}
                 <ul>
-                  {% assign sorted = currentCat.items | compact | sort: "order"  %}
-                  {% for item in sorted %}                
+                  {% assign sorted = current_orderable_category.items | compact | sort: "order"  %}
+                  {% for item in sorted %}
+                    {% if item.url == page.url %}
+                      {% assign klass = "current" %}
+                    {% else %}
+                      {% assign klass = "" %}
+                    {% endif %}
                     <li>
-                      <a href="{{ site.baseurl }}{{ item.url }}">
-                        {% if item.url == navurl %}
-                          <u>{{ item.title }}</u>
-                        {% else %}
-                          {{ item.title }}
-                        {% endif %}
-                      </a>
+                      <a href="{{ site.baseurl }}{{ item.url }}" class={{klass}}>{{ item.title }}</a>
                     </li>
                   {% endfor %}
               </ul>
@@ -39,12 +40,28 @@
           {% endfor %}
         </ul>
       </div>
+      </div>
       <div class="content">
-        <div class="content__container">              
+        <div class="content__container">
+          <div class="category">{{page.category}}</div>
           <h1>{{ page.title}}</h1>
           <p class="toc-header">Table of contents</p>
           {% toc %}
           {{ content }}
+        </div>
+        <div class="footer-nav">
+          <div class="prev-article">
+              {% if page.previous.url %}
+              <p class="prev-article__header">Previous article</p>
+              <a class="prev" href="{{page.previous.url}}">{{page.previous.title}}</a>
+              {% endif %}
+            </div>
+            <div class="next-article">
+                {% if page.next.url %}
+              <p class="next-article__header">Next article</p>
+              <a class="next" href="{{page.next.url}}">{{page.next.title}}</a>
+              {% endif %}
+            </div>
         </div>
       </div>
     </div>
