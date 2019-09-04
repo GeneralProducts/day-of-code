@@ -21,8 +21,6 @@ Follow the instructions [here](http://installrails.com/) to set up Ruby and Rail
 
 Following these instructions will take at least half an hour, and maybe more, so find some time to do it before the Day of Code.
 
-TODO check wording, update with details of webinar.
-
 ## Text editor
 
 This is where you will type your code. The installation instructions prompt you to download Sublime. If you prefer another text editor such as VS Code or Atom, download that to your computer.
