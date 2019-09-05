@@ -7,8 +7,8 @@ category: getting started
 order: 4
 ---
 <!-- <span class="tag tag--draft">Not started</span> -->
-<span class="tag tag--progress">In progress</span>
-<!-- <span class="tag tag--review">Ready for review</span> -->
+<!-- <span class="tag tag--progress">In progress</span> -->
+<span class="tag tag--review">Ready for review</span>
 <!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="abstract">
@@ -103,11 +103,18 @@ Your terminal window looks a bit like this:
 
 ## View the code running in a browser
 
-On a browser, such as Chrome, type "localhost:4000" in as the website address. This is a website running on your own computer, not on the internet. Your browser window looks a bit like this:
+On a browser, such as Chrome, type "localhost:4000" in as the website address. This runs a website on your own computer, rather than on the internet. Your browser window looks a bit like this:
 
 ![](assets/images/its-worked.png)
 
+You're up and running and ready to start programming your website.
+
 ## What you’ve learned
 
-* TODO
+A lot!
+
+* How to navigate around your computer on the command line
+* How to download files from GitHub
+* How to use Ruby gems
+* How to run a server on your computer and see the results in a browser
 
