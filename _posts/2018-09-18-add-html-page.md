@@ -8,8 +8,8 @@ order: 3
 ---
 
 <!-- <span class="tag tag--draft">Not started</span> -->
-<span class="tag tag--progress">In progress</span>
-<!-- <span class="tag tag--review">Ready for review</span> -->
+<!-- <span class="tag tag--progress">In progress</span> -->
+<span class="tag tag--review">Ready for review</span>
 <!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
@@ -48,7 +48,7 @@ Let's replace your placeholder text with some real HTML. Copy and paste the foll
       <div class="header__background">
         <h1>
           Portfolio
-          <span class="subtitle">Incredible stories, published with love</span>
+          <span class="header__subtitle">Incredible stories, published with love</span>
         </h1>
       </div>
       <section class="container__portfolio">

@@ -8,8 +8,8 @@ order: 1
 ---
 
 <!-- <span class="tag tag--draft">Not started</span> -->
-<span class="tag tag--progress">In progress</span>
-<!-- <span class="tag tag--review">Ready for review</span> -->
+<!-- <span class="tag tag--progress">In progress</span> -->
+<span class="tag tag--review">Ready for review</span>
 <!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
@@ -72,14 +72,14 @@ So the entire file looks like this:
 
 Refresh the browser page. You expect the colour of the heading to go red, right? But it's not changed. What has gone wrong? Let's debug the problem.
 
-## Debug the styles not working
+## Debug the problem
 
 First, look in your Inspector, in the HTML Elements panel. Is the HTML tag indeed `<h1>`? Yes, that is correct. The word "Portfolio" is surrounded by `<h1>` tags:
 
 {% highlight html %}
   <h1>
     Portfolio
-    <span class="subtitle">Incredible stories, published with love</span>
+    <span class="header__subtitle">Incredible stories, published with love</span>
   </h1>
 {% endhighlight %}
 
@@ -103,7 +103,7 @@ Your file now looks like this:
       <div class="header__background">
         <h1>
           Portfolio
-          <span class="subtitle">Incredible stories, published with love</span>
+          <span class="header__subtitle">Incredible stories, published with love</span>
         </h1>
       </div>
       <section class="container__portfolio">
@@ -119,7 +119,7 @@ Refresh your browser and now you'll see the changes applied:
 
 ## Use the inspector to make temporary edits
 
-You can temporarily make changes in the Inspector to see how they'd look on the page. Make the `<h1>` text go blue.
+You can temporarily make changes in the Inspector to see how they'd look on the page. Have a go: make the `<h1>` text go blue.
 
 ![](assets/images/css-blue.gif)
 

@@ -21,10 +21,13 @@ Your website is looking pretty bare at the moment. You need to write some code! 
 ## HTML tags
 [HTML](glossary#html) is composed of HTML tags that go at the start and the finish of the content that you want to mark up. They come in two parts: an opening HTML tag such as `<p>`, and a closing HTML tag such as `</p>`, (notice the `/` before the `p`).
 
-> It’s a bit like the old advice for giving a speech: “Tell ’em what you’re going to tell ’em; tell ’em; tell ’em what you’ve told ’em”.
-`<p>` means there's a paragraph coming up.
-Then there's a paragraph.
-Then `</p>` means that we just had a paragraph, and now it's over.
+> It’s a bit like the old advice for giving a speech: “Tell ’em what you’re going to tell ’em; tell ’em; tell ’em what you’ve told ’em”. Or the age-old advice for good storytelling – have a beginning, a middle, and an end:
+>
+>`<p>` means there's a paragraph coming up.
+>
+>Then there's a paragraph.
+>
+>Then `</p>` means that we just had a paragraph, and now it's over.
 
 Here’s a list of HTML tags. You will use them to tell the browser how it should structure your page.
 
