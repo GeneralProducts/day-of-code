@@ -90,10 +90,10 @@ If you want to print values onto the page in HTML, the syntax is a `{% raw %}{{{
 
 If you want to run some logic but not print values onto the page in HTML, the syntax is a `{% raw %}{%{% endraw %}` at the start of the command, and a `{% raw %}%}{% endraw %}` at the end. Anything between those characters will be interpreted as a command. The code will run, but the result will not be printed to the screen.
 
-In a while, you are going to query your own ONIX as a data source, but for now we have prepared a bit of sample data for you to use. Open lib/sample_book.rb. You’ll see some sample data -- the title is War and Peace, the publisher is Snowbooks, and so on.
-
+In a while, you are going to query your own ONIX as a data source, but for now we have prepared a bit of sample data for you to use.
 
 ## What you’ve learned
 
-* TODO
-
+* How the internet works
+* We are using Jekyll, a static site generator
+* Jekyll will process command tags in HTML
