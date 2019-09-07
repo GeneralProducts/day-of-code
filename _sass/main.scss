@@ -144,7 +144,7 @@ hr {
 
 .navigation__item--secondary {
   padding-right: 5px;
-  transform: translate(100%,0); // because safari handles position: absolute different to every other browser.
+  transform: translate(50%,0); // because safari handles position: absolute different to every other browser.
 }
 
 // Hero
@@ -387,7 +387,7 @@ hr {
   }
 }
 
-.footer {
+footer {
   position: relative;
   bottom: 0;
   width: 100%;

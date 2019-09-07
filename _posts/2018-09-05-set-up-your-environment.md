@@ -3,7 +3,7 @@ layout: guides
 title:  Set up your development environment
 permalink: set-up-your-development-environment
 toc: true
-category: getting started
+category: Getting started
 order: 3
 ---
 <!-- <span class="tag tag--draft">Not started</span> -->
@@ -11,7 +11,7 @@ order: 3
 <span class="tag tag--review">Ready for review</span>
 <!-- <span class="tag tag--approved">Approved</span> -->
 
-<p class="abstract">
+<p class="content__abstract">
   You’ll use different software to type your code, run your code, and view what your code does. This article walks through the set up actions you must do before the Day of Code.
 </p>
 
@@ -27,11 +27,11 @@ This is where you will type your code. The installation instructions prompt you 
 
 ## Command line
 
-This is where you will run your code. On the Mac, the command line is called the Terminal. On Windows, it's called the Command Prompt. Either way, it is the means by which you can type instructions to your computer.
+This is where you will run your code. On the Mac, the command line is called the [Terminal](glossary#terminal). On Windows, it's called the [Command Prompt](glossary#command-prompt). Either way, it is the means by which you can type instructions to your computer.
 
 You don't need to install anything: these apps ship with your computer and the installation instructions introduce you to them.
 
-Regardless of whether you are on Mac or Windows, you will enter commands at the command line which the computer will obey. Using the command line is often a lot quicker and more reliable than using the graphical user interface of your machine.
+Regardless of whether you are on Mac or Windows, you will enter commands at the command line which the computer will obey. Using the command line is often a lot quicker and more reliable than using the graphical user interface of your machine: Finder on Mac or File Explorer on Windows.
 
 ## Browser
 
@@ -45,7 +45,7 @@ As well as saving your code on your computer, you are going to use GitHub to sto
 
 Go to [Github.com](https://github.com/) and sign up for an account. Make sure you use a username and password that you will be able to recall on the Day of Code.
 
-> <span class="learn-more">Learn more later<span>
+> <span class="content__learn-more">Learn more later<span>
 * [Learn Enough Git to be Dangerous](https://www.learnenough.com/git) – Unleash the power of
 tracking & collaboration with version control!
 * [Git for writers](https://medium.com/@sayhellotovanessa/git-for-writers-write-fiction-like-a-good-programmer-ea6f0309a69a) – Aside from programming, all publishers and authors should use git, since we have so many changing documents. Learning git, and sharing how to use it with your authors, means an end to calls from authors that their hard drive is corrupted and the manuscript changes are lost forever.

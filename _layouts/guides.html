@@ -14,38 +14,39 @@
   </head>
   <body>
     {% include nav.html %}
-    <div class="wrapper">
+    <article>
       <div class="sidebar">
-        <div class="fixed">
-        {% assign docs_by_category = site.posts | group_by: "category" %}
-        <ul>
-          {% for orderable_category in site.categories-order %}
-            {% assign current_orderable_category = docs_by_category | where: 'name', orderable_category | first %}
-            <li>
-              {{ current_orderable_category.name | capitalize }}
-                <ul>
-                  {% assign sorted = current_orderable_category.items | compact | sort: "order"  %}
-                  {% for item in sorted %}
-                    {% if item.url == page.url %}
-                      {% assign klass = "current" %}
-                    {% else %}
-                      {% assign klass = "" %}
-                    {% endif %}
-                    <li>
-                      <a href="{{ site.baseurl }}{{ item.url }}" class={{klass}}>{{ item.title }}</a>
-                    </li>
-                  {% endfor %}
-              </ul>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
+        <div class="sidebar__inner">
+          <p class="sidebar__title">Guides</p>
+          {% assign docs_by_category = site.posts | group_by: "category" %}
+          <ul>
+            {% for orderable_category in site.categories-order %}
+              {% assign current_orderable_category = docs_by_category | where: 'name', orderable_category | first %}
+              <li>
+                {{ current_orderable_category.name  }}
+                  <ul>
+                    {% assign sorted = current_orderable_category.items | compact | sort: "order"  %}
+                    {% for item in sorted %}
+                      {% if item.url == page.url %}
+                        {% assign klass = "sidebar__current" %}
+                      {% else %}
+                        {% assign klass = "" %}
+                      {% endif %}
+                      <li>
+                        <a href="{{ site.baseurl }}{{ item.url }}" class={{klass}}>{{ item.title }}</a>
+                      </li>
+                    {% endfor %}
+                </ul>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
       <div class="content">
         <div class="content__container">
-          <div class="category">{{page.category}}</div>
+          <div class="content__category">{{page.category}}</div>
           <h1>{{ page.title}}</h1>
-          <p class="toc-header">Table of contents</p>
+          <p class="content__toc-header">Table of contents</p>
           {% toc %}
           {{ content }}
         </div>
@@ -64,9 +65,9 @@
             </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
+    </article>
+    <footer>
       Day of Code is a <a href="https://generalproducts.co">General Products Ltd</a> initiative.
-    </div>
+    </footer>
   </body>
 </html>

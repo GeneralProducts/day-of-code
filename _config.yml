@@ -44,9 +44,16 @@ highlight_options:
   linenos: true
 
 categories-order:
- - getting started
- - creating a web page
- - advanced
+  - Getting started
+  - HTML
+  - CSS
+  - A static website
+  - A dynamic website
+  - Ruby methods
+  - A data source
+  - Displaying data
+  - Next steps
+  - Reference
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -3,7 +3,7 @@ layout: guides
 title:  Languages and tools
 permalink: languages-and-tools
 toc: true
-category: getting started
+category: Getting started
 order: 2
 ---
 
@@ -12,7 +12,7 @@ order: 2
 <span class="tag tag--review">Ready for review</span>
 <!-- <span class="tag tag--approved">Approved</span> -->
 
-<p class="abstract">
+<p class="content__abstract">
   There are lots of different programming languages and software tools, and
 more are being created all the time. This article introduces the ones we will use. No actions required: just read it.
 </p>
@@ -52,7 +52,7 @@ pages. HTML stands for Hyper Text Markup Language. It looks like this:
 [^1]: Even ones from the olden days that were Flash-based were still HTML docs.
 [^2]: An ePub is a zip file whose contents include HTML and CSS files. Open one with [Springy](https://springy.en.softonic.com/mac) on a Mac or [WinZip](https://www.winzip.com/win/en/) on Windows and take a look.
 
-> <span class="learn-more">Learn more later<span>
+> <span class="content__learn-more">Learn more later<span>
 * [Learn Enough HTML to be Dangerous](https://www.learnenough.com/html)
 – [LearnEnough.com](https://www.learnenough.com) is a very well-written resource, and their course on HTML is a great way to learn to speak the universal language of the web.
 * If you are sociable, [CodeBar](https://tutorials.codebar.io/) is a great event to learn at.
@@ -70,7 +70,7 @@ such as HTML. CSS stands for Cascading Style Sheets, because later instructions 
   }
 {% endhighlight %}
 
-> <span class="learn-more">Learn more later<span>
+> <span class="content__learn-more">Learn more later<span>
 * [Learn Enough CSS & Layout to be Dangerous](https://www.learnenough.com/css)
 * [CSS Tricks](https://css-tricks.com/) – our go-to site for pragmatic uses of CSS.
 
@@ -101,7 +101,7 @@ You can run that Ruby on the command line. `irb` stands for 'Interactive Ruby'
   Hello, Rosie!
 {% endhighlight %}
 
-> <span class="learn-more">Learn more later<span>
+> <span class="content__learn-more">Learn more later</span>
 * [Learn Enough Ruby to Be Dangerous](https://www.learnenough.com/ruby-tutorial/hello_world)
 * [The Rails Tutorial](https://www.learnenough.com/ruby-on-rails-4th-edition) – A resource close to the author of these guide's heart, as she learned programming with this book, now in its 4th edition. It's best to have a firm grasp of the basics before embarking on these tutorials. The following are recommended:
 * Learn Enough Command Line to Be Dangerous
@@ -134,7 +134,7 @@ If `title` is a variable that stands for the words "Home page", this turns into 
 
 ## Command line
 
-The Terminal app (Mac) or Command Prompt program (Windows) is where you type instructions to the computer to run code. It looks something like this:
+The [Terminal](/glossary#terminal) app (Mac) or [Command Prompt](/glossary#command-prompt) program (Windows) is where you type instructions to the computer to run code. It looks something like this:
 
 ![A terminal window](/assets/images/terminal.png)
 
