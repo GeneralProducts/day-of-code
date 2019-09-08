@@ -105,8 +105,8 @@ $railscasts-diff-header                   : #2F33AB;
   }
 }
 
-body, h1, h2, p, ul, li {
-  font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto,noto, "segoe ui", arial, sans-serif;
+p, li {
+  font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
   color: #4b4840;
 }
 
@@ -144,7 +144,7 @@ ul {
 }
 
 li {
-  line-height: 1.5;
+  line-height: 1;
   color: #5c5962;
 }
 
@@ -178,6 +178,7 @@ li {
 
   li:not(.toc-entry) {
     list-style: none;
+    line-height: 1.5;
 
     &:before {
       color: $railscasts-markup-tag-color;
@@ -291,7 +292,9 @@ li {
 }
 
 .sidebar__inner {
-  position: fixed
+  position: fixed;
+  height: calc(100vh - 150px);
+  overflow-y: auto;
 }
 
 .sidebar__current {

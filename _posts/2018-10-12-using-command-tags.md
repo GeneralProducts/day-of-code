@@ -189,7 +189,77 @@ Let's look at how the browser is looking.
 
 ![](assets/images/list.gif)
 
-Wow -- lots of series, and lots of books. It's not quite right yet as we can see some duplication, but it's getting there. We'll handle the duplication in the next article.
+Wow -- lots of series, and lots of books. It's not quite right yet as we can see some duplication, but it's getting there. We'll remove the duplication you see on your portfolio page now.
+
+## Remove duplication
+
+Replace this:
+
+{% highlight liquid %}
+  {% raw %}
+  <section class="container__portfolio">
+    {% assign serieses = site.data.processed_books | group_by: "series" | sort: "title"  %}
+    {% for series in serieses  %}
+      <ul class="series-grid">
+        {% for book in series.items %}
+            <li class="cover-container">
+              <a href="{{site.base_url}}{{ book.title | datapage_url: '/books'}}">
+                <img src="{{book.image_path}}" class="cover" alt="{{ book.title }}">
+              </a>
+            </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </section>
+  {% endraw %}
+{% endhighlight %}
+
+with this:
+
+{% highlight liquid %}
+  {% raw %}
+  <section class="container__portfolio">
+    {% assign unique_tags = '' | split: '' %}
+    {% assign serieses = site.data.processed_books | group_by: "series" | sort: "title"  %}
+    {% for series in serieses  %}
+      <ul class="series-grid">
+        {% for book in series.items %}
+          {% unless unique_tags contains book.title %}
+            <li class="cover-container">
+              <a href="{{site.base_url}}{{ book.title | datapage_url: '/books'}}">
+                <img src="{{book.image_path}}" class="cover" alt="{{ book.title }}">
+              </a>
+            </li>
+            {% assign unique_tags = unique_tags | push: book.title  %}
+          {% endunless %}
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </section>
+  {% endraw %}
+{% endhighlight %}
+
+Let's pull out the lines that we've changed.
+
+{% highlight liquid %}
+  {% raw %}
+  <!-- First, make a list called unique_tags -->
+  {% assign unique_tags = '' | split: '' %}
+
+  <!-- The code to loop through the serieses goes here -->
+  <!-- The code to loop through the books in each series goes here-->
+  <!-- The next line instructs the book to display unless the unique_tags list contains the book title -->
+  {% unless unique_tags contains book.title %}
+    <!-- The next line adds the book title to the unique_tags list if the book has been displayed -->
+    {% assign unique_tags = unique_tags | push: book.title  %}
+  {% endunless %}
+  {% endraw %}
+{% endhighlight %}
+
+The logical approach we've taken here is to keep track of which books we've already seen on the page, and not repeat them
+
+> <span class="content__learn-more">Learn more later</span>
+*  Much of programming is about Googling and finding out answers to problems that present themselves through your own research. So read through the Liquid documentation to understand the `push:` command and the principles of arrays.
 
 ## What you’ve learned
 
@@ -197,3 +267,6 @@ Wow -- lots of series, and lots of books. It's not quite right yet as we can see
 * The `for` method lets you iterate through each instance of an item in a collection.
 * In Ruby, a dot means ‘call a method on an object’.
 * You can use methods to increase the number of things an object can know about or do.
+* Read the docs!
+* All programmers rely on Google.
+* Programming is less about maths, and more about logic and process.

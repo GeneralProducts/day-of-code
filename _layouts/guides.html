@@ -17,7 +17,6 @@
     <article>
       <div class="sidebar">
         <div class="sidebar__inner">
-          <p class="sidebar__title">Guides</p>
           {% assign docs_by_category = site.posts | group_by: "category" %}
           <ul>
             {% for orderable_category in site.categories-order %}
