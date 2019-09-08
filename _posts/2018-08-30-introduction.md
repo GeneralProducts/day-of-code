@@ -3,7 +3,7 @@ layout: guides
 title:  Introduction
 permalink: introduction
 toc: true
-category: Getting started
+category: Before the Day of Code
 order: 1
 ---
 
@@ -13,7 +13,7 @@ order: 1
 <!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
-  Today you're going to get some programming experience, and leave having built a real website. This article explains the plan for the day.
+  These are the step-by-step guides for the Day of Code. You're going to get some programming experience, and leave having built a real website. This article explains the background to the day.
 </p>
 
 ## Scope of the day

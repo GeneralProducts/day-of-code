@@ -35,16 +35,20 @@ $railscasts-diff-header                   : #2F33AB;
   position: relative;
   margin-bottom: 20px;
   overflow: auto;
-  font-size: 13px;
   color: $railscasts-color;
   border: none;
   line-height: 20px;
   margin-top: 25px;
-  margin-left: -30px;
-  margin-right: -30px;
   margin-bottom: 25px;
   padding-left: 15px;
   padding-right: 15px;
+  font-size: 11px;
+
+  @media (min-width: 600px) {
+    margin-left: -30px;
+    margin-right: -30px;
+    font-size: 13px;
+  }
 
   code {
     word-wrap: normal;
@@ -105,6 +109,11 @@ $railscasts-diff-header                   : #2F33AB;
   }
 }
 
+.edit-link {
+  margin-left: 12px;
+  font-size: smaller;
+}
+
 p, li {
   font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
   color: #4b4840;
@@ -114,29 +123,44 @@ h1 {
   color: #352d2d;
   margin-bottom: 0px;
   margin-top: 0;
-  font-size: 60px;
-  line-height: 65px;
+  font-size: 25px;
   padding:  0px 0px 0px 12px;
-  font-family: "Inconsolata", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace
+  font-family: "Inconsolata", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+  @media (min-width: 600px) {
+    font-size: 60px;
+    line-height: 65px;
+  }
 }
 
 h2, h3, h4 {
-  padding:  0px 100px 0px 12px
+  padding:  12px 0 0 12px;
+
+  @media (min-width: 600px) {
+    padding:  0px 100px 0px 12px
+  }
 }
 
 p {
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.5;
   color: #5c5962;
-  padding:  0px 100px 0px 12px;
   display: block;
+  padding: 0 10px;
+
+  @media (min-width: 600px) {
+    font-size: 16px;
+    padding:  0px 100px 0px 12px;
+  }
 }
 
 article {
-  display: flex;
-  margin-bottom: -80px;
-  flex: 1 0 auto;
-  padding: 80px 0;
+  @media (min-width: 1200px) {
+    display: flex;
+    margin-bottom: -80px;
+    flex: 1 0 auto;
+    padding: 80px 0;
+  }
 }
 
 ul {
@@ -146,11 +170,19 @@ ul {
 li {
   line-height: 1;
   color: #5c5962;
+  font-size: 12px;
+
+  @media (min-width: 600px) {
+    font-size: 16px;
+  }
 }
 
 .content__container {
-  max-width: 700px;
   min-height: 500px;
+
+  @media (min-width: 600px) {
+    max-width: 700px;
+  }
 
   ul li:not(.toc-entry) {
     padding: 10px 0 0
@@ -169,7 +201,10 @@ li {
 
 .content {
   flex: 3;
-  padding-left: 30px;
+
+  @media (min-width: 600px) {
+    padding-left: 30px;
+  }
 
   ul {
     margin-top: -10px;
@@ -221,9 +256,13 @@ li {
 }
 
 .content__abstract {
-  font-size: 20px;
+  font-size: 14px;
   color: #98979b;
   font-weight: 300;
+
+  @media (min-width: 600px) {
+    font-size: 20px;
+  }
 }
 
 .content__learn-more {
@@ -238,11 +277,15 @@ li {
   flex: 1;
   background: #fbf8f6;
   display: flex;
-  align-items: flex-end;
   flex-direction: column;
-  padding: 0 40px 0 85px;
   font-size: 14px;
   line-height: 1.8;
+  padding: 120px 0 0 0;
+
+  @media (min-width: 1200px) {
+    align-items: flex-end;
+    padding: 0 40px 0 85px;
+  }
 
   li {
     list-style-type: none;
@@ -292,21 +335,15 @@ li {
 }
 
 .sidebar__inner {
-  position: fixed;
-  height: calc(100vh - 150px);
-  overflow-y: auto;
+  @media (min-width: 1200px) {
+    position: fixed;
+    height: calc(100vh - 150px);
+    overflow-y: auto;
+  }
 }
 
 .sidebar__current {
   color: $railscasts-keyword-color !important
-}
-
-.sidebar__title {
-  padding: 14px 14px 0;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: #4b4840;
-  font-weight: bold;
 }
 
 code {
@@ -333,9 +370,12 @@ blockquote {
   padding: 20px 45px 20px 26px;
   margin-bottom: 30px;
   margin-top: 20px;
-  margin-left: -16px;
-  margin-right: -16px;
   border-radius: 5px;
+
+  @media (min-width: 600px) {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
 }
 
 :target:not(li, h2) {
@@ -344,8 +384,11 @@ blockquote {
 
 .footer-nav {
   background-color: #fbf8f6;
-  margin-left: -30px;
-  display: flex;
+
+  @media (min-width: 600px) {
+    display: flex;
+    margin-left: -30px;
+  }
 
   a {
     background-color: inherit;
@@ -355,18 +398,25 @@ blockquote {
 }
 
 .prev-article {
-  text-align: left;
-  padding: 25px;
   flex: 1;
+  padding: 10px;
+
+  @media (min-width: 600px) {
+    text-align: left;
+    padding: 25px;
+  }
 }
 
 .next-article {
-  padding: 25px 150px;
-  text-align: right;
+  padding: 10px;
+
+  @media (min-width: 600px) {
+    text-align: right;
+    padding: 25px 150px;
+  }
 }
 
 .next-article__header, .prev-article__header {
-  font-size: 13px;
   padding: 0
 }
 
@@ -440,5 +490,13 @@ li.toc-entry {
     font-size: 12px !important;
     font-family: monospace;
     padding-right: 13px;
+  }
+}
+
+li.navigation__item {
+  font-size: 20px;
+
+  @media (min-width: 600px) {
+    font-size: 28px;
   }
 }

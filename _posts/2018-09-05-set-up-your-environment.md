@@ -3,7 +3,7 @@ layout: guides
 title:  Set up your development environment
 permalink: set-up-your-development-environment
 toc: true
-category: Getting started
+category: Before the Day of Code
 order: 3
 ---
 <!-- <span class="tag tag--draft">Not started</span> -->
@@ -53,5 +53,5 @@ tracking & collaboration with version control!
 
 ## What you’ve learned
 
-* You have installed the tools needed to develop software on your computer.
+* You have installed the tools needed to develop software on your computer and you're ready for the Day of Code.
 

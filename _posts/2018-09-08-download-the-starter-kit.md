@@ -3,8 +3,8 @@ layout: guides
 title:  Get the starter kit
 permalink: get-the-starter-kit
 toc: true
-category: Getting started
-order: 4
+category: On the Day of Code
+order: 1
 ---
 <!-- <span class="tag tag--draft">Not started</span> -->
 <!-- <span class="tag tag--progress">In progress</span> -->

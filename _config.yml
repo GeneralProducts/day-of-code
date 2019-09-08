@@ -44,7 +44,8 @@ highlight_options:
   linenos: true
 
 categories-order:
-  - Getting started
+  - Before the Day of Code
+  - On the Day of Code
   - HTML
   - CSS
   - Templating

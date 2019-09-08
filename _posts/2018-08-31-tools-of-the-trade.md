@@ -3,7 +3,7 @@ layout: guides
 title:  Languages and tools
 permalink: languages-and-tools
 toc: true
-category: Getting started
+category: Before the Day of Code
 order: 2
 ---
 
@@ -14,7 +14,7 @@ order: 2
 
 <p class="content__abstract">
   There are lots of different programming languages and software tools, and
-more are being created all the time. This article introduces the ones we will use. No actions required: just read it.
+more are being created all the time. This article introduces the ones we will use. No actions required: please read it before the Day of Code.
 </p>
 
 In this course you’ll be using four programming languages:
@@ -153,9 +153,9 @@ Text editors look like this:
 ![image of a text editor](/assets/images/text-editor.png)
 
 ## A publisher website
-Today you are going to write a website which displays book data on
+On the Day of Code, you will write a website which displays book data on
 a series of web pages. You’ll be using all the technologies described
-previously. So let’s get started!
+previously.
 
 ## What you’ve learned
 * You tell computers what to do by using a programming

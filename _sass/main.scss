@@ -33,7 +33,11 @@ body {
 
 .wrapper {
   flex: 1 0 auto;
-  padding: 80px 0;
+  padding: 120px 0;
+
+  @media (min-width: $large-screen) {
+    padding: 80px 0;
+  }
 }
 
 p {
@@ -117,6 +121,7 @@ hr {
   margin: 0 auto;
   display: flex !important;
   flex-direction: column;
+  background-color: white;
 
   @media (min-width: $large-screen) {
     flex-direction: row;
@@ -143,8 +148,15 @@ hr {
 }
 
 .navigation__item--secondary {
-  padding-right: 5px;
-  transform: translate(50%,0); // because safari handles position: absolute different to every other browser.
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  @media (min-width: $large-screen) {
+    position: relative;
+    padding-right: 5px;
+    margin-left: auto;
+  }
 }
 
 // Hero
