@@ -7,15 +7,15 @@ category: Using data
 order: 2
 ---
 <!-- <span class="tag tag--draft">Not started</span> -->
-<span class="tag tag--progress">In progress</span>
-<!-- <span class="tag tag--review">Ready for review</span> -->
+<!-- <span class="tag tag--progress">In progress</span> -->
+<span class="tag tag--review">Ready for review</span>
 <!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
   This article explains how the internet works.
 </p>
 
-It’s probably worth going over what happens when you visit a website, since you’re creating one.
+It’s worth going over what happens when you visit a website, since you’re creating one.
 
 You start the conversation when you tell your web browser the URL you want to visit. Let’s imagine you want to visit Consonance’s Twitter page. You’d type ‘www.twitter.com/consonance_app’ into the address bar of your browser (or maybe you’d look it up on Google and click on a link).
 
@@ -25,9 +25,9 @@ The URL gets broken into two halves. The first part – what you might think of 
 
 <!-- ![](assets/images/round_trip.jpg) -->
 
-So what does a webserver do when it receives a request for a page? 99 times out of 100 it replies to that request by sending back an HTML file. The HTML might specify a heading which says ‘Consonance’. Then the relevant piece of CSS will specify that it should appear in 15 point Lucida Sans in white.
+So what does a webserver do when it receives a request for a page? 99 times out of 100 it replies to that request by sending back an HTML file. The HTML might specify a heading which says ‘Consonance’. Then the relevant piece of CSS will specify that it should appear in 15 point Lucida Sans in grey.
 
-To recap: the web browser on your computer requests a web page from some remote server. That server sends back an HTML file, plus some CSS. Then your browser uses the CSS to layout that HTML so that you can see the web page properly displayed on your screen.
+To recap: the web browser on your computer requests a web page from some remote server. That server sends back an HTML file, plus some CSS. Then your browser uses the CSS to lay out that HTML so that you can see the web page properly displayed on your screen.
 
 ## Static websites
 
@@ -41,15 +41,11 @@ A second, and more sophisticated, type of webserver can understand bits of code 
 
 Have you ever run a mail merge from Microsoft Word? You add in mail merge tags such as `<firstname>` and `<lastname>`. You can do the same thing in HTML. There are still lots of pre-prepared HTML files, but included in amongst the HTML will be command tags. These tags are code commands; they instruct the webserver to perform a task. In most cases the commands will instruct the webserver to fetch some information: for instance, today’s date. So you place the command tags in amongst the HTML in the exact spot you want the date to go and the last thing the webserver does before sending out the file is to replace it with the actual current date.
 
-<!-- ![](assets/images/dates.jpg) -->
-
-(The example above uses made-up tags. In reality, the format and syntax will depend on which of the many types of webserver you’re using.)
-
 Pieces of information that stay the same from day to day (e.g. the words in an old blog post) can be written directly into an HTML file. But if you want users to see information that keeps changing (e.g. the total number of visitors to your site) you can embed code like this instead. A visitor to the website never gets to see that code, though, because it’s always been replaced before the file is sent to your browser.
 
 You can think of these command tags as being a question. Before an HTML files gets sent out, all those questions are replaced with their HTML answers.
 
-Sites such as Wordpress, Twitter and our own publishing management software, Consonance, are examples of sophisticated web applications where servers dynamically query and interpret tagged-up files.
+Sites such as Wordpress, Twitter and our own publishing management software, [Consonance](https://www.consonance.app), are examples of sophisticated web applications where servers dynamically query and interpret tagged-up files.
 
 ## Databases
 
@@ -67,15 +63,15 @@ As computing power has increased over the last few decades, we can have programm
 
 ## Why Jekyll?
 
-Today, we are using the static site generator Jekyll to do the work of a webserver – translating command tags and outputting static HTML -- before we push the code to the internet, rather than dynamically creating it on the fly. It means we're not going to have to use an advanced web server to dynamically interpret our code, but we are still going to be inserting command tags so we can automate the generation of our HTML.
+Today, we are using the static site generator Jekyll to do some of the work of a webserver – translating command tags and outputting static HTML -- before we push the code to the internet, rather than dynamically creating it on the fly. It means we're not going to have to use an advanced web server to dynamically interpret our code, but we are still going to be inserting command tags so we can automate the generation of our HTML. Jekyll uses a templating language called [Liquid](https://shopify.github.io/liquid/), written in Ruby.
 
 ## Command tags
-Your first challenge is to replace the static HTML in the portfolio.index file with command tags that will loop through all your books and display them.
+Your challenge, which you'll be walked through in the next article, is to replace the static HTML in the `portfolio.html` file with Liquid command tags that will loop through all your books and display them. To do that, you'll need to know some code syntax.
 
 ## Syntax
 Syntax refers to the symbols and words that make up a programming language. Use the correct syntax and the computer will know what you want it to do.
 
-The syntax for a command tag in Jekyll's Liquid templating language is this:
+The syntax for command tags in Jekyll's Liquid templating language is this:
 
 {% highlight liquid %}
 {% raw %}
@@ -86,14 +82,14 @@ The syntax for a command tag in Jekyll's Liquid templating language is this:
 
 {% endhighlight %}
 
-If you want to print values onto the page in HTML, the syntax is a `{% raw %}{{{% endraw %}` at the start of the command, and a `{% raw %}}}{% endraw %}` at the end. Anything between those characters will be interpreted as a command. The code will run, and the result is printed to the screen. You’ll get a piece of data, such as the image, appearing on the page.
+If you want to print values onto the page in HTML, the syntax is a `{% raw %}{{{% endraw %}` at the start of the command, and a `{% raw %}}}{% endraw %}` at the end. Anything between those characters will be interpreted as a command. The code will run, and the result is printed to the screen. You’ll get a piece of data, such as the book's title, appearing on the page.
 
 If you want to run some logic but not print values onto the page in HTML, the syntax is a `{% raw %}{%{% endraw %}` at the start of the command, and a `{% raw %}%}{% endraw %}` at the end. Anything between those characters will be interpreted as a command. The code will run, but the result will not be printed to the screen.
 
-In a while, you are going to query your own ONIX as a data source, but for now we have prepared a bit of sample data for you to use.
+In a while, you are going to query your own ONIX as a data source, but for now we have prepared a bit of sample data for you to use. Go to the next article to get started in using this data source on your website, rather than typing directly into HTML.
 
 ## What you’ve learned
 
 * How the internet works
-* We are using Jekyll, a static site generator
-* Jekyll will process command tags in HTML
+* We are using Jekyll, a static site generator, which uses Liquid
+* Jekyll can process command tags, to produce HTML

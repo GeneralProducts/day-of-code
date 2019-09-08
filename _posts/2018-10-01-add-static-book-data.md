@@ -133,7 +133,7 @@ Copy and paste the `<li>...</li>` block of code a few times, so your file looks 
 
 ![](assets/images/books.png)
 
-Well, we have a portfolio page, but you can see this is now very manual to maintain, and I don't want to sit and type in all that data for every book. Ideally we want to be able to have just one block of `<li>...</li>` code, and programmatically insert the data in to it, getting the code to repeat itself once for each book. That's what we'll do next.
+Well, we have a portfolio page, but you can see this is now very manual to maintain. I don't know about you, but I don't want to sit and type in all that data for every book. Ideally we want to be able to have just one block of `<li>...</li>` code, and programmatically insert the data in to it, getting the code to repeat itself once for each book. That's what we'll do next.
 
 
 ## What you’ve learned

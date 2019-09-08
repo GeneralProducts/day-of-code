@@ -19,7 +19,9 @@ Let's get some sample data to work with. You'll be able to use your own data lat
 
 ## Add sample data
 
-Add a folder called _data, and a file called processed_books.json. Paste all the data at [this link](https://raw.githubusercontent.com/EmmaB/jekyll-snow/master/_data/processed_books.json) into the file, and save.
+TODO: maybe include this data in the starter kit repo?
+
+Add a folder called `_data`, and a file called `processed_books.json` within it. Paste all the data at [this link](https://raw.githubusercontent.com/EmmaB/jekyll-snow/master/_data/processed_books.json) into the file, and save.
 
 ![](assets/images/proc_book.gif)
 
@@ -65,15 +67,17 @@ It looks like a lot in one go, but let's step through the differences one by one
 
 ## Assigning a variable
 
-Variables are used to label and store information. You define a variable using an equals sign.
+Variables are used to label and store information. You define a variable using an equals sign. The following line assigns a variable called `serieses`.
+
+TODO: serieses is a weird word. Consider alternatives?
 
 {% highlight liquid %}
   {% raw %}{% assign serieses = site.data.processed_books | group_by: "series" | sort: "title"  %}{% endraw %}
 {% endhighlight %}
 
-This line assigns a value to the word `serieses`. It means we can use that word as a variable to represent the value.
+Now we have assigned a value to the word `serieses`, we can use that word as a variable to represent the value.
 
-The value of `serieses` is all the data found in the processed_books file, but grouped by series, then sorted by title.
+The value of `serieses` is all the data found in the `processed_books.json` file, but grouped by series, then sorted by title.
 `serieses` doesn’t only contain one series worth of data. In your app, you need to display each of those series in turn. This is called iteration.
 
 ## Iteration
@@ -88,7 +92,7 @@ Iteration is when you loop through a collection of data. Here's an example:
 {% endraw %}
 {% endhighlight %}
 
-This line says: for each series that exists, do something. Read that line aloud. It says "for series in serieses". More verbosely, it means “For each series in turn, replace the contents of the `series` variable with information about the next series in the list”.
+Read that line aloud. It says "for series in serieses". More verbosely, it means “For each series in turn, replace the contents of the `series` variable with information about the next series in the list”.
 
 Review the code you've just added, again: there's another iteration loop straight after:
 
@@ -103,17 +107,19 @@ Review the code you've just added, again: there's another iteration loop straigh
 
 This time, for each book (the item in the series) in turn, replace the contents of the `book` variable with information about the next book in the list.
 
+## Calling methods
+
+Once you have iterated and got your `book` variable, you can "call methods" on it and turn the results of the methods into HTML. This next line uses two method calls to output the HTML `img` tag for the book's cover.
+
 {% highlight liquid %}
   {% raw %}
   {% for book in series.items %}
     ...
+    <img src="{{book.image_path}}" class="cover" alt="{{ book.title }}">
+    ...
   {% endfor %}
 {% endraw %}
 {% endhighlight %}
-
-## Calling methods
-
-Once you have iterated and got your `book` variable, you can "call methods" on it and turn the results of the methods into HTML.
 
 You call a method using a dot:
 
@@ -123,9 +129,7 @@ You call a method using a dot:
 
 The dot is how you ask an object for some of its information. This is also know as “calling a method”. Here you’d say you’re "calling title on book".
 
-`title` is something that a book has. The syntax `book.title`
-
-is the same as saying “Book, please tell me your title". You can do the same for pub date, for isbn -- in fact, any attribute that book knows about.
+`title` is something that a book has. The syntax `book.title` is the same as saying “Book, please tell me your title". You can do the same for pub date, for isbn -- in fact, any attribute that `book` knows about.
 
 You can increase the number of things that a book knows about by writing methods. Here’s a method that figures out the stock delivery date of a book that’s been printed:
 
@@ -159,7 +163,7 @@ Let's look again at the code we've just added.
   {% endraw %}
 {% endhighlight %}
 
-This code turns into the following HTML for the book called "Lint". The first line creates a link in a manner specific to the [code library we're using to generate multiple pages](https://github.com/avillafiorita/jekyll-datapage_gen).
+This code turns into the following HTML for the book called "Lint". The first line creates a link in a manner specific to the [code library we're using to generate multiple pages](https://github.com/avillafiorita/jekyll-datapage_gen). The second line uses two method calls to create the `img` HTML tag for the book's cover.
 
 {% highlight html %}
   <a href="/books/lint/">
@@ -179,11 +183,13 @@ becomes the title of the book:
   alt="Lint"
 {% endhighlight %}
 
+## Review progress
+
 Let's look at how the browser is looking.
 
 ![](assets/images/list.gif)
 
-Wow -- lots of series, and lots of books. It's not quite right yet as we can see some duplication, but it's getting there.
+Wow -- lots of series, and lots of books. It's not quite right yet as we can see some duplication, but it's getting there. We'll handle the duplication in the next article.
 
 ## What you’ve learned
 
