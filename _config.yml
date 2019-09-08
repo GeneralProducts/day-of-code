@@ -28,6 +28,10 @@ github_username:  jekyll
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-toc
+
+toc:
+  max_level: 2 # default: 6
 
 highlighter: rouge
 
@@ -39,7 +43,16 @@ highlight:
 highlight_options:
   linenos: true
 
-  
+categories-order:
+  - Getting started
+  - HTML
+  - CSS
+  - Templating
+  - Using data
+  - Layout
+  - Next steps
+  - Reference
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

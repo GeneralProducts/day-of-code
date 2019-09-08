@@ -1,6 +1,6 @@
 $large-screen: 840px;
 $default-font: "Inconsolata", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-$dark-grey: #2b2b2b; 
+$dark-grey: #2b2b2b;
 $light-grey: #f6f4ed;
 $pale-grey: #f9f6ef;
 $white: #ffffff;
@@ -9,9 +9,10 @@ $nearly-black: #1e1e1e;
 $railscasts-yellow: #d3c9a9;
 $railscasts-green: #b4ca73;
 $railscasts-blue: #85a0c2;
-$railscasts-orange: #c89948;
+$railscasts-orange: #CC7833;
 $railscasts-purple: #c3c2ee;
 $railscasts-red: #e36049;
+$railscasts-grey: #ebe7e3;
 
 // Base
 * {
@@ -32,6 +33,7 @@ body {
 
 .wrapper {
   flex: 1 0 auto;
+  padding: 80px 0;
 }
 
 p {
@@ -50,7 +52,7 @@ cite {
 
 figure {
   margin-inline-start: 0;
-  margin-inline-end: 0; 
+  margin-inline-end: 0;
 }
 
 h1, h2 {
@@ -63,9 +65,9 @@ pre {
 }
 
 .language-html {
-  color: $white; 
+  color: $white;
   font-size: 65%;
-  
+
   @media (min-width: $large-screen) {
     font-size: 80%;
   }
@@ -77,7 +79,7 @@ a {
 
   &:hover,
   &:focus {
-    color: $railscasts-green;
+    color: $railscasts-yellow;
   }
 }
 
@@ -86,6 +88,14 @@ hr {
 }
 
 // Nav
+.navigation {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  z-index: 1;
+}
+
 .navigation__logo {
   height: 50px;
   padding: 10px 0 0;
@@ -109,7 +119,7 @@ hr {
   flex-direction: column;
 
   @media (min-width: $large-screen) {
-    flex-direction: row;  
+    flex-direction: row;
     font-size: 28px;
   }
 }
@@ -134,8 +144,7 @@ hr {
 
 .navigation__item--secondary {
   padding-right: 5px;
-  position: absolute;
-  right: 0;
+  transform: translate(50%,0); // because safari handles position: absolute different to every other browser.
 }
 
 // Hero
@@ -194,7 +203,7 @@ hr {
   }
 }
 
-.hero__text--subtitle, 
+.hero__text--subtitle,
 .hero__text--subtitle a {
   color: $railscasts-orange;
   margin-top: 20px;
@@ -236,7 +245,7 @@ hr {
 
   @media (min-width: $large-screen) {
     display: flex;
-    align-items: baseline;  
+    align-items: baseline;
   }
 }
 
@@ -259,7 +268,7 @@ hr {
   font-size: 40px;
   font-family: $default-font;
   color: $dark-grey;
-  
+
   @media (min-width: $large-screen) {
     font-size: 90px;
   }
@@ -267,7 +276,7 @@ hr {
 
 .section__content {
   flex: 2;
-  
+
   @media (min-width: $large-screen) {
     padding: 30px 0;
   }
@@ -378,7 +387,7 @@ hr {
   }
 }
 
-.footer {
+footer {
   position: relative;
   bottom: 0;
   width: 100%;
@@ -404,7 +413,7 @@ input, button, textarea {
   background-color: $light-grey;
   box-shadow: none;
   padding: 5px;
-  
+
   &:focus {
     outline: none;
   }
@@ -445,11 +454,11 @@ button {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    
+
     &__message {
-      margin-top: 10px;            
+      margin-top: 10px;
     }
-    
+
     button {
       margin-top: 10px;
       align-self: flex-end;
@@ -465,4 +474,13 @@ button {
 .time {
   font-size: 40px;
 }
+
+.language-html {
+  font-size: 100%;
+}
+
+.highlight pre { background-color: #1e1e1e; border-radius: 5px; }
+.highlight .s { color: $railscasts-orange } /* Literal.String */
+.highlight .na { color: $railscasts-grey } /* Name.Attribute */
+.highlight .nt { color: $railscasts-green; font-weight: bold } /* Name.Tag */
 

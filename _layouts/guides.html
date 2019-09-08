@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/guides.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    {% include nav.html %}
+    <article>
+      <div class="sidebar">
+        <div class="sidebar__inner">
+          {% assign docs_by_category = site.posts | group_by: "category" %}
+          <ul>
+            {% for orderable_category in site.categories-order %}
+              {% assign current_orderable_category = docs_by_category | where: 'name', orderable_category | first %}
+              <li>
+                {{ current_orderable_category.name  }}
+                  <ul>
+                    {% assign sorted = current_orderable_category.items | compact | sort: "order"  %}
+                    {% for item in sorted %}
+                      {% if item.url == page.url %}
+                        {% assign klass = "sidebar__current" %}
+                      {% else %}
+                        {% assign klass = "" %}
+                      {% endif %}
+                      <li>
+                        <a href="{{ site.baseurl }}{{ item.url }}" class={{klass}}>{{ item.title }}</a>
+                      </li>
+                    {% endfor %}
+                </ul>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content__container">
+          <div class="content__category">Guides > {{page.category}}</div>
+          <h1>{{ page.title}}</h1>
+          <p class="content__toc-header">Table of contents</p>
+          {% toc %}
+          {{ content }}
+        </div>
+        <div class="footer-nav">
+          <div class="prev-article">
+              {% if page.previous.url %}
+              <p class="prev-article__header">Previous article</p>
+              <a class="prev" href="{{page.previous.url}}">{{page.previous.title}}</a>
+              {% endif %}
+            </div>
+            <div class="next-article">
+                {% if page.next.url %}
+              <p class="next-article__header">Next article</p>
+              <a class="next" href="{{page.next.url}}">{{page.next.title}}</a>
+              {% endif %}
+            </div>
+        </div>
+      </div>
+    </article>
+    <footer>
+      Day of Code is a <a href="https://generalproducts.co">General Products Ltd</a> initiative.
+    </footer>
+  </body>
+</html>

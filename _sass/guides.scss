@@ -1,0 +1,444 @@
+// https://jakoblaegdsmand.com/en/blog/rouge-railscasts-theme-in-css/
+
+$railscasts-color                         : #E6E1DC;
+$railscasts-bg-color                      : #232323;
+
+$railscasts-gutter-color                  : #858179;
+$railscasts-gutter-bg-color               : #45433E;
+$railscasts-gutter-divider-color          : #75715E;
+
+$railscasts-comment-color                 : #BC9458;
+$railscasts-comment-font-style            : italic;
+
+$railscasts-keyword-color                 : #CC7833;
+$railscasts-function-color                : #FFC66D;
+$railscasts-class-color                   : #FFFFFF;
+$railscasts-numeric-color                 : #A5C261;
+$railscasts-variable-color                : #D0D0FF;
+$railscasts-constant-color                : #6D9CBE;
+$railscasts-constant-other-variable-color : #DA4939;
+$railscasts-constant-builtin-color        : #6E9CBE;
+$railscasts-constant-color                : #6D9CBE;
+$railscasts-string-color                  : #A5C261;
+$railscasts-library-function-color        : #DA4939;
+$railscasts-library-type-color            : #6E9CBE;
+$railscasts-library-constant-color        : #A5C261;
+$railscasts-markup-tag-color              : #E8BF6A;
+$railscasts-string-interpolation-color    : #519F50;
+$railscasts-diff-add-color                : #E6E1DC;
+$railscasts-diff-add-bg-color             : #144212;
+$railscasts-diff-remove-color             : #E6E1DC;
+$railscasts-diff-remove-bg-color          : #660000;
+$railscasts-diff-header                   : #2F33AB;
+
+.highlight {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: auto;
+  font-size: 13px;
+  color: $railscasts-color;
+  border: none;
+  line-height: 20px;
+  margin-top: 25px;
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-bottom: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  code {
+    word-wrap: normal;
+    overflow-x: auto;
+  }
+
+  .gd {
+    color: $railscasts-diff-remove-color;
+    background-color: $railscasts-diff-remove-bg-color;
+  }
+  .gi {
+    color: $railscasts-diff-add-color;
+    background-color: $railscasts-diff-add-bg-color;
+  }
+  .c, .c1, .c2 {
+    color: $railscasts-comment-color;
+    font-style: $railscasts-comment-font-style;
+  }
+  .s1, .s2, .s, .sr {
+    color: $railscasts-string-color;
+  }
+  .nv {
+    color: $railscasts-variable-color;
+  }
+  .k, .o, .kp {
+    color: $railscasts-keyword-color;
+  }
+  .mi {
+    color: $railscasts-numeric-color;
+  }
+  .ss {
+    color: $railscasts-library-type-color;
+  }
+  .si {
+    color: $railscasts-string-interpolation-color;
+  }
+  .vi {
+    color: $railscasts-variable-color;
+  }
+  .p {
+    color: $railscasts-keyword-color;
+  }
+  .m {
+    color: $railscasts-numeric-color
+  }
+  .nb {
+    color: $railscasts-string-color;
+  }
+  .mh {
+    color: $railscasts-variable-color;
+  }
+  .nl {
+    color: $railscasts-library-type-color;
+  }
+  .nt, .nc, .na {
+    color: $railscasts-function-color;
+    font-weight: normal !important;
+  }
+}
+
+p, li {
+  font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
+  color: #4b4840;
+}
+
+h1 {
+  color: #352d2d;
+  margin-bottom: 0px;
+  margin-top: 0;
+  font-size: 60px;
+  line-height: 65px;
+  padding:  0px 0px 0px 12px;
+  font-family: "Inconsolata", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace
+}
+
+h2, h3, h4 {
+  padding:  0px 100px 0px 12px
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #5c5962;
+  padding:  0px 100px 0px 12px;
+  display: block;
+}
+
+article {
+  display: flex;
+  margin-bottom: -80px;
+  flex: 1 0 auto;
+  padding: 80px 0;
+}
+
+ul {
+  margin-left: -27px;
+}
+
+li {
+  line-height: 1;
+  color: #5c5962;
+}
+
+.content__container {
+  max-width: 700px;
+  min-height: 500px;
+
+  ul li:not(.toc-entry) {
+    padding: 10px 0 0
+  }
+
+  a {
+    background-color: inherit;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px lightgrey;
+  }
+}
+
+.content {
+  flex: 3;
+  padding-left: 30px;
+
+  ul {
+    margin-top: -10px;
+    margin-bottom: 40px;
+  }
+
+  li:not(.toc-entry) {
+    list-style: none;
+    line-height: 1.5;
+
+    &:before {
+      color: $railscasts-markup-tag-color;
+      content: "–";
+      text-indent: -1.4em;
+      display: inline-block;
+      font-weight: bold;
+    }
+  }
+
+  .footnotes {
+    border-top: 2px solid $railscasts-markup-tag-color;
+
+    ol {
+      list-style-type: decimal;
+    }
+
+    li {
+      list-style: inherit;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.content__toc-header {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.content__category {
+  padding: 24px 14px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #4b4840;
+  font-weight: bold;
+}
+
+.content__abstract {
+  font-size: 20px;
+  color: #98979b;
+  font-weight: 300;
+}
+
+.content__learn-more {
+  font-weight: bold;
+  color: #4b4840;
+  font-style: italic;
+  font-size: 18px;
+  margin-left: -20px;
+}
+
+.sidebar {
+  flex: 1;
+  background: #fbf8f6;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 0 40px 0 85px;
+  font-size: 14px;
+  line-height: 1.8;
+
+  li {
+    list-style-type: none;
+    font-weight: 800;
+    line-height: 1.6;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4b4840;
+  }
+
+  a {
+    color: #4b4840;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: inherit;
+  }
+
+  a:hover {
+    color: #837a63;
+  }
+
+  ul li ul {
+    list-style: none;
+    padding-left: 1.5em;
+    margin-left: 0;
+
+    li {
+      margin-top: 0px;
+
+      &:before {
+        color: $railscasts-markup-tag-color;
+        content: "–";
+        text-indent: -1.4em;
+        display: inline-block;
+        font-weight: bold;
+      }
+
+      a {
+        color: #4b4840;
+        font-weight: 500;
+        text-decoration: none;
+        background-color: inherit;
+      }
+    }
+  }
+}
+
+.sidebar__inner {
+  position: fixed;
+  height: calc(100vh - 150px);
+  overflow-y: auto;
+}
+
+.sidebar__current {
+  color: $railscasts-keyword-color !important
+}
+
+.sidebar__title {
+  padding: 14px 14px 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #4b4840;
+  font-weight: bold;
+}
+
+code {
+  color: white;
+  background-color: #353238;
+  border-radius: 3px;
+  font-family: "Source Code Pro", monospace;
+}
+
+.highlighter-rouge {
+  padding: 0 5px;
+}
+
+.highlight pre {
+  background: #353238 !important;
+  padding: 22px 0 22px 10px;
+}
+
+blockquote {
+  background-color: #e8bf6a4d;
+  border-left-color: $railscasts-markup-tag-color;
+  border-left-width: 9px;
+  border-left-style: solid;
+  padding: 20px 45px 20px 26px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-left: -16px;
+  margin-right: -16px;
+  border-radius: 5px;
+}
+
+:target:not(li, h2) {
+  padding-top: 90px;
+}
+
+.footer-nav {
+  background-color: #fbf8f6;
+  margin-left: -30px;
+  display: flex;
+
+  a {
+    background-color: inherit;
+    font-size: 24px;
+    text-decoration: none;
+  }
+}
+
+.prev-article {
+  text-align: left;
+  padding: 25px;
+  flex: 1;
+}
+
+.next-article {
+  padding: 25px 150px;
+  text-align: right;
+}
+
+.next-article__header, .prev-article__header {
+  font-size: 13px;
+  padding: 0
+}
+
+.tag {
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+  font-size:12px;
+}
+
+.tag--draft {
+  background-color: #827b83;
+  box-shadow: 1px 1px 1px #3e3f47;
+  text-shadow: 1px 1px 1px #3e3f47;
+}
+
+.tag--progress {
+  background-color: #f39821;
+  box-shadow: 1px 1px 1px #ba9145;
+  text-shadow: 1px 1px 1px #ba9145;
+}
+
+.tag--review {
+  background-color: #2196f3;
+  box-shadow: 1px 1px 1px #6c6fba;
+  text-shadow: 1px 1px 1px #6c6fba;
+}
+
+.tag--approved {
+  background-color: #0ecb57;
+  box-shadow: 1px 1px 1px #4caf50;
+  text-shadow: 1px 1px 1px #4caf50;
+}
+
+.display-box {
+  background: #ece8e5;
+  border-radius: 5px;
+  margin-top: 25px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 25px;
+  padding: 10px 30px;
+}
+
+.display {
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+// TOC class names generated from Jekyll-nav
+.section-nav {
+  list-style-type: none;
+  counter-reset: step-counter;
+  padding-inline-start: 0;
+  margin-left: -15px;
+
+  a {
+    text-decoration: underline;
+    background-color: inherit;
+    line-height: 1.6;
+  }
+}
+
+li.toc-entry {
+  &:before {
+    color: #959396;
+    content: counter(step-counter, decimal-leading-zero);
+    counter-increment: step-counter;
+    font-size: 12px !important;
+    font-family: monospace;
+    padding-right: 13px;
+  }
+}
