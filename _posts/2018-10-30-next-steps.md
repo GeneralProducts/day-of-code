@@ -1,7 +1,7 @@
 ---
 layout: guides
-title:  After the Day of Code
-permalink: after-the-day-of-code
+title:  Next steps
+permalink: next-steps
 toc: true
 category: Reference
 order: 1
@@ -12,7 +12,7 @@ order: 1
 <!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
-  This article suggests some next steps after the Day of Code.
+  This article suggests some next steps for the end of the day or for your ongoing journey after the Day of Code.
 </p>
 
 Well, you've done it! You've built a website. Has the bug bitten you? It’s normal at this stage to feel overwhelmed, tired, brain dead and a bit weepy. You’ve had a tantalising, whistle-stop tour of a brand new set of concepts, and you might have a feeling of both elation -- you did it! -- and also an awareness that there is a lot to learn in programming.
