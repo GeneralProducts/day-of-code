@@ -37,11 +37,11 @@ the make-ready?" We expect you to leave today being able to make the same sort o
 
 ## Inspiration
 
-Over the summer of 2019, the Consonance team ran an online club called #SideProjectSummer. Every Friday afternoon, we put aside time to work on side projects, and over the summer we quietly encouraged others to join in. The results were so heartening, and I'd encourage you to visit Twitter and review some of the things publishers have carved out time to do. Some of the people behind these projects are coaches, today, and they include:
+Over the summer of 2019, the Consonance team ran an online club called #SideProjectSummer. Every Friday afternoon, we put aside time to work on side projects, and over the summer we quietly encouraged others to join in. The results were so heartening, and I'd encourage you to <a href="https://twitter.com/hashtag/SideProjectSummer?src=hashtag_click&f=live">visit Twitter and review</a> some of the things publishers have carved out time to do. Some of the people behind these projects are coaches, today, and they include:
 
 * an editorial assistant who controlled Excel with VBA
 * an editorial assistant who consumed an API to create a website https://jamie-reece.github.io/side-project-summer/
-* a metadata manager who wrote a React app to ingest and disseminate data to recipients TODO check with Anna
+* a metadata manager who wrote a React app
 * a number of people got familiar with HTML and untangled their in-house ONIX XML
 * an editor wrote Rails apps
 * a marketing assistant who used XSLT to parse his ONIX to produce marketing sheets in InDesign.
@@ -63,7 +63,7 @@ Please make sure you read and adhere to the [Code of Conduct](/coc). We will tak
 
 ## Timings
 
-The timings for the day are [here](/delegates). TODO: update as appropriate
+The timings for the day are [here](/delegates).
 
 ## Questions
 

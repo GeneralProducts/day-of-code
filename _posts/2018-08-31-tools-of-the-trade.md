@@ -14,9 +14,8 @@ order: 2
 
 <p class="content__abstract">
   There are lots of different programming languages and software tools, and
-more are being created all the time. This article introduces the ones we will use. No actions required: please read it before the Day of Code.
+more are being created all the time. This article introduces the ones we will use. Please read it before the Day of Code, although there is nothing you need to do on your computer.
 </p>
-
 In this course you’ll be using four programming languages:
 
 * **HTML** to structure information
@@ -59,7 +58,7 @@ pages. HTML stands for Hyper Text Markup Language. It looks like this:
 
 
 ## CSS
-CSS is a style sheet language used for describing the
+CSS is a style sheet language[^4] used for describing the
 presentation of a document written in a markup language,
 such as HTML. CSS stands for Cascading Style Sheets, because later instructions in CSS overwrite earlier ones, in a cascade. It looks like this:
 
@@ -69,6 +68,8 @@ such as HTML. CSS stands for Cascading Style Sheets, because later instructions 
     color: black;
   }
 {% endhighlight %}
+
+[^4]: For an example of CSS in action, you can look at the <a href="https://github.com/GeneralProducts/day-of-code">repo for the website you're reading now</a>. It uses <a href="https://sass-lang.com/">SASS</a>, which bills itself as "CSS with superpowers". If you are interested in styling CSS in a way which avoids code reuse and allows you to structure your styles nicely, we'd recommend checking it out for your later projects.
 
 > <span class="content__learn-more">Learn more later<span>
 * [Learn Enough CSS & Layout to be Dangerous](https://www.learnenough.com/css)
@@ -115,7 +116,7 @@ You can run that Ruby on the command line. `irb` stands for 'Interactive Ruby'
 [^3]: Web applications are websites that users can interact with.
 
 ## Liquid
-Liquid is an open-source template language created by the eCommerce platform company Shopify and written in Ruby.
+Liquid is an open-source template language[^5] created by the eCommerce platform company Shopify and written in Ruby.
 It is used to load dynamic content onto websites. It looks like this:
 
 {% highlight html %}
@@ -131,6 +132,8 @@ If `title` is a variable that stands for the words "Home page", this turns into 
     Home page
   </h1>
 {% endhighlight %}
+
+[^5]: Learning Liquid today will mean it's familiar if you need to edit Shopify or Jekyll websites later. If you go on to write Rails apps, you'll level-up to use <a href="https://ruby-doc.org/stdlib-1.9.3/libdoc/erb/rdoc/ERB.html">ERB</a>, ("<b>E</b>mbedded <b>R</b>u<b>B</b>y") and which is a more powerful templating language. Both Liquid and ERB do the same sort of thing: allow you to run code within your HTML files.
 
 ## Command line
 

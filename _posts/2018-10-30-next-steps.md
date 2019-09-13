@@ -19,6 +19,15 @@ Well, you've done it! You've built a website. Has the bug bitten you? It’s nor
 
 Once you've got over today, it would be great to use today as a jumping-off point for your next coding adventure.
 
+## Save your code on GitHub
+
+Before the Day of Code, you created an account on GitHub. <a href="https://guides.github.com/activities/hello-world/">Follow the instructions here</a> to upload your code to your free account.
+
+## Publish your website to the internet
+
+<a href="https://www.netlify.com/blog/2017/05/11/migrating-your-jekyll-site-to-netlify/">Follow the instructions here</a> to publish your website to a free hosting provider called Netlify.
+
+
 ## Use the Learn More boxes for ideas
 
 Throughout today you will have seen callout boxes headed "Learn more later". It's a great idea to go back through these docs, at your leisure, and explore those ideas further.

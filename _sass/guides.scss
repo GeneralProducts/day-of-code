@@ -1,35 +1,20 @@
 // https://jakoblaegdsmand.com/en/blog/rouge-railscasts-theme-in-css/
 
 $railscasts-color                         : #E6E1DC;
-$railscasts-bg-color                      : #232323;
-
-$railscasts-gutter-color                  : #858179;
-$railscasts-gutter-bg-color               : #45433E;
-$railscasts-gutter-divider-color          : #75715E;
-
 $railscasts-comment-color                 : #BC9458;
 $railscasts-comment-font-style            : italic;
-
 $railscasts-keyword-color                 : #CC7833;
 $railscasts-function-color                : #FFC66D;
-$railscasts-class-color                   : #FFFFFF;
 $railscasts-numeric-color                 : #A5C261;
 $railscasts-variable-color                : #D0D0FF;
-$railscasts-constant-color                : #6D9CBE;
-$railscasts-constant-other-variable-color : #DA4939;
-$railscasts-constant-builtin-color        : #6E9CBE;
-$railscasts-constant-color                : #6D9CBE;
 $railscasts-string-color                  : #A5C261;
-$railscasts-library-function-color        : #DA4939;
 $railscasts-library-type-color            : #6E9CBE;
-$railscasts-library-constant-color        : #A5C261;
 $railscasts-markup-tag-color              : #E8BF6A;
 $railscasts-string-interpolation-color    : #519F50;
 $railscasts-diff-add-color                : #E6E1DC;
 $railscasts-diff-add-bg-color             : #144212;
 $railscasts-diff-remove-color             : #E6E1DC;
 $railscasts-diff-remove-bg-color          : #660000;
-$railscasts-diff-header                   : #2F33AB;
 
 .highlight {
   position: relative;

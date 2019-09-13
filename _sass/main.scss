@@ -31,15 +31,6 @@ body {
   height: 100%;
 }
 
-.wrapper {
-  flex: 1 0 auto;
-  padding: 120px 0;
-
-  @media (min-width: $large-screen) {
-    padding: 80px 0;
-  }
-}
-
 p {
   font-family: $default-font;
   font-size: 22px;
@@ -66,15 +57,6 @@ h1, h2 {
 pre {
   white-space: pre-wrap;
   padding: 10px;
-}
-
-.language-html {
-  color: $white;
-  font-size: 65%;
-
-  @media (min-width: $large-screen) {
-    font-size: 80%;
-  }
 }
 
 a {
@@ -197,7 +179,7 @@ hr {
 }
 
 .hero__title--word {
-  display: table; //https://css-tricks.com/injecting-line-break/
+  display: table; // https://css-tricks.com/injecting-line-break/
   margin: 0 0 10px;
   background-color: $nearly-black;
   padding: 0 10px;
@@ -223,7 +205,6 @@ hr {
 }
 
 .hero__text--subtitle a {
-
   &:hover,
   &:focus {
     color: $railscasts-purple;
@@ -242,6 +223,16 @@ hr {
 }
 
 // Structure
+
+.container {
+  flex: 1 0 auto;
+  padding: 120px 0;
+
+  @media (min-width: $large-screen) {
+    padding: 80px 0;
+  }
+}
+
 .section {
   flex-direction: column;
 
@@ -443,9 +434,11 @@ textarea {
 button {
   cursor: pointer;
   font-weight: 500;
+  margin-top: 10px;
+  align-self: flex-end;
 }
 
-.contact {
+.heading {
   &-card {
     margin: 0 auto;
     border: 1px solid $black;
@@ -454,28 +447,23 @@ button {
     box-shadow: -0.6rem 0.6rem 0 $railscasts-yellow;
   }
 
-  &-header {
+  &-card-header {
     text-align: center;
     padding: 8px;
     font-size: 14px;
     font-weight: 700;
     border-bottom: 1px solid $black;
   }
+}
 
-  &-body {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+.contact-body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
 
-    &__message {
-      margin-top: 10px;
-    }
-
-    button {
-      margin-top: 10px;
-      align-self: flex-end;
-    }
-  }
+.contact__message {
+  margin-top: 10px;
 }
 
 .list-item {
@@ -489,6 +477,12 @@ button {
 
 .language-html {
   font-size: 100%;
+  color: $white;
+  font-size: 65%;
+
+  @media (min-width: $large-screen) {
+    font-size: 80%;
+  }
 }
 
 .highlight pre { background-color: #1e1e1e; border-radius: 5px; }
