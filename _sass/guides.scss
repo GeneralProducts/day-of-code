@@ -127,7 +127,7 @@ h2, h3, h4 {
 }
 
 p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.5;
   color: #5c5962;
   display: block;
@@ -149,13 +149,17 @@ article {
 }
 
 ul {
-  margin-left: -27px;
+  margin-right: 10px;
+
+  @media (min-width: 1200px) {
+    margin-left: -27px;
+  }
 }
 
 li {
   line-height: 1;
   color: #5c5962;
-  font-size: 12px;
+  font-size: 15px;
 
   @media (min-width: 600px) {
     font-size: 16px;
@@ -241,7 +245,7 @@ li {
 }
 
 .content__abstract {
-  font-size: 14px;
+  font-size: 18px;
   color: #98979b;
   font-weight: 300;
 

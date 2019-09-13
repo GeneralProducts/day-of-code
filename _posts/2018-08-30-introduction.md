@@ -22,7 +22,7 @@ Today is a chance for you to roll up your sleeves and write real, working, book-
 
 You won't become a programmer in a day, although all journeys start with a single step, and today might be the first of many days where you cajole a computer into doing what you want, using code.
 
-Today, you'll discover that modern programming has more parallels with storytelling than maths; that a certain facility with language and a natural attention to detail – skills found in any publishing professional – is arguably more important than a technical mind. You will realise that your existing knowledge of the ins and outs of your particular bit of publishing (your "domain knowledge") are both more difficult and harder to acquire than programming skills, and a critical component of writing software. In other words, you'll learn that you have a distinct advantage in writing publishing software over dedicated software developers.
+Today, you'll discover that modern programming has more parallels with storytelling than maths; that a certain facility with language and a natural attention to detail – skills found in any publishing professional – are arguably more important than a technical mind. You will realise that your existing knowledge of the ins and outs of your particular bit of publishing (your "domain knowledge") are both more difficult and harder to acquire than programming skills, and a critical component of writing software. In other words, you'll learn that you have a distinct advantage in writing publishing software over dedicated software developers.
 
 Coding in publishing is a controversial topic. Some people think that publishers should leave technology to vendors. But no-one raises an eyebrow when production people go round a
 print factory, and no-one expects those production managers to be running
@@ -42,8 +42,8 @@ Over the summer of 2019, the Consonance team ran an online club called #SideProj
 * an editorial assistant who controlled Excel with VBA
 * an editorial assistant who consumed an API to create a website https://jamie-reece.github.io/side-project-summer/
 * a metadata manager who wrote a React app
-* a number of people got familiar with HTML and untangled their in-house ONIX XML
-* an editor wrote Rails apps
+* a number of people who got familiar with HTML, and some who untangled their in-house ONIX XML
+* an editor who wrote Rails apps
 * a marketing assistant who used XSLT to parse his ONIX to produce marketing sheets in InDesign.
 
 The people who participated in #SideProjectSummer were publishers using code to solve their immediate publishing problems. That pragmaticism, rather than "learning to code" in the abstract, is crucial, and what we hope to encourage today.
