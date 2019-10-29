@@ -13,10 +13,12 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i&display=swap" rel="stylesheet">
   </head>
   <body>
+    {% include comments.html %}
     {% include nav.html %}
     <article>
       <div class="sidebar">
-        <div class="sidebar__inner">
+        <li class="menu-link" id="menu-link">Hide menu ▲</li>
+        <div class="sidebar__inner" id="menu">
           {% assign docs_by_category = site.posts | group_by: "category" %}
           <ul>
             {% for orderable_category in site.categories-order %}
@@ -32,7 +34,7 @@
                         {% assign klass = "" %}
                       {% endif %}
                       <li>
-                        <a href="{{ site.baseurl }}{{ item.url }}" class={{klass}}>{{ item.title }}</a>
+                        <a href="{{ item.url }}" class={{klass}}>{{ item.title }}</a>
                       </li>
                     {% endfor %}
                 </ul>
@@ -72,4 +74,5 @@
 
     </footer>
   </body>
+  <script src="/assets/javascript/app.js"></script>
 </html>

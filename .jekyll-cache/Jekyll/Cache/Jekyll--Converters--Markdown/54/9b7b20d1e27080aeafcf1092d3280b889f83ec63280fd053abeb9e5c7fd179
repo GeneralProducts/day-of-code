@@ -1,0 +1,110 @@
+I"�<!-- <span class="tag tag--draft">Not started</span> -->
+<!-- <span class="tag tag--progress">In progress</span> -->
+<p><span class="tag tag--review">Ready for review</span>
+<!-- <span class="tag tag--approved">Approved</span> --></p>
+
+<p class="content__abstract">
+  Building on our knowledge of templating, this article adds more shared code to our template.
+</p>
+
+<p>Let’s add some navigation links that will appear on every page. Now we have a template, we only have to change shared code in one place.</p>
+
+<h2 id="add-a-reference-to-navigation-links-to-our-template">Add a reference to navigation links to our template</h2>
+
+<p>Open <strong>_layouts/default.html</strong>. Add the following line in at the top of the body.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  {% include navigation.html %}</code></pre></figure>
+
+<p>This makes the full file look like this:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="cp">&lt;!doctype html&gt;</span>
+  <span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+      <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/css/main.css"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css?family=Amiri&amp;display=swap"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css?family=Montserrat:600&amp;display=swap"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+      {% include navigation.html %}
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+        {{ content }}
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+  <span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>Refresh the index page in your browser, because the index page uses the default template. Hang on: why hasn’t anything changed?</p>
+
+<h2 id="debug-the-missing-reference">Debug the missing reference</h2>
+
+<p>To debug this problem, let’s look at the server log. Look at your Terminal, where your server log has been running all this time. There is a big red error message:</p>
+
+<p><img src="assets/images/errors.png" alt="" /></p>
+
+<p>If you pick through those words, they are actually very descriptive and tell us that we’ve failed to include a file:</p>
+
+<figure class="highlight"><pre><code class="language-term" data-lang="term">  Liquid Exception: Could not locate the included file 'navigation.html'</code></pre></figure>
+
+<p>So we’ll add that file now.</p>
+
+<h2 id="add-the-missing-file">Add the missing file</h2>
+
+<p>Add a folder called “_includes”, and a file called “navigation.html” within that.</p>
+
+<p><img src="assets/images/includes.gif" alt="" /></p>
+
+<p>Paste the following code in to it and save the file.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav-item-container "</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/portfolio/"</span><span class="nt">&gt;</span>Books<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/about/"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<p>Refresh the browser: you’ll see your new nav links. And now you can more easily get to your portfolio page: click the “books” link.</p>
+
+<p><img src="assets/images/nav.png" alt="" /></p>
+
+<h2 id="what-youve-learned">What you’ve learned</h2>
+
+<ul>
+  <li>Once you have templates set up, there are fewer places where you have to maintain code.</li>
+</ul>
+
+<h2 id="stretch-goals">Stretch goals</h2>
+
+<ul>
+  <li>Make the “About” link work, in the same way you added the portfolio page.</li>
+  <li>Add in a footer section, using the following code:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="c">&lt;!-- _layouts/default.html --&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    {% include navigation.html %}
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+      {{ content }}
+    <span class="nt">&lt;/div&gt;</span>
+    {% include footer.html %}
+  <span class="nt">&lt;/body&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="c">&lt;!-- _includes/footer.html --&gt;</span>
+  <span class="nt">&lt;footer&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.consonance.app"</span><span class="nt">&gt;</span>Powered by Consonance<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/generalproducts/jekyll-doc"</span><span class="nt">&gt;</span>Github<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.freepik.com/free-photos-vectors/background"</span><span class="nt">&gt;</span>
+            Background vector created by freepik, macrovector_official - www.freepik.com
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span></code></pre></figure>
+
+:ET

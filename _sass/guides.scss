@@ -271,9 +271,18 @@ li {
   line-height: 1.8;
   padding: 120px 0 0 0;
 
+  .menu-link {
+    display: block;
+    margin: 0 40px;
+  }
+
   @media (min-width: 1200px) {
     align-items: flex-end;
     padding: 0 40px 0 85px;
+
+    .menu-link {
+      display: none;
+    }
   }
 
   li {
