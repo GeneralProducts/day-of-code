@@ -1,0 +1,76 @@
+I"�<!-- <span class="tag tag--draft">Not started</span> -->
+<!-- <span class="tag tag--progress">In progress</span> -->
+<!-- <span class="tag tag--review">Ready for review</span> -->
+<!-- <span class="tag tag--approved">Approved</span> -->
+
+<p class="content__abstract">
+  This article tells you how to create another web page.
+</p>
+
+<p>Your index page contains links to another page, but those links are currently broken. Clicking on them in your browser takes you to an error message:</p>
+
+<p><img src="assets/images/broken-link.png" alt="Screenshot showing a broken link" /></p>
+
+<p>You will fix this by adding another HTML file to your website repo.</p>
+
+<h2 id="add-a-new-html-file">Add a new HTML file</h2>
+
+<p>In your repo, click to add a new file and call it <em>portfolio.html</em>. Make sure it’s at the same level in your folder as <em>index.html</em> – not accidentally nested in another folder.</p>
+
+<p><img src="assets/images/new-file.gif" alt="A gif showing the programmer adding a new file called portfolio.html to the repo" /></p>
+
+<p>Type some words in, such as “here’s my portfolio page”, and save the file.</p>
+
+<p><img src="assets/images/new-file.png" alt="Adding some placeholder text to the new portfolio.html page" /></p>
+
+<p>Go back to your browser and try the link again. This time, your new page gets served:</p>
+
+<p><img src="assets/images/new-file-words.png" alt="The placeholder text successfully rendered in the browser" /></p>
+
+<blockquote>
+  <p><span class="content__learn-more">Troubleshooting</span></p>
+  <ul>
+    <li>If the browser doesn’t show your new page, make sure <em>portfolio.html</em> is saved at the same level in your repo as <em>index.html</em> – not accidentally nested in another folder, higher or lower.</li>
+  </ul>
+</blockquote>
+
+<h2 id="add-some-content">Add some content</h2>
+
+<p>Let’s replace your placeholder text with some real HTML. Copy and paste the following in to the <em>portfolio.html</em> file, replacing the placeholder text you typed earlier:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="cp">&lt;!doctype html&gt;</span>
+  <span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+      <span class="nt">&lt;header&gt;</span>
+        <span class="nt">&lt;h1&gt;</span>Portfolio<span class="nt">&lt;/h1&gt;</span>
+      <span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;main&gt;</span>
+        Book list goes here
+      <span class="nt">&lt;/main&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+  <span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>Now you have another page with some content.</p>
+
+<p><img src="assets/images/portfolio.png" alt="The portfolio page in the text editor" /></p>
+
+<p><img src="assets/images/portfolio-browser.png" alt="The portfolio page in the browser" /></p>
+
+<p>But you have three big problems:</p>
+
+<ul>
+  <li>These pages are still unstyled. You will have to add some CSS to make them look better.</li>
+  <li>There is duplication of code between the index and the portfolio pages. Duplication makes code more difficult to maintain so you’d be better off creating some code that can be shared by both pages.</li>
+  <li>There are no books listed yet on your portfolio page.</li>
+</ul>
+
+<p>You’ll solve each of these problems today, and you’ll tackle the first one next by adding some style information using CSS.</p>
+
+<h2 id="what-youve-learned">What you’ve learned</h2>
+
+<ul>
+  <li>HTML pages can link to each other using the <code class="highlighter-rouge">&lt;a&gt;</code> HTML tag.</li>
+  <li>Websites are a collection of HTML pages.</li>
+</ul>
+:ET

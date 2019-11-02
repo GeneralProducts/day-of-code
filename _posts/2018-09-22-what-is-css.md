@@ -22,7 +22,7 @@ Your website has some content, but it's using the default styling that comes wit
 
 Let's view what the styles looks like currently. In the browser, right-mouse and click on **Inspect**. Expand the nested HTML on the left, so you can see the `<h1>` tag.
 
-![](assets/images/inspect.png)
+![A screenshot showing the browser's inspector, showing h1 css](assets/images/inspect.png)
 
 The styles panel on the right shows me that the default styles for the `<h1>` HTML tag are that the font size is 2em (as in [em-dash](https://en.wikipedia.org/wiki/Em_(typography))) and the font weight is bold.
 
@@ -33,7 +33,7 @@ The styles panel on the right shows me that the default styles for the `<h1>` HT
 
 Open the file called _main.css_ in the _assets/css/_ folder:
 
-![](assets/images/main-css.png)
+![Screenshot showing the empty file where the reader will put their css code](assets/images/main-css.png)
 
 Add the following CSS to this file and save:
 
@@ -67,8 +67,7 @@ First, look in your Inspector, in the HTML Elements panel. Is the HTML tag indee
 
 Now look at the `<h1>` style definition in the Inspector.
 
-![](assets/images/inspect.png)
-
+![Using the inspector to show that the css styles aren't being applied. The screenshot shows that the new styles do not appear in the browser's inspector](assets/images/inspect.png)
 
 Does the `color: red` instruction appear? No: the code you wrote isn't getting referenced. That's the clue you need to figure out what's going wrong. The solution is to add a reference to the CSS file so that the browser knows to run it when it interprets the HTML file.
 
@@ -104,13 +103,13 @@ Your file now looks like this:
 
 Refresh your browser and now you'll see the changes applied:
 
-![](assets/images/css-red.png)
+![The css now works as the screenshot shows the h1 rendered in red](assets/images/css-red.png)
 
 ## Use the inspector to make temporary edits
 
-You can temporarily make changes in the Inspector to see how they'd look on the page. Have a go: make the `<h1>` text go blue. Right mouse on the colour chip to bring up the colour editor:
+You can temporarily make changes in the Inspector to see how they'd look on the page. Have a go: make the `<h1>` text display in a different font, or change the colour to blue. To edit colour, right-mouse on the colour chip to bring up the colour editor:
 
-![](assets/images/css-blue.gif)
+![A gif showing the user changing the color of the text in the inspector](assets/images/css-blue.gif)
 
 ## What you’ve learned
 

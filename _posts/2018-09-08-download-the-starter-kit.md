@@ -178,27 +178,27 @@ Your terminal window looks a bit like this:
 
 See the bit in the terminal log that says `Server address: http://127.0.0.1:4000/`? That's telling you the address of the website that's now running on your computer. In a browser window, such as Chrome, type "http://127.0.0.1:4000/" in as the website address. This gives you access to this website that's now running on your own computer, as opposed to on the internet. You can alternatively type in "localhost:4000" which is a synonym, and easier to type. Your browser window looks a bit like this:
 
-![](assets/images/its-worked.png)
+![It's worked!](assets/images/its-worked.png)
 
 ## View the code in your editor
 
 Open your text editor application (e.g. Atom), click **File > Open** and navigate to the _repos_ folder. Open the folder itself in your text editor. Notice that the contents of the folder are listed on the left-hand side in the same way as you see lists of files in Finder or File Explorer. It will look something like this:
 
-![](/assets/images/editor.png)
+![A text editor view](/assets/images/editor.png)
 
 Compare that to the listing in Finder. It's the same thing: a list of files and folders.
 
-![](/assets/images/finder.png)
+![The same files, displayed in Mac's Finder](/assets/images/finder.png)
 
 
 Double click on _index.html_ to open it in your text editor. It looks a bit like this:
 
-![](/assets/images/index.png)
+![How the index.html page looks](/assets/images/index.png)
 
 Notice that the words "it's worked" appear in the file. This is the HTML file that you viewed in your browser.
 The brower has interpreted and displayed your HTML file. To prove it, return to your browser, right-mouse-click over the words "It's worked", and choose **Inspect**. You see the HTML of the page:
 
-![](/assets/images/inspector.png)
+![The web browser inspector, showing HTML](/assets/images/inspector.png)
 
 ## What you’ve learned
 

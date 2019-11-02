@@ -12,12 +12,12 @@ order: 4
 <!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
-  Instructions for Mac set up. If you are on Windows, ignore this article and proeed to the next one.
+  Instructions for Mac set up. If you are on Windows, ignore this article and proceed to the next one.
 </p>
 
-Check the version of your operating system by click the Apple menu and choosing About this Mac.
+Check the version of your operating system by click the Apple menu and choosing "About this Mac".
 
-![](assets/images/apple.png)
+![Apple's menu](assets/images/apple.png)
 
 If your version is 10.6 or higher, this guide is for you. If it’s lower, email us urgently, well before the Day of Code.
 

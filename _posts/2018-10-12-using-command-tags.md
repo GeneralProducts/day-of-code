@@ -127,7 +127,7 @@ This code turns into the following HTML for the book called "The Goddess Project
 
 Let's look at how the browser is looking.
 
-![](assets/images/list.png)
+![The portfolio page looking nice with our book data being used to dynamically create one cover per book](assets/images/list.png)
 
 ## What you’ve learned
 

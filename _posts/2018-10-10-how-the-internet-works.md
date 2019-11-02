@@ -19,11 +19,9 @@ It’s worth going over what happens when you visit a website, since you’re cr
 
 You start the conversation when you tell your web browser the URL you want to visit. Let’s imagine you want to visit Consonance’s Twitter page. You’d type ‘www.twitter.com/consonance_app’ into the address bar of your browser (or maybe you’d look it up on Google and click on a link).
 
-![](assets/images/domain.jpg)
+![Image of the URL www.twitter.com/consonance_app with the parts labelled as domain name and page](assets/images/domain.jpg)
 
 The URL gets broken into two halves. The first part – what you might think of as the ’domain name’ – specifies which webserver you want to talk to. In this case you’re connecting to the servers at twitter.com. The second part of the URL says which page from that website you want to look at. In this case that’s the ‘/consonance_app’ part of the address. If you leave that part out, you’ll typically get taken to the home page of the website
-
-<!-- ![](assets/images/round_trip.jpg) -->
 
 So what does a webserver do when it receives a request for a page? 99 times out of 100 it replies to that request by sending back an HTML file. The HTML might specify a heading which says ‘Consonance’. Then the relevant piece of CSS will specify that it should appear in 15 point Lucida Sans in grey.
 

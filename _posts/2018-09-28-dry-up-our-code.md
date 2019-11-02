@@ -19,7 +19,7 @@ The Portfolio page is looking a bit nicer. Presumably the index page is also loo
 
 Go to your browser, and delete _/portfolio/_ from the address bar, so the URL goes back to being localhost:4000. The index.html page gets served by default, though you can also type localhost:4000/index or localhost:4000/index.html.
 
-![](assets/images/fixed-img.png)
+![The index page not showing any useful styling changes](assets/images/fixed-img.png)
 
 Oh. It looks the same. Why aren't the styles applied to this page?
 
@@ -30,11 +30,11 @@ It's because you haven't added the stylesheet link in to the _index.html_ page. 
 
 To add the stylesheet link, copy the styles and font links (all the contents of the `<head>` `</head>` tags) from _portfolio.html_ and paste into the same place in _index.html_.
 
-![](assets/images/copy-paste.gif)
+![A gif showing the user putting the links in the right place](assets/images/copy-paste.gif)
 
 Refresh your browser page. What a difference some CSS makes!
 
-![](assets/images/styled-homepage.png)
+![Now the browser is showing a nicely styled page](assets/images/styled-homepage.png)
 
 ## CSS classes
 
@@ -58,7 +58,7 @@ The tag `<header>` is defined in the CSS like this:
 {% endhighlight %}
 
 That's why the portfolio page looks like this: the colour _#03a9f4_ is blue.
-![](assets/images/blue.png)
+![Screeshot of the portfolio page showing the header is blue](assets/images/blue.png)
 
 The `<header>` tag in _index.html_, however, has a class, `primary-header`:
 
@@ -80,7 +80,7 @@ That class is defined in the CSS like this:
 
 Which is what you see in the browser, too:
 
-![](assets/images/bright.png)
+![Screenshot of the index page with a nice bright banner image](assets/images/bright.png)
 
 Notice too that `primary-header` has a higher priority than `header`, so the bright-flowers instruction overrides the blue instruction.
 
@@ -101,11 +101,11 @@ Open the folder called __layouts_ and within that create a file called _default.
 
 Copy all the lines in _index.html_ and paste them into _default.html_.
 
-![](assets/images/copytodefault.gif)
+![Gif showing the user setting up the default layout](assets/images/copytodefault.gif)
 
 In _default.html_, delete the index-specific code between the `<body>` and `</body>`  tags:
 
-![](assets/images/body.gif)
+![Gif showing the user setting up the default layout](assets/images/body.gif)
 
 Save the file. Next, type the following in between the `<body>` and `</body>` tags:
 
@@ -121,11 +121,11 @@ Your template is complete, and now you're going to use that in your index and po
 
 Go to the _index.html_ page in your text editor, and delete all the code except for the bit between the `<body>` and `</body>` tags, so it looks like this:
 
-![](assets/images/half-way-index.png)
+![Showing the user setting up the index page](assets/images/half-way-index.png)
 
 Save your file and refresh your browser. Oh dear: you've lost your styles, which you can see if you open the Inspector.
 
-![](assets/images/index-rev.png)
+![Shows the styles have dropped](assets/images/index-rev.png)
 
 Let's get them back again.
 
@@ -139,7 +139,7 @@ layout: default
 
 Save your file and refresh your browser. Great: the styles are back again:
 
-![](assets/images/bright.png)
+![Shows the styles are back](assets/images/bright.png)
 
 And do you see in your brower's inspector that the browser has reconstituted the whole HTML file, using the template's `<head>` code and the index page's content?
 
@@ -167,7 +167,7 @@ layout: default
 
 Here's the whole process:
 
-![](assets/images/port-edit.gif)
+![Gif showing all the editing needed to set up the portfolio page with a layout, as previously described](assets/images/port-edit.gif)
 
 
 Save your file and refresh your browser. Great: the styles are back again.
@@ -178,7 +178,7 @@ Save your file and refresh your browser. Great: the styles are back again.
 
 ## Stretch goals
 
-* If you have time now, or later after the Day of Code, choose your own background for the home page banner and amend the CSS to use it. The [Unsplash website](https://unsplash.com/photos/7G7RagQTqi4) is a useful resource. Find an image you like and get its link, making sure it's the image file not the website page URL by right-mouse-selecting "Copy Image address", not "Copy link address", and reference it in your CSS:
+* If you have time now, or later after the Day of Code, choose your own background for the home page banner and amend the CSS to use it. There are some in the _images_ folder, and the [Unsplash website](https://unsplash.com/photos/7G7RagQTqi4) is a useful resource. Find an image you like and get its link, making sure it's the image file not the website page URL by right-mouse-selecting "Copy Image address", not "Copy link address", and reference it in your CSS:
 
 {% highlight css %}
   .primary-header {
@@ -189,7 +189,7 @@ Save your file and refresh your browser. Great: the styles are back again.
 
 Refresh the page to see the effect:
 
-![](assets/images/unsplash-rendered.png)
+![Browser with a new header image](assets/images/unsplash-rendered.png)
 
 You might want to add `background-position: 50%` into your CSS definition to position the image better.
 

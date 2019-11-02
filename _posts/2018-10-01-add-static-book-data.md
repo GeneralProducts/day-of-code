@@ -17,7 +17,7 @@ order: 1
 
 So far, the data you have added to your website has been limited to page titles, and one-off "about us"-style text. Now, you need to start adding book data to your website, in two sorts of patterns: a list of books, and then one page per book. These are patterns you see all over the internet: think of Amazon, who have listing pages of a category of books, then one page per book. These pages are automatically generated from databases that in turn are populated by data sources such as your ONIX feeds. Pages like these are what you're going to build now.
 
-![](assets/images/maps.png)
+![Screenshots of Amazon pages](assets/images/maps.png)
 
 ## Add one book to the portfolio
 
@@ -66,7 +66,7 @@ layout: default
 
 Refresh the browser to see what the page looks like.
 
-![](assets/images/static-book.png)
+![Browser showing one book](assets/images/static-book.png)
 
 Very good, but one book does not a portfolio make. How do you add more?
 
@@ -167,7 +167,7 @@ layout: default
 </main>
 {% endhighlight %}
 
-![](assets/images/books.png)
+![Browser showing lots of books but they're all the same book](assets/images/books.png)
 
 Well, you have a portfolio page, but you can see this is now very manual to maintain. I don't know about you, but I don't want to sit and type in all that data for every book. Ideally, you want to be able to have just one block of `<li>...</li>` code, and programmatically insert the data in to it, getting the code to repeat itself once for each book. That's what you'll do next.
 

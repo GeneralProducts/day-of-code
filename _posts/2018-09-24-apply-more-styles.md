@@ -18,7 +18,7 @@ order: 2
 
 ## Add more CSS
 
-Paste the following in to the _main.css_ file, replacing your `h1` definition and all the current contents of the file. If you have trouble copying it, there's a raw text version of the whole file [here](https://raw.githubusercontent.com/GeneralProducts/publisher-website/finished-example/assets/css/main.css).
+Paste the following in to the _main.css_ file, replacing your `h1` definition and all the current contents of the file. If you have trouble copying it, there's a [raw text version of the whole file here](https://raw.githubusercontent.com/GeneralProducts/publisher-website/finished-example/assets/css/main.css).
 
 {% highlight css linenos%}
 
@@ -396,7 +396,7 @@ There are more styles that you necessarily need at the moment here, but this wil
 
 Refresh your browser page, and it's quite transformed:
 
-![](assets/images/styled-page.png)
+![Screenshot showing a nicely styled website with a nice blue header](assets/images/styled-page.png)
 
 That font, however, looks suspiciously like Georgia, and not the one referenced first in the inspector: "Amiri". Another font, "Noto Sans", is also referenced in the CSS, on line 78 and other places. These are not fonts which are included in operating systems, and so, to use them, you have to include a reference to those fonts, which are hosted on Google Web Fonts.
 
@@ -411,7 +411,7 @@ Paste the following line into the head of your _portfolio.html_ page, before or 
 
 Save the file, and refresh your browser.
 
-![](assets/images/google-font.png)
+![Screenshot showing the new font applied to the header](assets/images/google-font.png)
 
 Ooh, fancy! If you don't like this serif font, though, you can choose your own.
 
@@ -420,10 +420,10 @@ Ooh, fancy! If you don't like this serif font, though, you can choose your own.
 * Go to [Google Fonts](https://fonts.google.com/).
 * Search for a font you like. The Abril Fatface one looks quite jolly.
 
-![](assets/images/gf.png)
+![A screenshot of the Google Fonts website showing a range of interesting fonts](assets/images/gf.png)
 * Copy the link of the one you like.
 
-![](assets/images/font.gif)
+![A gif showing the user selecting the font they like on Google Fonts](assets/images/font.gif)
 * Paste the link in between the `<head>` and `</head>` tags, as in the previous exercise. You'll end up with something like this:
 {% highlight html %}
 <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
@@ -447,7 +447,7 @@ Ooh, fancy! If you don't like this serif font, though, you can choose your own.
 
 * Refresh your browser to see the results.
 
-![](assets/images/fatface.png)
+![A screenshot of the font the user has selected, in use on the website they're building](assets/images/fatface.png)
 
 Another different look! I'm going to switch back to Amiri but you can choose whether to keep your new font or not.
 
@@ -486,7 +486,7 @@ There is a CSS command called `background-color` which is not included in the `b
 
 Save the file and refresh your browser. Repeat until you're happy with the colour, or delete your addition if you don't like it. You're the programmer now, and you're in control of your design and layout.
 
-![](assets/images/css-play.png)
+![A rather gaudy yet personalised version of the website. Blue banner and off-yellow body colour](assets/images/css-play.png)
 
 ## Stretch goal
 

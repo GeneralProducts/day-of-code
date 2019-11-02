@@ -1,0 +1,236 @@
+I"j<!-- <span class="tag tag--draft">Not started</span> -->
+<!-- <span class="tag tag--progress">In progress</span> -->
+<!-- <span class="tag tag--review">Ready for review</span> -->
+<!-- <span class="tag tag--approved">Approved</span> -->
+
+<p class="content__abstract">
+  This article tells you how to create one page for each book.
+</p>
+
+<p>The portfolio page is looking great. But if you click through on one of the covers, you get an empty page.</p>
+
+<p>You need to write code that automatically generates one page per book. If you look back to the Amazon example, earlier, you’ve done the list page and you’re now writing the single-book show page.</p>
+
+<p><img src="assets/images/maps.png" alt="Amazon screenshots" /></p>
+
+<p>Open the file in <em>_layouts</em> called <em>book_template.html</em>, and make it use the template you’ve used for all the other pages so far by pasting the following right at the top of the file. Delete the TODO comment in the process.</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">---
+layout: default
+---</code></pre></figure>
+
+<blockquote>
+  <p><span class="content__learn-more">Learn more later</span></p>
+  <ul>
+    <li>You are using an adapted Jekyll plugin to generate all the pages-per-book. The authors of the plugin have <a href="https://github.com/avillafiorita/jekyll-datapage_gen">written docs</a> which you can read later, though we have edited their plug in substantially to make it relevant for Day of Code. Within your codebase, review <code class="highlighter-rouge">_config.yml</code>, where you’ll see the configuration line <code class="highlighter-rouge">page_gen-dirs: true</code>, and you’ll see the edited plugin code itself in the <code class="highlighter-rouge">_plugins/data_page_generator.rb</code>, as instructed in their docs.</li>
+  </ul>
+</blockquote>
+
+<p>Now if you click through from a cover on the portfolio page, you’ll not get a missing link, but since your <em>book_template.html</em> page is empty, there’s not much to see:</p>
+
+<p><img src="assets/images/blank-page.png" alt="A boring blank page with just nav links showing" /></p>
+
+<p>Let’s add some code.</p>
+
+<h2 id="build-the-book-template">Build the book template</h2>
+
+<p>The code at <code class="highlighter-rouge">_plugins/data_page_generator.rb</code> runs when you start the Jekyll server. It uses Ruby programming to transform one type of data into another, and loads that data into the <code class="highlighter-rouge">book_template.html</code> page, so that the <code class="highlighter-rouge">page</code> variable has methods available on it, provided by your data store, such as <code class="highlighter-rouge">page.title</code>, <code class="highlighter-rouge">page.author</code> and so on.</p>
+
+<p>Copy and paste the following code into <em>book_template.html</em> underneath the frontmatter (the <code class="highlighter-rouge">---</code> bit).</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"portfolio-header"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"secondary"</span><span class="nt">&gt;</span>• Coming soon •<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+
+<span class="nt">&lt;main</span> <span class="na">class=</span><span class="s">"portfolio-page"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;figure&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"cover--large"</span> <span class="na">src=</span><span class="s">"/images/covers/{{page.isbn}}.jpg"</span> <span class="na">alt=</span><span class="s">"Cover of ISBN {{page.isbn}} {{page.title}}"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/figure&gt;</span>
+  <span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"metadata"</span><span class="nt">&gt;</span>
+      {{page.series}}
+      {{page.series_number}}
+    <span class="nt">&lt;/aside&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>{{page.title}}<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;p&gt;</span>{{page.subtitle}}<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>{{page.author}}<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>{{page.blurb}}<span class="nt">&lt;/p&gt;</span>
+
+    {% if page.reviews.size &gt; 0 %}
+      <span class="nt">&lt;hr/&gt;</span>
+      <span class="nt">&lt;p&gt;&lt;span</span> <span class="na">class=</span><span class="s">"massive"</span><span class="nt">&gt;</span>“<span class="nt">&lt;/span&gt;</span>{{page.reviews}}<span class="nt">&lt;/p&gt;</span>
+    {% endif %}
+
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"metadata"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;span&gt;</span>ISBN<span class="nt">&lt;/span&gt;</span>
+        {{page.isbn}}
+      <span class="nt">&lt;/li&gt;</span>
+      {% if page.pub_date.size &gt; 0 %}
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;span&gt;</span>Published<span class="nt">&lt;/span&gt;</span>
+          {{page.pub_date | date: "%d %b %Y"}}
+        <span class="nt">&lt;/li&gt;</span>
+      {% endif %}
+
+      {% if page.gbp_price%}
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;span&gt;</span>Price<span class="nt">&lt;/span&gt;</span>
+          ${{ page.usd_price }} / £{{ page.gbp_price }}
+        <span class="nt">&lt;/li&gt;</span>
+      {% endif %}
+
+      {% if page.page_count.size &gt; 0 %}
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;span&gt;</span>Pages<span class="nt">&lt;/span&gt;</span>
+          {{page.page_count}}
+        <span class="nt">&lt;/li&gt;</span>
+      {% endif %}
+
+      {% if page.format.size &gt; 0 %}
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;span&gt;</span>Format<span class="nt">&lt;/span&gt;</span>
+        {{ page.format }}
+      <span class="nt">&lt;/li&gt;</span>
+      {% endif %}
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"metadata"</span><span class="nt">&gt;</span>{{page.subject}}<span class="nt">&lt;/p&gt;</span>
+
+    <span class="nt">&lt;h3&gt;</span>Buy {{page.title}}<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"shops"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.wordery_url }}"</span><span class="nt">&gt;</span>Wordery<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/main&gt;</span></code></pre></figure>
+
+<h2 id="review-the-pages">Review the pages</h2>
+
+<p>Click through from any cover on the portfolio page and you should now see your book data, one page per book.</p>
+
+<p><img src="assets/images/book-page.png" alt="A screenshot of a really nicely laid out book page, with pricing, subject metadata, a well-designed cover, the blurb, the author names and the series, too, with a review quote." /></p>
+
+<blockquote>
+  <p><span class="content__learn-more">Learn more later</span></p>
+  <ul>
+    <li>You can see the JSON data created from ONIX in <strong>_data/processed_books.json</strong>.</li>
+    <li>You can see the code that created it in the <strong>lib</strong> folder.</li>
+    <li>Track down the element and class names referenced here, such as <code class="highlighter-rouge">metadata</code> and <code class="highlighter-rouge">portfolio-header</code>, in the <em>main.css</em> file, to see how they’re defined.</li>
+  </ul>
+</blockquote>
+
+<h2 id="stretch-goal-1-add-more-stores">Stretch goal 1: Add more stores</h2>
+
+<p>See if you can add more links to the page to more retailers. The code below will help you.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.waterstones_url      }}"</span><span class="nt">&gt;</span>Waterstones    <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.foyles_url           }}"</span><span class="nt">&gt;</span>Foyles         <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.book_depository_url  }}"</span><span class="nt">&gt;</span>Book Depository<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.wh_smith_url         }}"</span><span class="nt">&gt;</span>WHSmith        <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.blackwells_url       }}"</span><span class="nt">&gt;</span>Blackwells     <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.oxfam_url            }}"</span><span class="nt">&gt;</span>Oxfam          <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.amz_uk_url           }}"</span><span class="nt">&gt;</span>Amazon UK      <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.amz_us_url           }}"</span><span class="nt">&gt;</span>Amazon US      <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.amz_ca_url           }}"</span><span class="nt">&gt;</span>Amazon CA      <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.amz_de_url           }}"</span><span class="nt">&gt;</span>Amazon DE      <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.amz_br_url           }}"</span><span class="nt">&gt;</span>Amazon BR      <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.amz_mx_url           }}"</span><span class="nt">&gt;</span>Amazon MX      <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.amz_fr_url           }}"</span><span class="nt">&gt;</span>Amazon FR      <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.amz_es_url           }}"</span><span class="nt">&gt;</span>Amazon ES      <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.amz_jp_url           }}"</span><span class="nt">&gt;</span>Amazon JP      <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.amz_in_url           }}"</span><span class="nt">&gt;</span>Amazon IN      <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.kobo_url             }}"</span><span class="nt">&gt;</span>Kobo           <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.infini-beam_url      }}"</span><span class="nt">&gt;</span>Infinibeam     <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.google_play_url      }}"</span><span class="nt">&gt;</span>Google Play    <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.hive_url             }}"</span><span class="nt">&gt;</span>Hive           <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.booktopia_url        }}"</span><span class="nt">&gt;</span>Booktopia      <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.barnes_and_noble_url }}"</span><span class="nt">&gt;</span>Barnes <span class="err">&amp;</span> Noble <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.worldcat_url         }}"</span><span class="nt">&gt;</span>Worldcat       <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.books_a_million_url  }}"</span><span class="nt">&gt;</span>Books A Million<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"bookstore"</span> <span class="na">rel=</span><span class="s">"noreferrer"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">href=</span><span class="s">"{{ page.book_finder_url      }}"</span><span class="nt">&gt;</span>Book Finder    <span class="nt">&lt;/a&gt;&lt;/li&gt;</span></code></pre></figure>
+
+<p>Click through to see if some of the retailers have your book in stock.</p>
+
+<h2 id="stretch-goal-2-schemaorg-data">Stretch goal 2: schema.org data</h2>
+<p>You can improve the SEO of your webpage by including structured data as recommended by Schema.org. Below is some code you can add.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- add to the top of book_template.html, underneath the front matter --&gt;</span>
+{%
+  include structuredData.html
+  title = page.title
+  author = page.author
+  isbn = page.isbn
+  pub_date = page.pub_date
+  usd_price = page.usd_price
+  gbp_price = page.gbp_price
+  url = page.url
+%}
+
+<span class="c">&lt;!-- Add to a new file called structuredData.html, in the _includes folder --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"application/ld+json"</span><span class="nt">&gt;</span>
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">@context</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">http://schema.org</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">@type</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">Book</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">@id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">http://silveroakpress.com/{{ include.isbn }}</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">{{ include.title }}</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">author</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">@type</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">Person</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">{{ include.author }}</span><span class="dl">"</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">{{ include.url }}</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">workExample</span><span class="dl">"</span> <span class="p">:</span> <span class="p">[{</span>
+    <span class="dl">"</span><span class="s2">@type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Book</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">@id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">http://silveroakpress.com/{{ include.isbn }}</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">isbn</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">{{ include.isbn }}</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">datePublished</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">{{ include.pub_date }}</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">bookFormat</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">http://schema.org/Paperback</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">potentialAction</span><span class="dl">"</span><span class="p">:{</span>
+    <span class="dl">"</span><span class="s2">@type</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">ReadAction</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">target</span><span class="dl">"</span><span class="p">:</span>
+      <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">@type</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">EntryPoint</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">urlTemplate</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">http://www.barnesandnoble.com/s/{{include.isbn}}</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">actionPlatform</span><span class="dl">"</span><span class="p">:[</span>
+          <span class="dl">"</span><span class="s2">http://schema.org/DesktopWebPlatform</span><span class="dl">"</span><span class="p">,</span>
+          <span class="dl">"</span><span class="s2">http://schema.org/IOSPlatform</span><span class="dl">"</span><span class="p">,</span>
+          <span class="dl">"</span><span class="s2">http://schema.org/AndroidPlatform</span><span class="dl">"</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="dl">"</span><span class="s2">expectsAcceptanceOf</span><span class="dl">"</span><span class="p">:{</span>
+        <span class="dl">"</span><span class="s2">@type</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">Offer</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">Price</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">{{include.usd_price}}</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">priceCurrency</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">USD</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">eligibleRegion</span><span class="dl">"</span> <span class="p">:</span> <span class="p">{</span>
+          <span class="dl">"</span><span class="s2">@type</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">Country</span><span class="dl">"</span><span class="p">,</span>
+          <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">US</span><span class="dl">"</span>
+        <span class="p">},</span>
+        <span class="dl">"</span><span class="s2">availability</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">http://schema.org/InStock</span><span class="dl">"</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}]</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+<p>Then look in the Inspector to see the results.</p>
+
+<h2 id="stretch-goal-3-conditionals">Stretch goal 3: Conditionals</h2>
+
+<p>Amend the HTML code in <em>book_template.html</em> so that the banner at the top of the page changes according to the pub date:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  {% assign todays_date = "now" | date: "%Y%m%d" %}
+
+  {% if page.pub_date_iso &gt; todays_date %}
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"secondary"</span><span class="nt">&gt;</span>• Coming soon •<span class="nt">&lt;/h1&gt;</span>
+  {% else %}
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"secondary"</span><span class="nt">&gt;</span>• Recently published •<span class="nt">&lt;/h1&gt;</span>
+  {% endif %}</code></pre></figure>
+
+<h2 id="what-youve-learned">What you’ve learned</h2>
+
+<ul>
+  <li>You can use other people’s open source code to perform certain tasks, such as you’ve done here to generate the static pages</li>
+  <li>You call methods on the <code class="highlighter-rouge">page</code> variable, which are named using the keys in the JSON data store</li>
+</ul>
+:ET

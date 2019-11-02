@@ -24,11 +24,11 @@ You've been mainly making changes in a text editor so far, and reviewing the res
 
 Your server is running in one tab, so you'll need to add a new tab to write commands. Use the menu to do that:
 
-![](assets/images/term1.png)
+![Screenshot showing how to create a new terminal tab](assets/images/term1.png)
 
 To learn how to get your data, open the _README_ file in your text editor. It is written in Markdown: you can see it turned into HTML [here](https://github.com/GeneralProducts/publisher-website/tree/master).
 
-![](assets/images/readme.png)
+![Screenshot showing the README file in the text editor](assets/images/readme.png)
 
 It says:
 
@@ -57,8 +57,7 @@ Press **enter**. You'll see a message like this:
 {% endhighlight  %}
 
 > <span class="content__learn-more">Troubleshooting</span>
-* For coaches: If you see messages like `lib/adaptors/onix/v3/reference/product.rb:134: syntax error, unexpected '.' ..urrency_code}']/PriceAmount")&.content`, your delegate is using an old version of Ruby which doesn't support the safe navigation `&.`. Try `rvm use ruby-2.5.5`
-
+* For coaches: If you see messages like `lib/ adaptors/ onix/ v3/ reference/ product.rb:134: syntax error, unexpected '.' ..urrency_code}']/ PriceAmount")&.content`, your delegate is using an old version of Ruby which doesn't support the safe navigation `&.`. Try `rvm use ruby-2.5.5`
 
 Now refresh your browser window and you'll see your own books being used.
 

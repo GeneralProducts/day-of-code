@@ -18,7 +18,7 @@ order: 3
 
 Your index page contains links to another page, but those links are currently broken. Clicking on them in your browser takes you to an error message:
 
-![](assets/images/broken-link.png)
+![Screenshot showing a broken link](assets/images/broken-link.png)
 
 You will fix this by adding another HTML file to your website repo.
 
@@ -26,15 +26,15 @@ You will fix this by adding another HTML file to your website repo.
 
 In your repo, click to add a new file and call it _portfolio.html_. Make sure it's at the same level in your folder as _index.html_ -- not accidentally nested in another folder.
 
-![](assets/images/new-file.gif)
+![A gif showing the programmer adding a new file called portfolio.html to the repo](assets/images/new-file.gif)
 
 Type some words in, such as "here's my portfolio page", and save the file.
 
-![](assets/images/new-file.png)
+![Adding some placeholder text to the new portfolio.html page](assets/images/new-file.png)
 
 Go back to your browser and try the link again. This time, your new page gets served:
 
-![](assets/images/new-file-words.png)
+![The placeholder text successfully rendered in the browser](assets/images/new-file-words.png)
 
 > <span class="content__learn-more">Troubleshooting</span>
 * If the browser doesn't show your new page, make sure _portfolio.html_ is saved at the same level in your repo as _index.html_ -- not accidentally nested in another folder, higher or lower.
@@ -60,9 +60,9 @@ Let's replace your placeholder text with some real HTML. Copy and paste the foll
 
 Now you have another page with some content.
 
-![](assets/images/portfolio.png)
+![The portfolio page in the text editor](assets/images/portfolio.png)
 
-![](assets/images/portfolio-browser.png)
+![The portfolio page in the browser](assets/images/portfolio-browser.png)
 
 But you have three big problems:
 

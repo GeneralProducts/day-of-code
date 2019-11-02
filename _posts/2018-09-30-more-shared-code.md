@@ -49,7 +49,7 @@ Refresh the index page in your browser, because the index page uses the default 
 
 To debug this problem, let's look at the server log. Look at your Terminal, where your server log has been running all this time. There is a big red error message:
 
-![](assets/images/errors.png)
+![A screenshot of frightening looking errors on the server log](assets/images/errors.png)
 
 If you pick through those words, shouty-red and off-putting though they are, they are actually very descriptive and tell you that you've failed to include a file:
 
@@ -75,12 +75,12 @@ Paste the following code in to it, and save the file.
   </nav>
 {% endhighlight %}
 
-![](assets/images/nav.gif)
+![Showing the nav links being added to the text editor](assets/images/nav.gif)
 
 
 Refresh the browser: you'll see your new nav links. And now you can more easily get around your website: click the "Books" link on your web page.
 
-![](assets/images/nav.png)
+![Showing the nav links in the browser](assets/images/nav.png)
 
 ## What you’ve learned
 

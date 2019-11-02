@@ -9,7 +9,7 @@ $nearly-black: #1e1e1e;
 $railscasts-yellow: #d3c9a9;
 $railscasts-green: #b4ca73;
 $railscasts-blue: #85a0c2;
-$railscasts-orange: #CC7833;
+$railscasts-orange: #9f5c24;
 $railscasts-purple: #c3c2ee;
 $railscasts-red: #e36049;
 $railscasts-grey: #ebe7e3;
@@ -65,7 +65,7 @@ a {
 
   &:hover,
   &:focus {
-    color: $railscasts-yellow;
+    color: $railscasts-red;
   }
 }
 
