@@ -27,17 +27,25 @@ $railscasts-diff-remove-bg-color          : #660000;
   margin-bottom: 25px;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 11px;
+  font-size: 14px;
 
   @media (min-width: 600px) {
     margin-left: -30px;
     margin-right: -30px;
-    font-size: 13px;
+    font-size: 16px;
   }
 
   code {
     word-wrap: normal;
     overflow-x: auto;
+  }
+
+ .gl {
+    background-color: #353238;
+  }
+
+ .lineno {
+    background-color: #4a454e !important;
   }
 
   .gd {
@@ -357,7 +365,6 @@ code {
 
 .highlight pre {
   background: #353238 !important;
-  padding: 22px 0 22px 10px;
 }
 
 blockquote {
@@ -497,4 +504,25 @@ li.navigation__item {
   @media (min-width: 600px) {
     font-size: 28px;
   }
+}
+
+em {
+  font-style: normal;
+  font-family: "Inconsolata", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-weight: 600;
+  color: black;
+}
+
+.time  {
+  font-style: normal;
+  font-family: "Inconsolata", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-weight: 600;
+  color: #4b4840;
+  font-size: inherit;
+}
+
+h1 .time {
+  font-size: 18px;
+  display: table;
+  line-height: 1;
 }

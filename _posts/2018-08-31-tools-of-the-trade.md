@@ -9,7 +9,7 @@ order: 2
 
 <!-- <span class="tag tag--draft">Not started</span> -->
 <!-- <span class="tag tag--progress">In progress</span> -->
-<span class="tag tag--review">Ready for review</span>
+<!-- <span class="tag tag--review">Ready for review</span> -->
 <!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
@@ -23,7 +23,7 @@ In this course you’ll be using four programming languages:
 * **Ruby** to dynamically generate information
 * **Liquid** to insert that dynamic information into your HTML
 
-We'll also use some software development tools:
+You'll also use some software development tools:
 
 * **Terminal** (Mac), or
 * **Command Prompt** (Windows)
@@ -36,13 +36,13 @@ code that the community have built, tested and released for
 use at no charge. These are not hobbyist resources: open
 source has the benefit of being more thoroughly and widely
 tested than closed, proprietary software.
-HTML, CSS, Ruby and Liquid are open source. We will be using another open source resource called [Jekyll](https://jekyllrb.com/), a static site generator.
+HTML, CSS, Ruby and Liquid are open source programming languages. You will also be using an open source static site generator called [Jekyll](https://jekyllrb.com/).
 
 ## HTML
-HTML is the language of the web. Every single website
+**H**yper**T**ext **M**arkup **L**anguage is the language of the web. Every single website
 you’ve ever been on[^1] is made from HTML, and ePubs[^2] are
 made from it, too. It is a markup language for describing web
-pages. HTML stands for Hyper Text Markup Language. It looks like this:
+pages. HTML looks like this:
 
 {% highlight html %}
   <h1>Hello, world!</h1>
@@ -60,9 +60,9 @@ pages. HTML stands for Hyper Text Markup Language. It looks like this:
 ## CSS
 CSS is a style sheet language[^4] used for describing the
 presentation of a document written in a markup language,
-such as HTML. CSS stands for Cascading Style Sheets, because later instructions in CSS overwrite earlier ones, in a cascade. It looks like this:
+such as HTML. CSS stands for Cascading Style Sheets, because you can provide multiple contradictory style instructions, but have the browser sort out their priority, in a cascade, according to a set of rules. In other words you can override the brower's default styles, and you can override your own styles in certain situations, too, such as at different browser sizes. CSS looks like this:
 
-{% highlight css %}
+{% highlight css linenos %}
   h1 {
     font-size: 16px;
     color: black;
@@ -74,6 +74,7 @@ such as HTML. CSS stands for Cascading Style Sheets, because later instructions 
 > <span class="content__learn-more">Learn more later<span>
 * [Learn Enough CSS & Layout to be Dangerous](https://www.learnenough.com/css)
 * [CSS Tricks](https://css-tricks.com/) – our go-to site for pragmatic uses of CSS.
+* [Understanding the cascade](https://blog.logrocket.com/how-css-works-understanding-the-cascade-d181cd89a4d8/)
 
 ## Ruby
 Ruby has been around since 1993, making it a comparatively mature language. Ruby became
@@ -83,15 +84,15 @@ written in Ruby, called Ruby on Rails.
 The aim of Ruby on Rails was to make it quicker
 to develop web applications by hiding a lot of repetitive
 complexity from the developer. The publishing management
-system [Consonance](https://consonance.app), written by the people behind Day of Code, is written in Ruby on Rails. Today we won't be using a framework, but a Ruby-based static site generator, called Jekyll. We will also be using Ruby methods to process raw book data. Ruby looks like this:
+system [Consonance](https://consonance.app), written by the people behind Day of Code, is written in Ruby on Rails, as is Github, Basecamp, Kickstarter, Goodreads and Airbnb. Today you won't be using Rails, but a Ruby-based static site generator, called Jekyll. You will also be using Ruby methods to process raw book data. Ruby looks like this:
 
-{% highlight ruby %}
+{% highlight ruby linenos%}
   def hello_world(name)
     puts "Hello, #{name}!"
   end
 {% endhighlight %}
 
-You can run that Ruby on the command line. `irb` stands for 'Interactive Ruby'
+You can run that Ruby on the command line. `irb` stands for 'Interactive Ruby'. Typing `irb` in to a console window and pressing **enter** starts a Ruby command line which can run Ruby.
 
 {% highlight bash %}
   $ irb
@@ -104,22 +105,21 @@ You can run that Ruby on the command line. `irb` stands for 'Interactive Ruby'
 
 > <span class="content__learn-more">Learn more later</span>
 * [Learn Enough Ruby to Be Dangerous](https://www.learnenough.com/ruby-tutorial/hello_world)
-* [The Rails Tutorial](https://www.learnenough.com/ruby-on-rails-4th-edition) – A resource close to the author of these guide's heart, as she learned programming with this book, now in its 4th edition. It's best to have a firm grasp of the basics before embarking on these tutorials. The following are recommended:
+* [The Rails Tutorial](https://www.learnenough.com/ruby-on-rails-4th-edition) – A resource close to the [author of these guide](http://twitter.com/has_many_books)'s heart, as she finally knuckled down and learned programming with this book, now in its 4th edition. It's best to have a firm grasp of the basics before embarking on this tutorial. The following from [Learn Enough](https://www.learnenough.com/) are recommended:
 * Learn Enough Command Line to Be Dangerous
 * Learn Enough Text Editor to Be Dangerous
 * Learn Enough Git to Be Dangerous
 * Learn Enough HTML to Be Dangerous
 * Learn Enough CSS & Layout to Be Dangerous
-* [RailsGirls](http://railsgirls.com/events.html) are wonderful events where you build an app in a day. The Consonance team volunteer at each London event.
+* [RailsGirls](http://railsgirls.com/events.html) are wonderful events where you build an app in a day. The Consonance team volunteer at each London event: see you there?
 
 
 [^3]: Web applications are websites that users can interact with.
 
 ## Liquid
-Liquid is an open-source template language[^5] created by the eCommerce platform company Shopify and written in Ruby.
-It is used to load dynamic content onto websites. It looks like this:
+[Liquid](https://shopify.github.io/liquid/) is an open-source template language[^5] created by the eCommerce platform company Shopify and written in Ruby. Lots of web services use Liquid as a way for programmers to load dynamic content onto websites. As well as Shopify, they include Salesforce Desk, Zendesk, [500px](https://web.500px.com/) and [more](https://github.com/Shopify/liquid/wiki#who-uses-liquid). We have chosen to use Liquid in the Day of Code tutorial as knowing it will enable you to edit Shopify stores, often used by publishers for their website. Liquid looks like this (the bit with two curly braces on line 2):
 
-{% highlight html %}
+{% highlight html linenos %}
   <h1>
     {% raw %}{{ title }}{% endraw %}
   </h1>
@@ -127,7 +127,7 @@ It is used to load dynamic content onto websites. It looks like this:
 
 If `title` is a variable that stands for the words "Home page", this turns into the following HTML:
 
-{% highlight html %}
+{% highlight html linenos %}
   <h1>
     Home page
   </h1>
@@ -137,7 +137,7 @@ If `title` is a variable that stands for the words "Home page", this turns into 
 
 ## Command line
 
-The [Terminal](/glossary#terminal) app (Mac) or [Command Prompt](/glossary#command-prompt) program (Windows) is where you type instructions to the computer to run code. It looks something like this:
+The [Terminal](/glossary#terminal) app (Mac) or [Command Prompt](/glossary#command-prompt) program (Windows) is where you type instructions to the computer to run code. It looks something like this in light mode, and can also start in dark mode:
 
 ![A terminal window](/assets/images/terminal.png)
 
@@ -151,14 +151,14 @@ You don't use Microsoft Word to write code: instead you use a purpose-built text
 * Atom
 * Sublime
 
-Text editors look like this:
+Text editors look something like this. They can also run in light mode. Notice the file menu down the left hand side: this is for file navigation, just like in Finder (Mac) or File Explorer (Windows).
 
 ![image of a text editor](/assets/images/text-editor.png)
 
 ## A publisher website
 On the Day of Code, you will write a website which displays book data on
-a series of web pages. You’ll be using all the technologies described
-previously.
+a series of web pages. You’ll be using all the tools and technologies described
+on this page.
 
 ## What you’ve learned
 * You tell computers what to do by using a programming
@@ -168,4 +168,3 @@ time
 * There are lots of different sorts of programming languages,
 each written with a particular speciality in mind.
 * Learning to program takes time and there are lots of resources out there to fit your learning style.
-

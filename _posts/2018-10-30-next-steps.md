@@ -1,13 +1,13 @@
 ---
 layout: guides
-title:  Next steps
+title:   <span class="time">16.15 </span> Next steps
 permalink: next-steps
 toc: true
 category: Reference
 order: 1
 ---
 <!-- <span class="tag tag--draft">Not started</span> -->
-<span class="tag tag--progress">In progress</span>
+<!-- <span class="tag tag--progress">In progress</span> -->
 <!-- <span class="tag tag--review">Ready for review</span> -->
 <!-- <span class="tag tag--approved">Approved</span> -->
 
@@ -15,7 +15,7 @@ order: 1
   This article suggests some next steps for the end of the day or for your ongoing journey after the Day of Code.
 </p>
 
-Well, you've done it! You've built a website. Has the bug bitten you? It’s normal at this stage to feel overwhelmed, tired, brain dead and a bit weepy. You’ve had a tantalising, whistle-stop tour of a brand new set of concepts, and you might have a feeling of both elation -- you did it! -- and also an awareness that there is a lot to learn in programming.
+Well, you've done it! You've built a website. Has the bug bitten you? It’s normal at this stage to feel overwhelmed, tired, brain dead and possibly a bit weepy. You’ve had a tantalising, whistle-stop tour of a brand new set of concepts, and you might have a feeling of both elation -- you did it! -- and also an awareness that there is a lot to learn in programming.
 
 Once you've got over today, it would be great to use today as a jumping-off point for your next coding adventure.
 
@@ -25,16 +25,14 @@ Before the Day of Code, you created an account on GitHub. <a href="https://guide
 
 ## Publish your website to the internet
 
-<a href="https://www.netlify.com/blog/2017/05/11/migrating-your-jekyll-site-to-netlify/">Follow the instructions here</a> to publish your website to a free hosting provider called Netlify.
-
+<a href="https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/">Follow the instructions here</a> to publish your website to a free hosting provider called Netlify. [Here's one we made earlier](https://publisher-website.netlify.com/).
 
 ## Use the Learn More boxes for ideas
 
 Throughout today you will have seen callout boxes headed "Learn more later". It's a great idea to go back through these docs, at your leisure, and explore those ideas further.
 
-
 ## Introverts’ route
-If you are an introvert, you’re most likely to enjoy learning over the internet, from books and from videos. We recommend https://www.learnenough.com/ as a great place to get started, followed by https://learnrubythehardway.org/ and http://railstutorial.org
+If you are an introvert, you’re most likely to enjoy learning over the internet, from books and from videos. We recommend [Learn Enough](https://www.learnenough.com/) as a great place to get started, followed by [Learn Ruby the Hard Way](https://learnrubythehardway.org/) and [The Rails Tutorial](http://railstutorial.org).
 
 ## Extroverts’ route
 If you prefer learning alongside other people, then Codebar is a great and welcoming event that happens frequently in London, with a new chapter opened in Oxford. Railsgirls London is also another good taster day and the Consonance team volunteer there. General Assembly and Makers’ Academy run crash courses, but they’re not cheap.
@@ -47,11 +45,11 @@ Whichever way your interests take you, the more knowledge you accrue, the more p
 
 ## Stay in touch
 
-Do stay in touch with us! Our company website is http://generalproducts.co. We blog at www.consonance.app, and tweet at @consonance_app: our staff are Emma @has_many_books, Andy @andypearson, Sara @saramoohead and Dave @databasesponge. Please follow our Publishers’ Advice Bot @bot_publishing.
+Do stay in touch with us! Here's our [company website](http://generalproducts.co) with links to all the initiatives we do to increase technical literacy in publishing. We blog at [www.consonance.app](https://www.consonancena.app), and tweet at @consonance_app: our staff are Emma @has_many_books, Andy @andypearson, Sara @saramoohead and Dave @databasesponge. Please follow our Publishers’ Advice Bot @bot_publishing.
 
-Please do give us feedback on this course at TODO insert feedback link.
+Please do give us [feedback on this course](https://emma359024.typeform.com/to/GPkjMu).
 
-And if you need a modern, cloud-based publishing management system, you know who to ask! Visit http://consonance.app to find out what we do.
+And if you need a modern, cloud-based publishing management system, you know who to ask! Visit [Consonance.app](http://consonance.app) to find out what we do.
 
 ## What you’ve learned
 

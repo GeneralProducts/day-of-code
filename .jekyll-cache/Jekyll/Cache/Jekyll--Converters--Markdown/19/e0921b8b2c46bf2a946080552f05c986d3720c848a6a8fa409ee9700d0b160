@@ -1,0 +1,64 @@
+I"/<!-- <span class="tag tag--draft">Not started</span> -->
+<!-- <span class="tag tag--progress">In progress</span> -->
+<!-- <span class="tag tag--review">Ready for review</span> -->
+<p><span class="tag tag--approved">Approved</span></p>
+
+<p class="content__abstract">
+  These are the step-by-step guides for the Day of Code. You're going to get some programming experience, and leave having built a real website. This article explains the background to the day.
+</p>
+
+<h2 id="scope-of-the-day">Scope of the day</h2>
+
+<p>Today is a chance for you to roll up your sleeves and write real, working, book-trade-specific software.</p>
+
+<p>You won’t become a programmer in a day, although all journeys start with a single step, and today might be the first of many days where you cajole a computer into doing what you want with code.</p>
+
+<p>Today, you’ll discover that modern programming has more parallels with storytelling than maths; that a certain facility with language and a natural attention to detail – skills found in any publishing professional – are more important than a technical mind. You will realise that your existing knowledge of the ins and outs of your particular bit of publishing (your “domain knowledge”) are arguably more difficult, more nuanced, and harder to acquire than programming skills, whilst being a critical component of writing software. In other words, you’ll learn that you have a distinct advantage in writing publishing software over dedicated software developers.</p>
+
+<p>Coding in publishing is a controversial topic. Some people think that publishers should leave technology to vendors. But no-one raises an eyebrow when production people go round a
+print factory. And no-one expects those production managers to be running
+the factory the next day. However, there is an expectation that such research
+and investment of time will lead to better decisions, greater insights, and
+an ongoing interest in learning more about an important part of the supply
+chain. Today is intended to be a familiarisation, in the same vein, to prompt
+the same sorts of insights and lines of enquiry: “Hey, I can see that the binding
+line splits here… does that mean we could print the paperback and
+hardback book block on the same run, split them on the binding line and save on
+the make-ready?” We expect you to leave today being able to make the same sort of non-expert, but curious, observations that come from increased agency and might just save some money. Next time you’re commissioning a website, and the developer says they can’t use your ONIX feed as a data source for “technical reasons”, you’ll be able to say that once you attended a coding day where you did exactly that, and that the developer should perhaps look again. By being here today, you’ve shifted the balance of power in your favour.</p>
+
+<h2 id="inspiration">Inspiration</h2>
+
+<p>Over the summer of 2019, the Consonance team ran an online club called #SideProjectSummer. For a few years now, every Friday afternoon we put aside time to work on side projects, and over the summer we quietly encouraged others to join in. The results were so heartening, and I’d encourage you to <a href="https://twitter.com/hashtag/SideProjectSummer?src=hashtag_click&amp;f=live">visit Twitter and review</a> some of the things publishers have carved out time to do. Some of the people behind these projects are coaches, today, and they include:</p>
+
+<ul>
+  <li>an editorial assistant who controlled Excel with VBA</li>
+  <li>an editorial assistant who consumed the Consonance product metadata API to create a beautiful <a href="https://jamie-reece.github.io/side-project-summer/">website</a></li>
+  <li>a metadata manager who wrote a React app</li>
+  <li>a number of people who got familiar with HTML, and some who untangled their in-house ONIX XML</li>
+  <li>a seasoned editor who wrote multiple Rails apps</li>
+  <li>a marketing assistant who used XSLT to parse his ONIX to produce marketing sheets in InDesign.</li>
+</ul>
+
+<p>The people who participated in #SideProjectSummer were publishers using code to solve their immediate publishing problems. That pragmaticism, rather than “learning to code” in the abstract, is crucial, and what we hope to encourage today.</p>
+
+<h2 id="our-coaches">Our coaches</h2>
+
+<p>Thank you to the technically-literate publishing people who have given up their time to join us as coaches
+today. Ten years ago, it was difficult to rustle up even two or three people from within the industry who had both technical confidence <em>and</em> deep, hands-on publishing knowledge. Today, we are legion, and we’re so pleased to gather so many of these people together today who have taken the time to increase their knowledge and share it with delegates.</p>
+
+<h2 id="what-you-are-going-to-build">What you are going to build</h2>
+
+<p>You are going to build a website that lists your books, build from ONIX data kindly provided for free by Nielsen to Day of Code, and which allows users to click through to buy the book. You’re going to use various technologies, such as HTML, CSS, and Ruby. You’re going to use your publishing knowledge to write software that’s pragmatic, beautiful and useful.</p>
+
+<h2 id="code-of-conduct">Code of conduct</h2>
+
+<p>Please make sure you read and adhere to the <a href="/coc">Code of Conduct</a>. We will take action if anyone breaks this code: please keep Day of Code welcoming and enjoyable for all.</p>
+
+<h2 id="timings">Timings</h2>
+
+<p>The timings for the day are <a href="/delegates">here</a>.</p>
+
+<h2 id="questions">Questions</h2>
+
+<p>Any questions or feedback? Email info@consonance.app.</p>
+:ET

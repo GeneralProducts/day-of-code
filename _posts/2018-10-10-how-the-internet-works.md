@@ -1,6 +1,6 @@
 ---
 layout: guides
-title:  How the internet works
+title:   <span class="time">13.45 </span> How the internet works
 permalink: how-the-internet-works
 toc: true
 category: Using data
@@ -8,11 +8,11 @@ order: 2
 ---
 <!-- <span class="tag tag--draft">Not started</span> -->
 <!-- <span class="tag tag--progress">In progress</span> -->
-<span class="tag tag--review">Ready for review</span>
+<!-- <span class="tag tag--review">Ready for review</span> -->
 <!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
-  This article explains how the internet works.
+  This article explains how the internet works. You won't add anything to your web app whilst working through this article, but it contains important relevant principles and processes.
 </p>
 
 It’s worth going over what happens when you visit a website, since you’re creating one.
@@ -49,24 +49,28 @@ Sites such as Wordpress, Twitter and our own publishing management software, [Co
 
 ## Databases
 
-The ability to swap in data dynamically becomes even more useful if your website stores its content in a database rather than in lots of separate HTML files. If you want to offer 100 web pages, one for each book you’ve published, you don’t need to create 100 HTML files. You can design one web page as a ‘template’ and use it for all 100 books, drawing their data from where it’s stored in the database. For instance, the heading in your template could be made up of one command tag for ‘author name’ and another command tag for ‘book title’. Those command tags will be replaced with the relevant info, depending on which book’s web page the user is requesting. You can think of a database as a bit like a spreadsheet, where the sheets can talk to each other, matching their data through identical keys. We are going to be using a range of database-like data stores today: JSON, XML (ONIX) and the good old .csv.
+The ability to swap in data dynamically becomes even more useful if your website stores its content in a database rather than in lots of separate HTML files. If you want to offer 100 web pages, one for each book you’ve published, you don’t need to create 100 HTML files. You can design one web page as a ‘template’ and use it for all 100 books, drawing their data from where it’s stored in the database. For instance, the heading in your template could be made up of one command tag for ‘author name’ and another command tag for ‘book title’. Those command tags will be replaced with the relevant info, depending on which book’s web page the user is requesting.
+
+The data store you're using today is XML (ONIX). It's not a traditional database, but it does have structure so you can look data up in it.
+
+
+## Why Jekyll?
+
+Today, you are using the static site generator Jekyll to do some of the work of a webserver – translating command tags and outputting static HTML -- before you push the code to the internet, rather than dynamically creating it on the fly. It means you're not going to have to use an advanced web server to dynamically interpret your code, but you are still going to be inserting command tags so you can automate the generation of your HTML. Jekyll uses a templating language called [Liquid](https://shopify.github.io/liquid/), written in Ruby.
+
 
 ## Why Ruby?
 
-We have chosen to use Ruby during this course because it is an elegant language. William Strunk, Jr. would be delighted with Ruby:
+We have chosen to use Ruby because it is an elegant language. You'll know the seminal work on writing, Strunk and White's "The Elements of Style". William Strunk, Jr. would be delighted with Ruby:
 
 > ### Omit needless words.
 > Vigorous writing is concise. A sentence should contain no unnecessary words, a paragraph no unnecessary sentences, for the same reason that a drawing should have no unnecessary lines and a machine no unnecessary parts. This requires not that the writer make all his sentences short, or that he avoid all detail and treat his subjects only in outline, but that _every word tell_.
 > #### Strunk and White, The Elements of Style, 1918
 
-As computing power has increased over the last few decades, we can have programming languages optimised for humans, not computers. Computers are powerful enough nowadays to allow Ruby methods to be written in clear English, which take longer to process than some terse machine code. Ruby is quite readable. `Book.all`, for example, means “get all the books”.
-
-## Why Jekyll?
-
-Today, we are using the static site generator Jekyll to do some of the work of a webserver – translating command tags and outputting static HTML -- before we push the code to the internet, rather than dynamically creating it on the fly. It means we're not going to have to use an advanced web server to dynamically interpret our code, but we are still going to be inserting command tags so we can automate the generation of our HTML. Jekyll uses a templating language called [Liquid](https://shopify.github.io/liquid/), written in Ruby.
+As computing power has increased over the last few decades, we can have programming languages optimised for humans, not computers. Computers are powerful enough nowadays to allow Ruby methods to be written in clear English, which take longer to process than some terse machine code, but makes for a far more enjoyable coding experience, because Ruby is readable. `Book.all`, for example, means “get all the books”.
 
 ## Command tags
-Your challenge, which you'll be walked through in the next article, is to replace the static HTML in the `portfolio.html` file with Liquid command tags that will loop through all your books and display them. To do that, you'll need to know some code syntax.
+Your challenge, which you'll be walked through in the next article, is to replace the static HTML in the _portfolio.html_ file with Liquid command tags that will loop through all your books and display them. To do that, you'll need to know some code syntax.
 
 ## Syntax
 Syntax refers to the symbols and words that make up a programming language. Use the correct syntax and the computer will know what you want it to do.
@@ -90,6 +94,6 @@ In a while, you are going to query your own ONIX as a data source, but for now w
 
 ## What you’ve learned
 
-* How the internet works
-* We are using Jekyll, a static site generator, which uses Liquid
-* Jekyll can process command tags, to produce HTML
+* The web browser on your computer requests a web page from a remote server. That server sends back an HTML file, plus some CSS. Your browser uses the CSS to lay out that HTML so that you can see the web page properly displayed on your screen. That's how the internet works.
+* You are using Jekyll, a static site generator, which uses a templating language called Liquid.
+* Jekyll's Liquid language uses command tags to produce HTML.

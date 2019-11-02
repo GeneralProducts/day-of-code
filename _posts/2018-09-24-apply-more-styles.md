@@ -1,6 +1,6 @@
 ---
 layout: guides
-title:  Apply more styles
+title:  <span class="time">11.00 </span> Apply more styles
 permalink: apply-more-styles
 toc: true
 category: CSS
@@ -9,7 +9,7 @@ order: 2
 
 <!-- <span class="tag tag--draft">Not started</span> -->
 <!-- <span class="tag tag--progress">In progress</span> -->
-<span class="tag tag--review">Ready for review</span>
+<!-- <span class="tag tag--review">Ready for review</span> -->
 <!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
@@ -18,355 +18,395 @@ order: 2
 
 ## Add more CSS
 
-Paste the following in to the `main.scss` file, replacing your `h1` definition and all the current contents of the file. If you have trouble copying it, there's a raw text version of the whole file [here](https://raw.githubusercontent.com/GeneralProducts/publisher-website/master/css/main.scss?token=AAFFYZTRCEQEFBYC2QTB5O25PTUCS).
+Paste the following in to the _main.css_ file, replacing your `h1` definition and all the current contents of the file. If you have trouble copying it, there's a raw text version of the whole file [here](https://raw.githubusercontent.com/GeneralProducts/publisher-website/finished-example/assets/css/main.css).
 
-{% highlight css %}
-  ---
-  ---
+{% highlight css linenos%}
 
-  $dark: #000162;
-  $black: #232323;
-
-  // Structure
+  /* Structure */
   body {
     margin: 0;
-    font-family: "Amiri", sans-serif;
+    font-family: "Amiri", Georgia, serif;
     font-size: 28px;
-    color: $black;
+    color: #232323;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+  }
+
+  header {
+    padding: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #03a9f4;
+  }
+
+  .primary-header {
+    background-image: url(/images/bright-flowers.jpg);
+    background-size: 100%;
+  }
+
+  .secondary-header {
+    background-image: url(/images/flower3.jpg);
+    background-size: 100%;
   }
 
   section {
     margin: 0 auto;
     max-width: 1250px;
     padding: 0 20px;
+  }
 
-    @media (min-width: 1110px) {
+  @media (min-width: 1110px) {
+    section {
       width: 800px;
+    }
+
+    aside {
+      width: 50%;
     }
   }
 
-  // Typography
-  h1 {
-    padding: 10px 0;
-    margin: 0;
-    text-align: center;
-    text-transform: uppercase;
-    top: 60px;
-    position: relative;
-    letter-spacing: 5px;
-    background-color: white;
-    text-shadow: 1px 1px 1px #fefbe0;
-    font-size: 0.9em;
-    width: 70%;
-    margin: 0 auto;
+  figure {
+    margin: 50px 0 0  5px;
+    flex: 1;
+  }
 
-    @media (min-width: 1110px) {
-      font-size: 2em;
+  aside {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-top: 8px;
+    opacity: 0.95;
+    font-size: 0.7em;
+  }
+
+  /* Typography */
+  h1 {
+    background-color: white;
+    opacity: 0.95;
+    font-size: 1em;
+  }
+
+  @media (min-width: 1110px) {
+    h1 {
       letter-spacing: 10px;
+      width: 50%;
+      margin: 0 auto;
+      font-size: 2em;
     }
+  }
+
+  .secondary {
+    font-family: "Noto sans", Arial, sans-serif;
+    font-size: 20px !important;
+    color: #2e2e2e;
+    padding: 8px;
   }
 
   h2 {
-    font-size: 1em;
-    margin-block-end: -10px;
-    margin-block-start: 50px;
-    line-height: 1;
+    font-size: 0.7em;
   }
 
-  .subtitle {
-    display: block;
-    font-size: 0.5em;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+  @media (min-width: 1110px) {
+    h2 {
+      font-size: 1em;
+    }
   }
 
   h3 {
-    font-size: 1em;
+    font-size: 0.6em;
+    margin: 60px 0 -30px 0;
+    font-family: "Noto sans", Arial, sans-serif;
   }
 
   p {
-    color: $black;
-    font-family: "Amiri", sans-serif;
+    color: #232323;
+    font-family: "Amiri", Georgia, serif;
     font-size: 0.75em;
     line-height: 34px;
   }
 
+  /* Links */
   a {
-    color: $black;
+    color: #232323;
     text-decoration: none;
   }
 
   a:hover {
-    border-bottom: 4px solid $black;
+    border-bottom: 4px solid #232323;
   }
 
-  // Lists
+  .bookstore {
+    margin: 20px 10px 10px 0;
+    line-height: 60px;
+    border-bottom: 3px solid #e4e4e0;
+  }
+
+  /* Lists */
   ul {
-    padding-inline-start: 0 !important;
+    display: flex;
+    flex-flow: row wrap;
   }
 
   li {
     list-style-type: none;
-    font-size: 20px;
-    margin: 0 0 -20px;
+    font-size: 16px;
+    margin: 0;
   }
 
-  // Navigation
-  .nav {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-
-    @media (min-width: 1110px) {
-      max-width: 1100px;
-    }
-  }
-
+  /* Navigation */
   .nav-item-container {
-    display: inline-block;
+    padding: 0;
     font-weight: 800;
-    text-align: center;
-    margin-top: 10px;
-
-    @media (min-width: 1110px) {
-      margin-top: 15px;
-    }
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .nav-item {
-    display: inline;
     font-size: 0.6em;
-    padding-right: 10px;
+  }
 
-    @media (min-width: 1110px) {
-      display: inline-block;
+  @media (min-width: 1110px) {
+    .nav-item {
       padding: 0 30px;
-      font-size: 1em;
+      font-size: 22px;
+    }
+
+    .nav-item-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 10px 0;
     }
   }
 
-  // Headers
-  .header__background {
-    background-color: #e3dde6;
-    height: 300px;
-  }
-
-  .header__background--patterned {
-    background-image: url(/images/background-image-floral.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 300px;
-  }
-
-  .header__background--book-page {
-    background-color: #e3dde6;
-    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 0C6.716 0 0 6.716 0 15c8.284 0 15-6.716 15-15zM0 15c0 8.284 6.716 15 15 15 0-8.284-6.716-15-15-15zm30 0c0-8.284-6.716-15-15-15 0 8.284 6.716 15 15 15zm0 0c0 8.284-6.716 15-15 15 0-8.284 6.716-15 15-15z' fill='%23cbccc8' fill-opacity='0.19' fill-rule='evenodd'/%3E%3C/svg%3E");  color: #1f2420;
-    height: 130px;
-  }
-
-  .header__background--book-page h1 {
-    padding: 10px 0;
-    margin: 0;
-    text-align: center;
-    text-transform: uppercase;
-    top: 30px;
-    position: relative;
-    letter-spacing: 5px;
-    background-color: white;
-    text-shadow: 1px 1px 1px #fefbe0;
-    font-size: 0.9em;
-    width: 70%;
+  /* Images */
+  .covers-container {
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 0;
+  }
 
-    @media (min-width: 1110px) {
-      font-size: 1em;
-      letter-spacing: 10px;
+  .covers-container li {
+    flex: 1;
+    display: flex;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  @media (min-width: 1110px) {
+    .covers-container li {
+      background-color: #eff1f7;
     }
   }
 
-  // Covers
-  li.cover-container {
-    list-style-type: none;
+  .covers-container a {
     display: flex;
     flex-direction: column;
-    padding: 0 10px;
-
-    @media (min-width: 1110px) {
-      padding: 10px;
-    }
+    justify-content: space-between;
+    margin: 0 auto;
   }
 
-  li.cover-container a:hover {
+  .covers-container a:hover {
     border-bottom: none;
     filter: brightness(1.2);
   }
 
+  .covers-container	p {
+    margin: 10px 0 0;
+    font-family: "Noto Sans", sans-serif !important;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
   .cover {
-    height: 330px;
-    border-radius: 4px;
-    width: auto;
+    width: 220px;
+    box-shadow: 2px 2px 8px #aaaeb9;
+  }
+
+  img {
+    font-family: "Noto Sans", Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+    width: 98%;
   }
 
   .cover--home {
     float: right;
     width: 100%;
     margin: 20px 0;
+  }
 
-    @media (min-width: 1110px) {
+  @media (min-width: 1110px) {
+    .cover--home {
       width: 240px;
-      border: 5px solid $dark;
+      border: 5px solid #000162;
     }
+  }
 
-    &:hover {
-      filter: brightness(1.2);
-    }
+  .cover--home:hover {
+    filter: brightness(1.2);
   }
 
   .cover--large {
-    width: 100%;
-
-    &:hover {
-      filter: brightness(1.3);
-    }
+    box-shadow: 2px 2px 8px #aaaeb9;
   }
 
-  // Books page
-  .container__portfolio {
-    background-color: #f3f1f4;
-
-    @media (min-width: 1110px) {
-      width: 100%;
-    }
+  .cover--large:hover {
+    filter: brightness(1.2);
   }
 
-  .series-grid {
-    border-radius: 0px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    flex-direction: row;
-    padding: 40px 0 0;
-  }
-
-  // Book page
-  .container__book-page {
-    display: flex;
-    flex-direction: column;
-
-    @media (min-width: 1110px) {
-      flex-direction: row;
-      max-width: 1000px !important;
-    }
-  }
-
-  .content {
-    flex: 2;
-
-    @media (min-width: 1110px) {
-      margin-left: 30px;
-    }
-  }
-
-  .sidebar {
-    margin: 50px 0;
-    flex: 1;
-  }
-
-  h1.book-page {
-    background: none;
-    text-align: left;
-    letter-spacing: normal;
-    margin:0;
-    line-height: 1.1;
-
-    @media (min-width: 1110px) {
-      font-size: 45px;
-    }
-  }
-
-  .bookstores-grid {
-    display: flex;
-    flex-flow: row wrap;
-    list-style-type: none;
-    padding-inline-start: 0
-  }
-
-  .bookstore {
-    flex: 1 auto;
-    text-align: center;
-    margin: 20px 10px 10px 0;
-    line-height: 60px;
-
-    a {
-      border-bottom: 3px solid #e4e4e0;
-    }
-  }
-
-  // Footer
+  /* Footer */
   footer {
-    padding: 30px;
-    background-color: #e3dde6;
-    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 0C6.716 0 0 6.716 0 15c8.284 0 15-6.716 15-15zM0 15c0 8.284 6.716 15 15 15 0-8.284-6.716-15-15-15zm30 0c0-8.284-6.716-15-15-15 0 8.284 6.716 15 15 15zm0 0c0 8.284-6.716 15-15 15 0-8.284 6.716-15 15-15z' fill='%23cbccc8' fill-opacity='0.19' fill-rule='evenodd'/%3E%3C/svg%3E");  color: #1f2420;
     position: relative;
     top: 150px;
+    border-top: 5px solid #E7EBF4;
+    background-color: #232323;
   }
 
   footer .wrapper {
-    max-width: 1120px;
     display: flex;
     margin: 0 auto;
+    max-width: 800px;
+    flex-direction: column;
   }
 
   footer ul {
     display: flex;
-    padding: 0 70px;
     flex-direction: column;
   }
 
   footer li {
     flex: 1;
     list-style: none;
-    font-family: Montserrat, sans-serif;
-    line-height: 40px;
+    font-family: "Noto Sans", Arial, sans-serif;
+  }
 
-    @media (min-width: 1110px) {
-      font-size: 0.5em;
+  footer li img {
+    background-color: white;
+    width: 30px;
+  }
+
+  footer li, footer li a {
+    color: white;
+    padding: 5px 0;
+  }
+
+  @media (min-width: 1110px) {
+    footer ul:first-child {
+      padding-left: 0;
+    }
+
+    footer .wrapper {
+      flex-direction: row;
     }
   }
 
-  footer li a {
-    text-decoration: none;
-    color: $black;
+  footer li a:hover {
+    color: #03a4a6;
+  }
 
-    &:hover {
-      border-bottom: none;
-      color: #03a4a6;
+  /* Portfolio page */
+  .portfolio-page {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1110px) {
+    .portfolio-page {
+      flex-direction: row;
+      max-width: 1000px !important;
     }
+  }
+
+  @media (min-width: 1110px) {
+    .portfolio-page section {
+      margin-left: 30px;
+      flex: 2;
+    }
+  }
+
+  .portfolio-page h1 {
+    letter-spacing: normal;
+    margin: 40px 0;
+    line-height: 1.1;
+    width: 100%;
+  }
+
+  .portfolio-page h2 {
+    line-height: 1.1;
+  }
+
+  .portfolio-header {
+    background-image: url("/images/shadow.jpg");
+    background-size: 100%;
+    padding: 30px;
+  }
+
+  .metadata, .metadata span {
+    display: flex;
+    font-family: "Noto sans", Arial, sans-serif;
+    font-size: 14px;
+    color: #839292
+  }
+
+  .metadata {
+    display: flex;
+    margin: 40px 0 -30px;
+    border-top: 2px solid #f1f1eb;
+    padding-top: 10px;
+    padding-left: 0;
+    flex-direction: column;
+  }
+
+  @media (min-width: 1110px) {
+    .metadata {
+      flex-direction: row;
+    }
+  }
+
+  .metadata li {
+    padding-right: 20px;
+  }
+
+  .shops {
+    font-family: "Noto sans", Arial, sans-serif;
+    padding-left: 0;
+  }
+
+  .shops li {
+    margin: 0 0 -20px;
+  }
+
+  hr {
+    border: 2px solid #f1f1eb;
+  }
+
+  .massive {
+    font-size: 120px;
+    position: relative;
+    top: 30px;
   }
 
 {% endhighlight %}
 
-There are more styles that we necessarily need at the moment here, but this will improve the look of our website and let us focus on more types of programming today.
+There are more styles that you necessarily need at the moment here, but this will improve the look of your website and let us focus on more types of programming today.
 
 Refresh your browser page, and it's quite transformed:
 
 ![](assets/images/styled-page.png)
 
-That font, however, looks suspiciously like Arial, and not the one referenced in the Inspector: "Amiri". Another font, "Montserrat", is also referenced in the CSS. We have to include a reference to those fonts, which are hosted on Google Web Fonts.
+That font, however, looks suspiciously like Georgia, and not the one referenced first in the inspector: "Amiri". Another font, "Noto Sans", is also referenced in the CSS, on line 78 and other places. These are not fonts which are included in operating systems, and so, to use them, you have to include a reference to those fonts, which are hosted on Google Web Fonts.
 
 ## Include the correct fonts
 
-Paste the following line into the head of your `portfolio.html` page, after the stylesheet link (or before: it doesn't matter).
+Paste the following line into the head of your _portfolio.html_ page, before or after the stylesheet link (the order doesn't matter).
 
 {% highlight html %}
-  <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet">
 {% endhighlight %}
 
 Save the file, and refresh your browser.
@@ -384,20 +424,21 @@ Ooh, fancy! If you don't like this serif font, though, you can choose your own.
 * Copy the link of the one you like.
 
 ![](assets/images/font.gif)
-* Paste the link into the `<head>` tag, as in the previous exercise.
+* Paste the link in between the `<head>` and `</head>` tags, as in the previous exercise. You'll end up with something like this:
 {% highlight html %}
-  <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 {% endhighlight %}
 
-* Reference the new font in your CSS file.
-{% highlight css %}
+* Reference the new font in your CSS file, in the `body` definition.
+{% highlight css linenos %}
+  /* Structure */
   body {
     margin: 0;
-    font-family: "Abril Fatface", sans-serif;
+    font-family: "Abril Fatface", Georgia, sans-serif;
     font-size: 28px;
-    color: $black;
+    color: #232323;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -408,36 +449,38 @@ Ooh, fancy! If you don't like this serif font, though, you can choose your own.
 
 ![](assets/images/fatface.png)
 
+Another different look! I'm going to switch back to Amiri but you can choose whether to keep your new font or not.
+
 ## Edit the styles
 
-Open `css/main.scss` and go to line 8:
+In _assets/css/main.css_, find the `body` definition that starts on line 2:
 
-{% highlight css %}
-  // Structure
+{% highlight css linenos %}
+  /* Structure */
   body {
     margin: 0;
-    font-family: "Amiri", sans-serif;
+    font-family: "Amiri", Georgia, serif;
     font-size: 28px;
-    color: $black;
+    color: #232323;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
 {% endhighlight %}
 
-There is a CSS command called `background-color` which is not included in the `body` definition. Add it in, and choose a color using hex codes ([here is a website you can use to get them](https://htmlcolorcodes.com/)). Your CSS will look something like this:
+There is a CSS command called `background-color` which is not included in the `body` definition. Add it in, and choose a color using hex codes ([here is a website you can use to get them](https://htmlcolorcodes.com/)). Your CSS will look something like this (the addition is on line 10):
 
-{% highlight css %}
-  // Structure
+{% highlight css linenos %}
+  /* Structure */
   body {
     margin: 0;
-    font-family: "Amiri", sans-serif;
+    font-family: "Amiri", Georgia, serif;
     font-size: 28px;
-    color: $black;
+    color: #232323;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: #5fd5ff;
+    background-color: #eff1f7;
   }
 {% endhighlight %}
 
@@ -445,8 +488,10 @@ Save the file and refresh your browser. Repeat until you're happy with the colou
 
 ![](assets/images/css-play.png)
 
+## Stretch goal
+
+Change the colours of the headers and body in your CSS to suit your own tastes. I recommend very pale, almost-white colours for backgrounds, and bright colours for headers (strong coloured backgrounds make your website go a bit late-90s).
+
 ## What you’ve learned
 
-* Using Google Fonts is a matter of pasting a link into your webpage's head and referencing it in your CSS
-
-
+* Using Google Fonts is a matter of pasting a link into your webpage's head and referencing it in your CSS.

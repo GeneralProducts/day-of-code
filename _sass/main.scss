@@ -476,16 +476,10 @@ button {
 }
 
 .language-html {
-  font-size: 100%;
   color: $white;
-
-  @media (min-width: $large-screen) {
-    font-size: 80%;
-  }
 }
 
 .highlight pre { background-color: #1e1e1e; border-radius: 5px; }
 .highlight .s { color: $railscasts-orange } /* Literal.String */
 .highlight .na { color: $railscasts-grey } /* Name.Attribute */
 .highlight .nt { color: $railscasts-green; font-weight: bold } /* Name.Tag */
-
