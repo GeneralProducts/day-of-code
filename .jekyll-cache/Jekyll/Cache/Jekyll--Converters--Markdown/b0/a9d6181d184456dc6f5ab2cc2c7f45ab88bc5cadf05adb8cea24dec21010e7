@@ -1,0 +1,33 @@
+I"�<!-- <span class="tag tag--draft">Not started</span> -->
+<!-- <span class="tag tag--progress">In progress</span> -->
+<!-- <span class="tag tag--review">Ready for review</span> -->
+<!-- <span class="tag tag--approved">Approved</span> -->
+
+<p class="content__abstract">
+  Instructions for Windows set up. If you are on Mac, ignore this article and read the previous one.
+</p>
+
+<p>You are going to install Ruby using an installer.</p>
+
+<h2 id="install-ruby">Install Ruby</h2>
+<p><a href="https://rubyinstaller.org/">Download Ruby Installer and run it</a>. Click through the installer using the default options.</p>
+
+<h2 id="enable-copy-and-paste-in-windows-command-prompt">Enable copy and paste in Windows Command Prompt</h2>
+
+<p><strong>For Windows 10 users:</strong></p>
+
+<p>Open Command Prompt. Right-click on the command prompt’s title bar, and choose “Properties”. Navigate to the “options” tab, and check “Enable Ctrl key shortcuts”. (If you don’t find it, but have an “experimental” tab, navigate there and check “Enable new Ctrl key shortcuts” option. In this case, you may need to check the “Enable experimental console features” option first.)</p>
+
+<p><strong>For other Windows versions:</strong></p>
+
+<p>To paste a text in the command prompt window you’ll need to use the mouse (right-click on the window –&gt; paste).</p>
+
+<h2 id="install-nodejs">Install Node.js</h2>
+<p>Go to <a href="https://nodejs.org/">https://nodejs.org/</a> and install the Node.js LTS package</p>
+
+<h2 id="what-youve-learned">What you’ve learned</h2>
+
+<ul>
+  <li>You have installed the tools needed to develop software on your computer and you’re ready for the Day of Code.</li>
+</ul>
+:ET

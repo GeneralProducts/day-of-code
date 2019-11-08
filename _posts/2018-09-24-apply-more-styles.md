@@ -18,7 +18,7 @@ order: 2
 
 ## Add more CSS
 
-Paste the following in to the _main.css_ file, replacing your `h1` definition and all the current contents of the file. If you have trouble copying it, there's a [raw text version of the whole file here](https://raw.githubusercontent.com/GeneralProducts/publisher-website/finished-example/assets/css/main.css).
+Paste the following in to the _main.css_ file, replacing your `h1` definition and all the current contents of the file.
 
 {% highlight css linenos%}
 
@@ -392,7 +392,7 @@ Paste the following in to the _main.css_ file, replacing your `h1` definition an
 
 {% endhighlight %}
 
-There are more styles that you necessarily need at the moment here, but this will improve the look of your website and let us focus on more types of programming today.
+There are more styles than you necessarily need at the moment here, but this will improve the look of your website and let us focus on more types of programming today.
 
 Refresh your browser page, and it's quite transformed:
 
@@ -488,7 +488,7 @@ Save the file and refresh your browser. Repeat until you're happy with the colou
 
 ![A rather gaudy yet personalised version of the website. Blue banner and off-yellow body colour](assets/images/css-play.png)
 
-## Stretch goal
+## Do more later
 
 Change the colours of the headers and body in your CSS to suit your own tastes. I recommend very pale, almost-white colours for backgrounds, and bright colours for headers (strong coloured backgrounds make your website go a bit late-90s).
 

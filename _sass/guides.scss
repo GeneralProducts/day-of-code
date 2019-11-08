@@ -400,6 +400,10 @@ blockquote {
     font-size: 24px;
     text-decoration: none;
   }
+
+  span {
+    display: none;
+  }
 }
 
 .prev-article {
@@ -519,10 +523,12 @@ em {
   font-weight: 600;
   color: #4b4840;
   font-size: inherit;
+  float: right;
 }
 
 h1 .time {
   font-size: 18px;
   display: table;
   line-height: 1;
+  float: none;
 }

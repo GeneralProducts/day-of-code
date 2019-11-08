@@ -82,7 +82,7 @@ Which is what you see in the browser, too:
 
 ![Screenshot of the index page with a nice bright banner image](assets/images/bright.png)
 
-Notice too that `primary-header` has a higher priority than `header`, so the bright-flowers instruction overrides the blue instruction.
+Notice too that `primary-header` has a higher priority than `header`, so the bright-flowers instruction overrides the blue instruction. This is because of the CSS specificity rules, which determine which style "wins". [Read more about that later.](https://blog.logrocket.com/how-css-works-understanding-the-cascade-d181cd89a4d8/)
 
 This is how CSS works: the keywords in the CSS match the HTML, and more specific commands override more generic ones.
 
@@ -169,16 +169,11 @@ Here's the whole process:
 
 ![Gif showing all the editing needed to set up the portfolio page with a layout, as previously described](assets/images/port-edit.gif)
 
-
 Save your file and refresh your browser. Great: the styles are back again.
 
-## What you’ve learned
+## Do more later 1: choose your own background
 
-* Programmers like to keep code DRY so there's less to maintain.
-
-## Stretch goals
-
-* If you have time now, or later after the Day of Code, choose your own background for the home page banner and amend the CSS to use it. There are some in the _images_ folder, and the [Unsplash website](https://unsplash.com/photos/7G7RagQTqi4) is a useful resource. Find an image you like and get its link, making sure it's the image file not the website page URL by right-mouse-selecting "Copy Image address", not "Copy link address", and reference it in your CSS:
+If you have time now, or later after the Day of Code, choose your own background for the home page banner and amend the CSS to use it. There are some in the _images_ folder, and the [Unsplash website](https://unsplash.com/photos/7G7RagQTqi4) is a useful resource. Find an image you like and get its link, making sure it's the image file not the website page URL by right-mouse-selecting "Copy Image address", not "Copy link address", and reference it in your CSS:
 
 {% highlight css %}
   .primary-header {
@@ -192,6 +187,9 @@ Refresh the page to see the effect:
 ![Browser with a new header image](assets/images/unsplash-rendered.png)
 
 You might want to add `background-position: 50%` into your CSS definition to position the image better.
+
+
+## Do more later 2: Google analytics
 
 * Google Analytics code is a good example of code that should run on every page, but should only appear once in your codebase. If you have a Google account, [follow their instructions](https://support.google.com/analytics/answer/1008015?hl=en) to get your analytics code, and paste it into the `<head>` of your _default.html_ like this:
 
@@ -212,3 +210,8 @@ You might want to add `background-position: 50%` into your CSS definition to pos
   ...
 </html>
 {% endhighlight %}
+
+
+## What you’ve learned
+
+* Programmers like to keep code DRY so there's less to maintain.

@@ -52,20 +52,9 @@ The ability to swap in data dynamically becomes even more useful if your website
 The data store you're using today is XML (ONIX). It's not a traditional database, but it does have structure so you can look data up in it.
 
 
-## Why Jekyll?
+## Jekyll
 
-Today, you are using the static site generator Jekyll to do some of the work of a webserver – translating command tags and outputting static HTML -- before you push the code to the internet, rather than dynamically creating it on the fly. It means you're not going to have to use an advanced web server to dynamically interpret your code, but you are still going to be inserting command tags so you can automate the generation of your HTML. Jekyll uses a templating language called [Liquid](https://shopify.github.io/liquid/), written in Ruby.
-
-
-## Why Ruby?
-
-We have chosen to use Ruby because it is an elegant language. You'll know the seminal work on writing, Strunk and White's "The Elements of Style". William Strunk, Jr. would be delighted with Ruby:
-
-> ### Omit needless words.
-> Vigorous writing is concise. A sentence should contain no unnecessary words, a paragraph no unnecessary sentences, for the same reason that a drawing should have no unnecessary lines and a machine no unnecessary parts. This requires not that the writer make all his sentences short, or that he avoid all detail and treat his subjects only in outline, but that _every word tell_.
-> #### Strunk and White, The Elements of Style, 1918
-
-As computing power has increased over the last few decades, we can have programming languages optimised for humans, not computers. Computers are powerful enough nowadays to allow Ruby methods to be written in clear English, which take longer to process than some terse machine code, but makes for a far more enjoyable coding experience, because Ruby is readable. `Book.all`, for example, means “get all the books”.
+Today, you are using the static site generator Jekyll to do some of the work of a webserver – translating command tags and outputting static HTML -- before you push the code to the internet, rather than dynamically creating it on the fly. It means you're not going to have to use an advanced web server to dynamically interpret your code, but you are still going to be inserting command tags so you can automate the generation of your HTML. Jekyll uses a templating language called [Liquid](https://shopify.github.io/liquid/), written in [Ruby](/glossary#ruby).
 
 ## Command tags
 Your challenge, which you'll be walked through in the next article, is to replace the static HTML in the _portfolio.html_ file with Liquid command tags that will loop through all your books and display them. To do that, you'll need to know some code syntax.

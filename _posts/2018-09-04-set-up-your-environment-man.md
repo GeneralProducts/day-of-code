@@ -58,7 +58,7 @@ paste the following and press **enter**:
 {% highlight bash %}
 brew install curl-ca-bundle
 {% endhighlight%}
-Then paste the following and press **enter**.
+And then also paste the following and press **enter**.
 {% highlight bash %}
 cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE'`
 {% endhighlight%}

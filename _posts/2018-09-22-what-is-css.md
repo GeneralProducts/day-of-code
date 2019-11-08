@@ -31,6 +31,8 @@ The styles panel on the right shows me that the default styles for the `<h1>` HT
 
 ## Add CSS to override the default style
 
+You're going to try to override the default style. But heads up: it's not going to work at first. You will have the opportunity to debug the problem.
+
 Open the file called _main.css_ in the _assets/css/_ folder:
 
 ![Screenshot showing the empty file where the reader will put their css code](assets/images/main-css.png)

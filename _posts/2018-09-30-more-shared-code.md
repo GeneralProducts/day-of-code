@@ -82,11 +82,7 @@ Refresh the browser: you'll see your new nav links. And now you can more easily 
 
 ![Showing the nav links in the browser](assets/images/nav.png)
 
-## What you’ve learned
-
-* Once you have templates set up, there are fewer places where you have to maintain code.
-
-## Stretch goals
+## Do more later
 
 * It's best for users if link labels match the words found at their destination. Amend the word "Books" to "Portfolio", by editing the _navigation.html_ file.
 * Make the "About" link work, in the same way you added the portfolio page.
@@ -132,3 +128,7 @@ Refresh the browser: you'll see your new nav links. And now you can more easily 
 </footer>
 
 {% endhighlight %}
+
+## What you’ve learned
+
+* Once you have templates set up, there are fewer places where you have to maintain code.

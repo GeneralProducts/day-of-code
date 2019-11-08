@@ -27,7 +27,7 @@ You'll start by adding one book to your portfolio page. Open _portfolio.html_. R
 <ul class="covers-container">
   <li class="cover-container">
     <a href="/sample_book">
-      <img src="/images/sample-cover.jpg" class="cover" alt="Cover"/>
+      <img src="/images/home_img.png" class="cover" alt="Cover"/>
       <p>
         <small>Published Nov 2019</small>
         <br/>

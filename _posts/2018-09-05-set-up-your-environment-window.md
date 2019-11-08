@@ -15,16 +15,16 @@ order: 5
   Instructions for Windows set up. If you are on Mac, ignore this article and read the previous one.
 </p>
 
-You are going to install Ruby on Rails using an installer. You don't actually need Rails for the Day of Code but this installer provide everything you'll need to have a web development environment, in one go.
+You are going to install Ruby using an installer.
 
-## Install Rails
-[Download RailsInstaller and run it](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.4.0.exe). Click through the installer using the default options.
+## Install Ruby
+[Download the Ruby Installer Ruby Devkit 2.6.X (x64) and run it](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.5-1/rubyinstaller-devkit-2.6.5-1-x64.exe). Click through the installer using the default options. That link downloads the installer itself: if you prefer to go to the Ruby Installer website, [here is the link](https://rubyinstaller.org/downloads/).
 
 ## Enable copy and paste in Windows Command Prompt
 
 **For Windows 10 users:**
 
-Open Command Prompt with Ruby and Rails. Right-click on the command prompt’s title bar, and choose “Properties”. Navigate to the “options” tab, and check “Enable Ctrl key shortcuts”. (If you don’t find it, but have an “experimental” tab, navigate there and check “Enable new Ctrl key shortcuts” option. In this case, you may need to check the “Enable experimental console features” option first.)
+Open Command Prompt. Right-click on the command prompt’s title bar, and choose “Properties”. Navigate to the “options” tab, and check “Enable Ctrl key shortcuts”. (If you don’t find it, but have an “experimental” tab, navigate there and check “Enable new Ctrl key shortcuts” option. In this case, you may need to check the “Enable experimental console features” option first.)
 
 **For other Windows versions:**
 
