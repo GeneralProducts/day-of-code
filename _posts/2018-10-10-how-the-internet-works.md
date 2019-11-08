@@ -51,7 +51,6 @@ The ability to swap in data dynamically becomes even more useful if your website
 
 The data store you're using today is XML (ONIX). It's not a traditional database, but it does have structure so you can look data up in it.
 
-
 ## Jekyll
 
 Today, you are using the static site generator Jekyll to do some of the work of a webserver – translating command tags and outputting static HTML -- before you push the code to the internet, rather than dynamically creating it on the fly. It means you're not going to have to use an advanced web server to dynamically interpret your code, but you are still going to be inserting command tags so you can automate the generation of your HTML. Jekyll uses a templating language called [Liquid](https://shopify.github.io/liquid/), written in [Ruby](/glossary#ruby).
