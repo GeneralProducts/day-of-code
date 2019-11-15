@@ -1,0 +1,101 @@
+I"[<!-- <span class="tag tag--draft">Not started</span> -->
+<!-- <span class="tag tag--progress">In progress</span> -->
+<!-- <span class="tag tag--review">Ready for review</span> -->
+<!-- <span class="tag tag--approved">Approved</span> -->
+
+<p class="content__abstract">
+  Instructions for Mac set up. If you are on Windows, ignore this article and proceed to the next one.
+</p>
+
+<p>Check the version of your operating system by click the Apple menu and choosing “About this Mac”.</p>
+
+<p><img src="assets/images/apple.png" alt="Apple's menu" /></p>
+
+<p>If your version is 10.6 or higher, this guide is for you. If it’s lower, email us urgently, well before the Day of Code.</p>
+
+<h2 id="macos-109-and-higher">MacOS 10.9 and higher</h2>
+
+<p>If your version is 10.9 or higher, do the following:</p>
+
+<h3 id="install-command-line-tools">Install Command line tools</h3>
+<p>Open <a href="glossary#terminal">Terminal</a> (Mac) or the <a href="glossary#command-prompt">Command Prompt</a> (Windows), and, at the command line, paste the following and press <strong>enter</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">xcode-select <span class="nt">--install</span></code></pre></figure>
+
+<h3 id="install-homebrew">Install Homebrew</h3>
+<p>At the command line, paste the following and press <strong>enter</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ruby <span class="nt">-e</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install<span class="si">)</span><span class="s2">"</span></code></pre></figure>
+
+<h3 id="check-that-git-is-installed">Check that Git is installed</h3>
+<p>Git should be installed as part of XCode, but it’s best to check. At the command line, type the following and press <strong>enter</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  git <span class="nt">--version</span></code></pre></figure>
+
+<p>You should see something like:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  git version xxx <span class="o">(</span>Apple Git-xx<span class="o">)</span></code></pre></figure>
+
+<p>If you don’t, download the latest <a href="https://sourceforge.net/projects/git-osx-installer/files/">Git for Mac installer</a> and follow the prompts to install Git.</p>
+
+<h3 id="install-rbenv">Install rbenv</h3>
+<p>At the command line, paste the following and press <strong>enter</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">brew update
+brew <span class="nb">install </span>rbenv
+<span class="nb">echo</span> <span class="s1">'eval "$(rbenv init -)"'</span> <span class="o">&gt;&gt;</span> ~/.bash_profile
+<span class="nb">source</span> ~/.bash_profile</code></pre></figure>
+
+<h3 id="build-ruby-with-rbenv">Build Ruby with rbenv</h3>
+<p>At the command line, paste the following and press <strong>enter</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">rbenv <span class="nb">install </span>2.5.5</code></pre></figure>
+
+<p>If you get an <code class="highlighter-rouge">OpenSSL::SSL::SSLError: … : certificate verify failed</code> error,
+paste the following and press <strong>enter</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">brew <span class="nb">install </span>curl-ca-bundle</code></pre></figure>
+
+<p>And then also paste the following and press <strong>enter</strong>.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cp</span> /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt <span class="sb">`</span>ruby <span class="nt">-ropenssl</span> <span class="nt">-e</span> <span class="s1">'puts OpenSSL::X509::DEFAULT_CERT_FILE'</span><span class="sb">`</span></code></pre></figure>
+
+<h3 id="set-default-ruby">Set default Ruby</h3>
+<p>At the command line, paste the following and press <strong>enter</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">rbenv global 2.5.5</code></pre></figure>
+
+<h3 id="optional-install-ruby-on-rails">Optional: install Ruby on Rails</h3>
+<p>You do not need Rails for the Day of Code, but if you’d think you’d like to have it on your laptop for continuing your learning after the event, do the following. At the command line, paste the following and press <strong>enter</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gem <span class="nb">install </span>rails <span class="nt">--no-document</span></code></pre></figure>
+
+<h2 id="macos-108-and-lower">MacOS 10.8 and lower</h2>
+
+<p>If your MacOS version is 10.6, 10.7, or 10.8, download the RailsInstaller for your version of OS X:</p>
+
+<p><a href="http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.7.app.tgz">RailsInstaller for 10.7 and 10.8 (325MB)</a></p>
+
+<p><a href="http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.6.app.tgz">RailsInstaller for 10.6 (224MB)</a></p>
+
+<p>Double click the downloaded file and it will unpack it into the current directory. Double click the the newly unpacked <em>RailsInstaller-1.0.4-osx-10.7.app</em> or <em>RailsInstaller-1.0.4-osx-10.6.app</em> and follow the instructions. It will open a README file with <em>Rails Installer OS X</em> at the top. Please ignore the instructions in this file.</p>
+
+<h2 id="check-your-environment">Check your environment</h2>
+<p>At the command line, paste the following and press <strong>enter</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ruby <span class="nt">-v</span></code></pre></figure>
+
+<p>You should get something like this appear:</p>
+
+<p><code class="highlighter-rouge">ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-darwin17]</code></p>
+
+<p>Please email us if you don’t.</p>
+
+<p>You have set up your laptop ready for the Day of Code – congrats!</p>
+
+<h2 id="what-youve-learned">What you’ve learned</h2>
+
+<ul>
+  <li>You have installed the tools needed to develop software on your computer and you’re ready for the Day of Code.</li>
+</ul>
+:ET

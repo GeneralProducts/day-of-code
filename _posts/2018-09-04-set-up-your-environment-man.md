@@ -38,6 +38,19 @@ At the command line, paste the following and press **enter**:
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 {% endhighlight%}
 
+### Check that Git is installed
+Git should be installed as part of XCode, but it's best to check. At the command line, type the following and press **enter**:
+{% highlight bash %}
+  git --version
+{% endhighlight%}
+
+You should see something like:
+{% highlight bash %}
+  git version xx.xx.xx (Apple Git-xx)
+{% endhighlight%}
+
+If you don't, download the latest [Git for Mac installer](https://sourceforge.net/projects/git-osx-installer/files/) and follow the prompts to install Git.
+
 ### Install rbenv
 At the command line, paste the following and press **enter**:
 {% highlight bash %}
