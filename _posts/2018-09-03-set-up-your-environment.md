@@ -28,6 +28,20 @@ We recommend the text editor Atom because it is free. If you have a strong prefe
 
 [Download Atom and install it](https://atom.io/)
 
+Throughout these docs, you'll see screenshots of the text editor. The author of these docs uses VSCode, and you'll see her text editor in the screenshots. Here's an example:
+
+![The index.html page](/assets/images/index.png)
+
+Here's the same HTML file, in Atom:
+
+![The index.html page](/assets/images/index-atom.png)
+
+And in Sublime:
+
+![The index.html page](/assets/images/index-sublime.png)
+
+Whatever text editor you use, the effect is roughly the same: they all have a file navigator down the left hand side, and the larger area is where you open files and edit them.
+
 ## Browser
 
 A browser is where you will view what your code does. We recommend the latest version of Chrome or Firefox.
