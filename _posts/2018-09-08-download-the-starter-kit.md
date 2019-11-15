@@ -21,8 +21,14 @@ We've written a starter kit that contains some code libraries and data that you'
 
 Open [Terminal](glossary#terminal) (Mac) or the [Command Prompt](glossary#command-prompt) (Windows), and, at the command line, type the following and press **enter**:
 
+On the Mac, type:
 {% highlight bash %}
   cd
+{% endhighlight%}
+
+On Windows, type:
+{% highlight bash %}
+  cd/
 {% endhighlight%}
 
 `cd` stands for "change directory", and it has changed the directory you're in to the root of your computer. You could have done the same by going to your file navigator on your computer (Finder or File Explorer) and clicking on the relevant folder, but you're doing programming now, so you'll use the command line, which is quicker and more controllable.
@@ -80,7 +86,7 @@ You are now within the _publisher-website_ directory.
 
 ## Process the files
 
-Type `ls`, which is the command for "list files",  and press **enter** to see a list of the files in your _publisher-website_ directory. You will see something like this:
+On the Mac, type `ls`, and on Windows type `DIR`, which are the commands for "list files",  and press **enter** to see a list of the files in your _publisher-website_ directory. You will see something like this:
 
 {% highlight bash %}
 Emma@Emmas-MBP-3 publisher-website $ ls

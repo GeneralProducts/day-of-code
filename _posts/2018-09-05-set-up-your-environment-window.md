@@ -45,6 +45,12 @@ You should get something like this appear:
 
 Please email us or comment on the Slack channel if you don't.
 
+## Install Git
+
+Download the latest [Git for Windows stand-alone installer](https://git-for-windows.github.io/).
+
+When you've successfully started the installer, you should see the Git Setup wizard screen. Follow the Next and Finish prompts to complete the installation, accepting the default options.
+
 ## What you’ve learned
 
 * You have installed the tools needed to develop software on your computer and you're ready for the Day of Code.

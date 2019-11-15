@@ -1,4 +1,4 @@
-I"B-<!-- <span class="tag tag--draft">Not started</span> -->
+I"E.<!-- <span class="tag tag--draft">Not started</span> -->
 <!-- <span class="tag tag--progress">In progress</span> -->
 <!-- <span class="tag tag--review">Ready for review</span> -->
 <!-- <span class="tag tag--approved">Approved</span> -->
@@ -13,7 +13,13 @@
 
 <p>Open <a href="glossary#terminal">Terminal</a> (Mac) or the <a href="glossary#command-prompt">Command Prompt</a> (Windows), and, at the command line, type the following and press <strong>enter</strong>:</p>
 
+<p>On the Mac, type:</p>
+
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">  <span class="nb">cd</span></code></pre></figure>
+
+<p>On Windows, type:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  <span class="nb">cd</span>/</code></pre></figure>
 
 <p><code class="highlighter-rouge">cd</code> stands for “change directory”, and it has changed the directory you’re in to the root of your computer. You could have done the same by going to your file navigator on your computer (Finder or File Explorer) and clicking on the relevant folder, but you’re doing programming now, so you’ll use the command line, which is quicker and more controllable.</p>
 
@@ -60,7 +66,7 @@
 
 <h2 id="process-the-files">Process the files</h2>
 
-<p>Type <code class="highlighter-rouge">ls</code>, which is the command for “list files”,  and press <strong>enter</strong> to see a list of the files in your <em>publisher-website</em> directory. You will see something like this:</p>
+<p>On the Mac, type <code class="highlighter-rouge">ls</code>, and on Windows type <code class="highlighter-rouge">DIR</code>, which are the commands for “list files”,  and press <strong>enter</strong> to see a list of the files in your <em>publisher-website</em> directory. You will see something like this:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">Emma@Emmas-MBP-3 publisher-website <span class="nv">$ </span><span class="nb">ls
 </span>Gemfile		README.md	_data		assets		index.html	spec
