@@ -138,7 +138,7 @@ Now you are ready to run the code you have downloaded. You do this by starting a
 Your terminal window looks a bit like this:
 
 {% highlight bash %}
-  Emma@Emmas-MBP-3 publisher-website $ jekyll serve --watch --livereload
+  Emma@Emmas-MBP-3 publisher-website $ jekyll serve
   Configuration file: /Users/Emma/repos/publisher-website/_config.yml
   Configuration file: /Users/Emma/repos/publisher-website/_config.yml
               Source: /Users/Emma/repos/publisher-website
@@ -152,7 +152,7 @@ Your terminal window looks a bit like this:
 {% endhighlight%}
 
 > <span class="content__learn-more">Troubleshoot<span>
-* On the author's nice fast Macbook Pro, the server starts in under a second. On her son's cheap, old Windows 10 laptop, it takes over 3 minutes. If the server "hangs" at "Generating...", sit tight and wait.
+* If the server "hangs" at "Generating...", press `ctrl+C` and rerun the command as `jekyll serve --trace` to see what the error is.
 
 ## View the code running in a browser
 
