@@ -125,6 +125,7 @@ Your terminal window looks a bit like this:
 
 > <span class="content__learn-more">Troubleshoot<span>
 * If you get a message such as `public_suffix-4.0.1 requires ruby version >= 2.3, which is incompatible with the current version, ruby 2.2.5p319`, you are on an old version of Ruby. Ask your coach for advice, and post in the Slack channel for further help. Our advice will differ based on which system and Ruby version manager you're on. Aim for Ruby 2.5.5 at least.
+* If you get a Windows error like "this version of Rubyxxx is not compatible with the version of Windows you're running", reinstall Bundler by typing `gem install bundler`, pressing enter and accepting the dialogue box defaults. You might also have to run `bundle update --bundler` if prompted by another error message, and `gem install bundler:1.16.6`, and MSYS2 if prompted.
 
 ## Start a server running on your computer
 
