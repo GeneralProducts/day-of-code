@@ -16,7 +16,7 @@ order: 3
   This article tells you how to create another web page.
 </p>
 
-Your index page contains links to another page, but those links are currently broken. Clicking on them in your browser takes you to an error message:
+Your index page contains "View all our books ->" links to another page, but those links are currently broken. Clicking on them in your browser takes you to an error message:
 
 ![Screenshot showing a broken link](assets/images/broken-link.png)
 
