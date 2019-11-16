@@ -23,7 +23,7 @@ Go to our [GitHub repo](https://github.com/GeneralProducts/publisher-website) an
 
 ## Instructions for Windows
 
-* In File Explorer, find the ZIP file that you have downloaded and right-mouse > Expand All
+* In File Explorer, find the ZIP file that you have downloaded and right-mouse > Extract All
 * A dialogue box appears asking you to set the location of the unzipped folder: it should be This PC > Windows (C:) > Users > [username] > repos, so write in the repos folder name, a bit like this:
 
 ![Extracting the files on Windows](/assets/images/extract-win.JPG)
