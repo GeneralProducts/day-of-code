@@ -49,7 +49,7 @@ Sites such as Wordpress, Twitter and our own publishing management software, [Co
 
 The ability to swap in data dynamically becomes even more useful if your website stores its content in a database rather than in lots of separate HTML files. If you want to offer 100 web pages, one for each book you’ve published, you don’t need to create 100 HTML files. You can design one web page as a ‘template’ and use it for all 100 books, drawing their data from where it’s stored in the database. For instance, the heading in your template could be made up of one command tag for ‘author name’ and another command tag for ‘book title’. Those command tags will be replaced with the relevant info, depending on which book’s web page the user is requesting.
 
-The data store you're using today is XML (ONIX). It's not a traditional database, but it does have structure so you can look data up in it.
+The data store you're using today is XML (ONIX). XML isn't a database but it has structure and describes the data you're going to be using in this section.
 
 ## Jekyll
 
@@ -59,7 +59,7 @@ Today, you are using the static site generator Jekyll to do some of the work of 
 Your challenge, which you'll be walked through in the next article, is to replace the static HTML in the _portfolio.html_ file with Liquid command tags that will loop through all your books and display them. To do that, you'll need to know some code syntax.
 
 ## Syntax
-Syntax refers to the symbols and words that make up a programming language. Use the correct syntax and the computer will know what you want it to do.
+Syntax means the rules about how you can use the symbols and words that make up a programming language. Use the correct syntax and the computer will know what you want it to do.
 
 The syntax for command tags in Jekyll's Liquid templating language is this:
 

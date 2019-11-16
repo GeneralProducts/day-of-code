@@ -24,7 +24,11 @@ You are going to install Ruby using an installer.
 
 **For Windows 10 users:**
 
-Open Command Prompt. Right-click on the command prompt’s title bar, and choose “Properties”. Navigate to the “options” tab, and check “Enable Ctrl key shortcuts”. (If you don’t find it, but have an “experimental” tab, navigate there and check “Enable new Ctrl key shortcuts” option. In this case, you may need to check the “Enable experimental console features” option first.)
+Open Command Prompt by typing `cmd` in the search bar at the bottom of the screen, and selecting Command Prompt:
+
+![Starting the command prompt in windows 10](/assets/images/cmd.jpg)
+
+Right-click on the command prompt’s title bar, and choose “Properties”. Navigate to the “options” tab, and check “Enable Ctrl key shortcuts”. (If you don’t find it, but have an “experimental” tab, navigate there and check “Enable new Ctrl key shortcuts” option. In this case, you may need to check the “Enable experimental console features” option first.)
 
 **For other Windows versions:**
 
@@ -53,4 +57,4 @@ When you've successfully started the installer, you should see the Git Setup wiz
 
 ## What you’ve learned
 
-* You have installed the tools needed to develop software on your computer and you're ready for the Day of Code.
+* You have installed the tools needed to develop software on your computer.

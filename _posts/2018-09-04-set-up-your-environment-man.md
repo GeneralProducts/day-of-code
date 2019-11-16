@@ -109,8 +109,6 @@ You should get something like this appear:
 
 Please email us if you don't.
 
-You have set up your laptop ready for the Day of Code -- congrats!
-
 ## What you’ve learned
 
-* You have installed the tools needed to develop software on your computer and you're ready for the Day of Code.
+* You have installed the tools needed to develop software on your computer.

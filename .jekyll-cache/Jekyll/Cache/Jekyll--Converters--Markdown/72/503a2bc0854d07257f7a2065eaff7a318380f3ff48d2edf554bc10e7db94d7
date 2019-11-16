@@ -1,0 +1,40 @@
+I"J
+<!-- <span class="tag tag--draft">Not started</span> -->
+<!-- <span class="tag tag--progress">In progress</span> -->
+<!-- <span class="tag tag--review">Ready for review</span> -->
+<!-- <span class="tag tag--approved">Approved</span> -->
+
+<p class="content__abstract">
+  This article explains how to get the starter kit. It's a large file, so please run through this article before the Day of Code so you don't have to wait for a large download on the day.
+</p>
+
+<p>We’ve written a starter kit that contains some code libraries and data that you’ll need for today, which you’re about to download from the code repository website GitHub. Go ahead and follow the instructions below to get started.</p>
+
+<h2 id="download-the-files">Download the files</h2>
+
+<p>Go to our <a href="https://github.com/GeneralProducts/publisher-website">GitHub repo</a> and click the “Clone or download” button, then “Download ZIP”. This is a large ZIP file so may take some time.</p>
+
+<h2 id="navigate-to-the-downloaded-zip-file">Navigate to the downloaded ZIP file</h2>
+
+<p>In Finder or File Explorer, find the ZIP file that you have downloaded and double-click to unzip it, or right-mouse Expand All. On Windows you will get the chance to say the location of the unzipped folder: it should be This PC &gt; Windows (C:) &gt; Users &gt; [username] &gt; repos, so write in the repos folder name.</p>
+
+<p>Once the folder is uncompressed, remove the “-master” from the end of the folder name, so it is called “publisher-website”. (“master” refers to the version, or branch, of the code on GitHub and is unnecessarily wordy for your local version of the code.)</p>
+
+<h2 id="move-the-unzipped-folder-to-a-new-folder">Move the unzipped folder to a new folder</h2>
+
+<p>If you haven’t already as part of the unzipping process, create a new folder on your computer called <code class="highlighter-rouge">repos</code>, in your home folder. Drag the unzipped folder into that new folder. Here’s what it should look like:</p>
+
+<p>On Windows, the folder should be located in This PC &gt; Windows (C:) &gt; Users &gt; [username] &gt; repos &gt; publisher-website, like this:</p>
+
+<p><img src="/assets/images/win-home.JPG" alt="Correct file location on windows" /></p>
+
+<p>On Mac, the folder should be located in Users &gt; [username] &gt; repos &gt; publisher-website, like this:</p>
+
+<p><img src="/assets/images/mac-home.png" alt="Correct file location on mac" /></p>
+
+<h2 id="what-youve-learned">What you’ve learned</h2>
+
+<ul>
+  <li>You have downloaded the starter kit to your computer, and you’re ready for the Day of Code.</li>
+</ul>
+:ET

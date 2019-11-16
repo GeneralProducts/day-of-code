@@ -27,7 +27,7 @@ You'll start by adding one book to your portfolio page. Open _portfolio.html_. R
 <ul class="covers-container">
   <li class="cover-container">
     <a href="/sample_book">
-      <img src="/images/home_img.png" class="cover" alt="Cover"/>
+      <img src="/images/home_img.jpg" class="cover" alt="Cover"/>
       <p>
         <small>Published Nov 2019</small>
         <br/>
@@ -38,7 +38,7 @@ You'll start by adding one book to your portfolio page. Open _portfolio.html_. R
 </ul>
 {% endhighlight %}
 
-Save the file. The whole file should look like this:
+Take the time to align and nest the code properly, if pasting has misaligned it. Save the file. The whole file should look like this:
 
 {% highlight html %}
 ---

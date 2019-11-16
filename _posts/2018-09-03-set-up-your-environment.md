@@ -44,15 +44,15 @@ Whatever text editor you use, the effect is roughly the same: they all have a fi
 
 ## Browser
 
-A browser is where you will view what your code does. We recommend the latest version of Chrome or Firefox.
+A browser is where you will view what your code does. We recommend the latest version of Chrome or Firefox. If you use Chrome, all the screenshots in these docs will match.
 
-Go to [Update my browser](https://updatemybrowser.org/) and check you are using the latest version of your preferred browser. We recommend Chrome, and definitely not Internet Explorer.
+Go to [Update my browser](https://updatemybrowser.org/) and check you are using the latest version of your preferred browser.
 
 ## Version control and backup
 
-As well as saving your code on your computer, you are going to use a webservice called GitHub to store a copy of your code. Create a free account on GitHub. GitHub is where most programmers save and share their code, as well as having it on their computers.
+As well as saving your code on your computer, we recommend a webservice called GitHub to store a copy of your code. GitHub is where most programmers save and share their code, as well as having it on their computers.
 
-Go to [Github.com](https://github.com/) and sign up for an account. Make sure you use a username and password that you will be able to recall on the Day of Code.
+Go to [Github.com](https://github.com/) and sign up for an account.
 
 > <span class="content__learn-more">Learn more later<span>
 * [Learn Enough Git to be Dangerous](https://www.learnenough.com/git) – Unleash the power of
@@ -63,4 +63,3 @@ tracking & collaboration with version control!
 ## What you’ve learned
 
 * Software is needed to make software, and it's called the "development environment"
-* Thanks to [RailsGirls](http://guides.railsgirls.com/install) for providing the instructions that ours are heavily based on.

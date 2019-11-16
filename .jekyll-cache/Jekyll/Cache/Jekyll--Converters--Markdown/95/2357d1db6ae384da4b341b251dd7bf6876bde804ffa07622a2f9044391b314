@@ -1,0 +1,54 @@
+I"{<!-- <span class="tag tag--draft">Not started</span> -->
+<!-- <span class="tag tag--progress">In progress</span> -->
+<!-- <span class="tag tag--review">Ready for review</span> -->
+<!-- <span class="tag tag--approved">Approved</span> -->
+
+<p class="content__abstract">
+  Instructions for Windows set up. If you are on Mac, ignore this article and read the previous one.
+</p>
+
+<p>You are going to install Ruby using an installer.</p>
+
+<h2 id="install-ruby">Install Ruby</h2>
+<p><a href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.5-1/rubyinstaller-devkit-2.6.5-1-x64.exe">Download the Ruby Installer Ruby Devkit 2.6.X (x64) and run it</a>. Click through the installer using the default options. That link downloads the installer itself: if you prefer to go to the Ruby Installer website, <a href="https://rubyinstaller.org/downloads/">here is the link</a>.</p>
+
+<h2 id="enable-copy-and-paste-in-windows-command-prompt">Enable copy and paste in Windows Command Prompt</h2>
+
+<p><strong>For Windows 10 users:</strong></p>
+
+<p>Open Command Prompt by typing <code class="highlighter-rouge">cmd</code> and selecting Command Prompt.</p>
+
+<p><img src="/assets/images/cmd.png" alt="Starting the command prompt in windows 10" /></p>
+
+<p>Right-click on the command prompt’s title bar, and choose “Properties”. Navigate to the “options” tab, and check “Enable Ctrl key shortcuts”. (If you don’t find it, but have an “experimental” tab, navigate there and check “Enable new Ctrl key shortcuts” option. In this case, you may need to check the “Enable experimental console features” option first.)</p>
+
+<p><strong>For other Windows versions:</strong></p>
+
+<p>To paste a text in the command prompt window you’ll need to use the mouse (right-click on the window –&gt; paste).</p>
+
+<h2 id="install-nodejs">Install Node.js</h2>
+<p>Go to <a href="https://nodejs.org/">https://nodejs.org/</a> and install the Node.js LTS package</p>
+
+<h2 id="check-your-environment">Check your environment</h2>
+<p>At the command line, paste the following and press <strong>enter</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ruby <span class="nt">-v</span></code></pre></figure>
+
+<p>You should get something like this appear:</p>
+
+<p><code class="highlighter-rouge">ruby 2.5.5</code></p>
+
+<p>Please email us or comment on the Slack channel if you don’t.</p>
+
+<h2 id="install-git">Install Git</h2>
+
+<p>Download the latest <a href="https://git-for-windows.github.io/">Git for Windows stand-alone installer</a>.</p>
+
+<p>When you’ve successfully started the installer, you should see the Git Setup wizard screen. Follow the Next and Finish prompts to complete the installation, accepting the default options.</p>
+
+<h2 id="what-youve-learned">What you’ve learned</h2>
+
+<ul>
+  <li>You have installed the tools needed to develop software on your computer.</li>
+</ul>
+:ET

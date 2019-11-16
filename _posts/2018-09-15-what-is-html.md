@@ -116,14 +116,14 @@ Usually interpreted as a bulleted list e.g.
 **Image**
 
 {% highlight html linenos %}
-<img src='/assets/images/cover.png' alt='Shakespeare vs Cthulhu cover image'>
+<img src='/assets/images/cover.png' alt='Shakespeare vs Cthulhu cover image' />
 {% endhighlight %}
 
-Code which points to a file location of an image to display. `src` means source -- the file location. `alt` means alternative text -- vital for accessibility.
+Code which points to a file location of an image to display. `src` means source -- the file location. Notice that it is `src`, not `scr` -- an easy typo to make! `alt` means alternative text -- vital for accessibility. The `img` tag is self-closing -- you don't put an `</img>` tag at the end, only a `/>`.
 
 <div class="display-box">
   <div class="display">
-     <img src='/assets/images/cover.png' alt='Shakespeare vs Cthulhu cover image'>
+     <img src='/assets/images/cover.png' alt='Shakespeare vs Cthulhu cover image' />
   </div>
 </div>
 

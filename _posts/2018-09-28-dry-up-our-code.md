@@ -24,9 +24,9 @@ Go to your browser, and delete _/portfolio/_ from the address bar, so the URL go
 Oh. It looks the same. Why aren't the styles applied to this page?
 
 > <span class="content__learn-more">Troubleshoot</span>
-* Before you scroll down to see the answer, try to think why the styles aren't appearing on this page. Open _index.html_ in your text editor, have a look at it, and see if you can see what's missing. Line 3 is a clue.
+* Before you scroll down to see the answer, try to think why the styles aren't appearing on this page. Look at _index.html_ in your text editor, and see if you can see what's missing. Line 3 is a clue.
 
-It's because you haven't added the stylesheet link in to the _index.html_ page. Did you figure that out correctly? If not, next time, consider comparing a page that works with one that doesn't.
+It's because you haven't added the stylesheet link in to the _index.html_ page. Did you figure that out correctly? If not, next time, consider comparing a file that works with one that doesn't.
 
 To add the stylesheet link, copy the styles and font links (all the contents of the `<head>` `</head>` tags) from _portfolio.html_ and paste into the same place in _index.html_.
 
@@ -38,9 +38,9 @@ Refresh your browser page. What a difference some CSS makes!
 
 ## CSS classes
 
-The header on the index page has a pattern, unlike the one on the portfolio page, because its HTML has a different structure to that on the portfolio page.
+The header on the index page has a flowery pattern, unlike the one on the portfolio page, because its HTML has a different structure to that on the portfolio page.
 
-The header in _portfolio.html_ has an HTML tag, `<header>`:
+The header in _portfolio.html_ has an HTML tag called `<header>`:
 
 {% highlight html %}
   <header>
@@ -48,7 +48,7 @@ The header in _portfolio.html_ has an HTML tag, `<header>`:
   </header>
 {% endhighlight %}
 
-The tag `<header>` is defined in the CSS like this:
+The HTML tag `<header>` is defined in the CSS like this:
 
 {% highlight css %}
   header {
@@ -87,9 +87,9 @@ Notice too that `primary-header` has a higher priority than `header`, so the bri
 This is how CSS works: the keywords in the CSS match the HTML, and more specific commands override more generic ones.
 
 Additionally, HTML classes get referenced in CSS with a preceeding `.`, HTML ids get referenced with a `#`, and HTML tags get referenced as their name, with no `<` `>`.
-* `<header class="primary-header">` gets referenced in CSS as `.primary-header {}`
-* `<header id="primary-header">` gets referenced in CSS as `#primary-header {}`
-* `<header>` gets referenced in CSS as `header {}`
+* `<header class="primary-header">` gets referenced in CSS as `.primary-header`
+* `<header id="primary-header">` gets referenced in CSS as `#primary-header`
+* `<header>` gets referenced in CSS as `header`
 
 This mechanism means you can define the styles once in CSS, and use them multiple times in the HTML. Programmers call this "keeping your code DRY", where DRY stands for "Don't Repeat Yourself".
 
@@ -97,7 +97,7 @@ But when you copied and pasted the head styles from _portfolio.html_ to _index.h
 
 ## Create a template
 
-Open the folder called __layouts_ and within that create a file called _default.html_.
+Open the folder called __layouts_. It currently contains one file, called _book_template.html_. Within this __layouts_ folder, create another file called _default.html_.
 
 Copy all the lines in _index.html_ and paste them into _default.html_.
 
@@ -115,7 +115,7 @@ Save the file. Next, type the following in between the `<body>` and `</body>` ta
 
 Save the file. The unique content on each page that uses the template will go where it says `content`.
 
-Your template is complete, and now you're going to use that in your index and portfolio pages.
+Your template is complete, and now you're going to use your template in your index and portfolio pages.
 
 ## Apply the template to the index page
 
@@ -144,7 +144,9 @@ Save your file and refresh your browser. Great: the styles are back again:
 And do you see in your brower's inspector that the browser has reconstituted the whole HTML file, using the template's `<head>` code and the index page's content?
 
 > <span class="content__learn-more">Troubleshoot</span>
-* If the styles are not back, have you saved your new _default.html_ page?
+* If the styles are not back:
+* Is _default.html_ within the __layouts_ folder?
+* Have you saved your new _default.html_ page?
 * If that doesn't fix it, look at the server log in your Terminal for clues.
 
 See if you can do the same for the _portfolio.html_ page. The instructions follow below, but see if you can do it yourself, without looking.

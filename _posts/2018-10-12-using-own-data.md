@@ -12,15 +12,15 @@ order: 4
 <!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
-  This article tells you how to use your own code.
+  This article tells you how to use your own data.
 </p>
 
-## Get your ONIX file
-Nielsen have kindly provided access to the ONIX 3.0 data they hold for delegates today, and we have stored that data in its raw ONIX format [here](https://github.com/GeneralProducts/publisher-xml-files) [a private GitHub repo, made public just for the Day of Code]. The data is in exactly the same file format that your publishing company generates from its publishing management system (a system like our [Consonance](https://consonance.app), or Klopotek or Biblio) and which it sends to data aggregators such as Nielsen, BDS, Bowker, EBSCO, JSTOR etc. By knowing how to use and reuse assets such as ONIX files to create websites and marketing materials, you get better value out of your investment in systems. You can populate the website you're building today with your own ONIX 3 files, after the Day of Code, by saving your ONIX files in the __data_ folder.
-
-For now, go to the [repo here](https://github.com/GeneralProducts/publisher-xml-files) and find your company's ONIX file. Download it and save it in your __data_ folder.
+Nielsen have kindly provided access to the ONIX 3.0 data they hold for delegates today, and we have stored that data in its raw ONIX format in your code repository. The data is in exactly the same file format that your publishing company generates from its publishing management system (a system like our [Consonance](https://consonance.app), or Klopotek or Biblio) and which it sends to data aggregators such as Nielsen, BDS, Bowker, EBSCO, JSTOR, and Amazon. By knowing how to use and reuse assets such as ONIX files to create websites and marketing materials, you get better value out of your investment in systems. You can populate the website you're building today with your own ONIX 3 files, after the Day of Code, by saving your ONIX files in the __data_ folder.
 
 You've been mainly making changes in a text editor so far, and reviewing the results in a browser. Now you're going to use the command line to change the source of data you're using. On the Mac, the command line is called the [Terminal](glossary#terminal). On Windows, it's called the [Command Prompt](glossary#command-prompt). Open the relevant one now.
+
+> <span class="content__learn-more"> Troubleshoot</span>
+* Don't get confused between a Terminal and a text editor window. Some developers set their Terminal's theme to have a light background and their text editor to have a dark background, or vice versa, to avoid confusion.
 
 Your server is running in one tab, so you'll need to add a new tab to write commands. Use the menu to do that:
 
@@ -28,38 +28,102 @@ Your server is running in one tab, so you'll need to add a new tab to write comm
 
 To learn how to get your data, open the _README_ file in your text editor. It is written in Markdown: you can see it turned into HTML [here](https://github.com/GeneralProducts/publisher-website/tree/master).
 
-![Screenshot showing the README file in the text editor](assets/images/readme.png)
-
 It says:
 
 {% highlight markdown %}
-To process an ONIX 3 file called `snowbooks.xml`, run:
+To process the records for a publisher called snowbooks, run:
 
-`ruby lib/seed.rb --adaptor onix --publisher snowbooks`
+ruby lib/seed.rb --adaptor onix --publisher snowbooks
 {% endhighlight  %}
 
-In your new Terminal tab, type the following, changing the word "snowbooks" to be the name your file is named.
+In your new Terminal tab, paste the following, changing the word "name" to be the name of the publisher you want to see the data for.
 
 {% highlight terminal %}
-  ruby lib/seed.rb --adaptor onix --publisher snowbooks
+  ruby lib/seed.rb --adaptor onix --publisher name
 {% endhighlight  %}
 
-If you are from Elsevier, and your file saved in __data_ is called _elsevier.xml_, you would type
+If you are from Elsevier, you would type
 
 {% highlight terminal %}
-  ruby lib/seed.rb --adaptor onix --publisher elsevier
+  ruby lib/seed.rb --adaptor onix --publisher Elsevier
 {% endhighlight  %}
+
+If you want to see the books from a publisher with more than one word in its name, enclose the name in quotes. For Hodder & Stoughton, you would type
+
+{% highlight terminal %}
+  ruby lib/seed.rb --adaptor onix --publisher "Hodder & Stoughton"
+{% endhighlight  %}
+
+If you want to see the books from all the publisher's variations, provide just a fraction of the name. For the books from all of Penguin Adult,
+Penguin Books (SA) (Pty) Ltd,
+Penguin Books Australia,
+Penguin Books India Pvt Ltd,
+Penguin Books Ltd,
+Penguin Group (NZ),
+Penguin Putnam Inc,
+Penguin Random House India,
+and Penguin USA, you would type "Penguin"
+
+{% highlight terminal %}
+  ruby lib/seed.rb --adaptor onix --publisher penguin
+{% endhighlight  %}
+
+Here is a full list of all the publishers that you can choose from:
+
+```
+Bloomsbury
+Cambridge University Press
+Institute of Physics Publishing
+Librarie Philosophique J. Vrin
+Morgan & Claypool Publishers
+Oxford University Press
+British Library Publishing
+Egmont UK Ltd
+Elsevier Science & Technology
+Elsevier Science Publishing Co Inc
+Hachette Children's Group
+Hardie Grant Egmont
+Hodder & Stoughton General Division
+Hodder & Stoughton
+Jacaranda Books Art Music Ltd
+John Murray Press
+Oxford University Press Inc
+Oxford University Press Southern Africa
+Oxford University Press, Canada
+Oxford University Press
+Penguin Adult
+Penguin Books (SA) (Pty) Ltd
+Penguin Books Australia
+Penguin Books India Pvt Ltd
+Penguin Books Ltd
+Penguin Group (NZ)
+Penguin Putnam Inc
+Penguin Random House India
+Penguin USA
+Prelude
+Profile Books Ltd
+Quercus Publishing
+Royal Yachting Association
+SAGE Publications India Pvt Ltd
+SAGE Publications Ltd
+Soaring Penguin Press
+Taylor & Francis
+```
 
 Press **enter**. You'll see a message like this:
 
 {% highlight terminal %}
-  ONIX is being processed for elsevier. Processed data will be put into _data/processed_books.json
+  ONIX is being processed for Elsevier. Processed data will be put into _data/processed_books.json
 {% endhighlight  %}
 
 > <span class="content__learn-more">Troubleshooting</span>
-* For coaches: If you see messages like `lib/ adaptors/ onix/ v3/ reference/ product.rb:134: syntax error, unexpected '.' ..urrency_code}']/ PriceAmount")&.content`, your delegate is using an old version of Ruby which doesn't support the safe navigation `&.`. Try `rvm use ruby-2.5.5`
+* If you see messages like `lib/ adaptors/ onix/ v3/ reference/ product.rb:134: syntax error, unexpected '.' ..urrency_code}']/ PriceAmount")&.content`, you are using an old version of Ruby which doesn't support the safe navigation `&.`. Try `rbenv global 2.5.5` or `rvm use ruby-2.5.5` on the Command Line.
 
-Now refresh your browser window and you'll see your own books being used.
+Now refresh your browser window and you'll see your own data being used. Note that you didn't change any HTML, just the source of data.
+
+> <span class="content__learn-more"> Where does this data come from?</span>
+* As sponsors of Day of Code, Nielsen kindly allowed the Consonance team, who put together this course, access to their database of book data. The Consonance team ran searches by the publisher name of each of the delegates attending the Day of Code, to get a range of familiar products, which the team downloaded in ONIX 3 form. The code you ran to process that ONIX excludes products which do not have a cover on Nielsen, removes duplicates, and makes the publisher query case-insensitive and fuzzy (it checks to see if the publisher name `contains`, rather than `is equal to`, the query). The code is in `lib/adaptors/onix/v3/reference.rb`, in the `products` method.
+* Additionally, for the Consonance clients at Day of Code, we have used ONIX 3 data straight out of Consonance.
 
 ## VERY IMPORTANT: take a screenshot!
 

@@ -61,9 +61,9 @@ So you'll add that file now.
 
 ## Add the missing file
 
-Add a folder called __includes_, and a file called _navigation.html_ within that. The __includes_ folder must be at the same level as other folders that start with an underscore, such as __layouts_.
+Add a folder called __includes_ at the same level as the __layouts_ and __data_ folders. Within your new folder, add a file and name it _navigation.html_. The __includes_ folder must be at the same level as other folders that start with an underscore, such as __layouts_.
 
-Paste the following code in to it, and save the file.
+Paste the following code in to _navigation.html_, and save the file.
 
 {% highlight html %}
   <nav>

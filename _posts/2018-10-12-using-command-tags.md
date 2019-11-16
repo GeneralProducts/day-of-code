@@ -34,6 +34,7 @@ In _portfolio.html_, replace this, which is everything between the `<main>` tags
         </p>
       </a>
     </li>
+    <!-- you will have your repeating <li></li> blocks of code here: delete them all too -->
     ...
   </ul>
 {% endhighlight %}
@@ -60,7 +61,11 @@ With this:
   {% endraw %}
 {% endhighlight %}
 
-It looks like a lot in one go, but let's step through the differences one by one.
+Save your file. Refresh your browser and see the effect.
+
+![The portfolio page looking nice with our book data being used to dynamically create one cover per book](assets/images/list.png)
+
+The page is displaying new data, because of your new code. The rest of this article explains the new code you added, piece-by-piece.
 
 ## Iteration
 
@@ -80,7 +85,9 @@ Read that line aloud. It says "for book in site data processed_books". More verb
 
 Once you have iterated and got a `book` variable, you can "call methods" on it and turn the results of the methods into HTML.
 
-This next line uses two method calls to output the HTML `img` tag for the book's cover. Can you see what those methods might be?
+This next line uses two method calls to output the HTML `img` tag for the book's cover.
+
+Question: Can you see what those methods might be?
 
 {% highlight liquid %}
   {% raw %}
@@ -92,7 +99,7 @@ This next line uses two method calls to output the HTML `img` tag for the book's
 {% endraw %}
 {% endhighlight %}
 
-The methods called here are `isbn` and `title`.
+Answer: The methods called here are `isbn` and `title`.
 
 You call a method using a dot:
 
@@ -125,9 +132,7 @@ This code turns into the following HTML for the book called "The Goddess Project
 > <span class="content__learn-more">Learn more later</span>
 *  Much of programming is about Googling and finding out answers to problems that present themselves through your own research. So read through the Liquid documentation to learn about the `date: '%b %Y'` pub date formatting method you've used and discover more about Ruby by Googling, and using the resources listed [earlier](/languages-and-tools).
 
-Let's look at how the browser is looking.
 
-![The portfolio page looking nice with our book data being used to dynamically create one cover per book](assets/images/list.png)
 
 ## What you’ve learned
 

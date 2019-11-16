@@ -486,7 +486,7 @@ There is a CSS command called `background-color` which is not included in the `b
 
 Save the file and refresh your browser. Repeat until you're happy with the colour, or delete your addition if you don't like it. You're the programmer now, and you're in control of your design and layout.
 
-![A rather gaudy yet personalised version of the website. Blue banner and off-yellow body colour](assets/images/css-play.png)
+![A personalised version of the website. Blue banner and greyish body colour](assets/images/css-play.png)
 
 ## Do more later
 
