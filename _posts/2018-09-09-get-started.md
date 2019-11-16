@@ -149,9 +149,10 @@ Your terminal window looks a bit like this:
   Configuration file: /Users/Emma/repos/publisher-website/_config.yml
       Server address: http://127.0.0.1:4000/
     Server running... press ctrl-c to stop.
-
 {% endhighlight%}
 
+> <span class="content__learn-more">Troubleshoot<span>
+* On the author's nice fast Macbook Pro, the server starts in under a second. On her son's cheap, old Windows 10 laptop, it takes over 3 minutes. If the server "hangs" at "Generating...", sit tight and wait.
 
 ## View the code running in a browser
 

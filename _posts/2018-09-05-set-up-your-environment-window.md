@@ -20,6 +20,8 @@ You are going to install Ruby using an installer.
 ## Install Ruby
 [Download the Ruby Installer Ruby Devkit 2.6.X (x64) and run it](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.5-1/rubyinstaller-devkit-2.6.5-1-x64.exe). Click through the installer using the default options. That link downloads the installer itself: if you prefer to go to the Ruby Installer website, [here is the link](https://rubyinstaller.org/downloads/).
 
+Run MSYS2 if given the option.
+
 ## Enable copy and paste in Windows Command Prompt
 
 **For Windows 10 users:**
