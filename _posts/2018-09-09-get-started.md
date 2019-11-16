@@ -132,7 +132,7 @@ Your terminal window looks a bit like this:
 Now you are ready to run the code you have downloaded. You do this by starting a server.  Type the following and press **enter**:
 
 {% highlight bash %}
-  jekyll serve --watch --livereload
+  jekyll serve
 {% endhighlight%}
 
 Your terminal window looks a bit like this:
@@ -152,7 +152,7 @@ Your terminal window looks a bit like this:
 {% endhighlight%}
 
 > <span class="content__learn-more">Troubleshoot<span>
-* If the server "hangs" at "Generating...", press `ctrl+C` and rerun the command as `jekyll serve --trace` to see what the error is.
+* If the server "hangs" at "Generating...", press `ctrl+c` on Windows, `cmd+c` on Mac, and re-run the command as `jekyll serve --trace` to see what the error is.
 
 ## View the code running in a browser
 
@@ -166,7 +166,7 @@ Open your text editor application (e.g. Atom), click **File > Open** and navigat
 
 ![A text editor view](/assets/images/editor.png)
 
-Compare that to the listing in Finder. It's the same thing: a list of files and folders.
+Compare that to the listing in Finder or File Explorer. It's the same thing: a list of files and folders.
 
 ![The same files, displayed in Mac's Finder](/assets/images/finder.png)
 
