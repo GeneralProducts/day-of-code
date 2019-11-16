@@ -26,6 +26,9 @@ Your server is running in one tab, so you'll need to add a new tab to write comm
 
 ![Screenshot showing how to create a new terminal tab](assets/images/term1.png)
 
+> <span class="content__learn-more"> Troubleshoot</span>
+* Make sure you are in the correct directory. Your prompt should show you are in the "publisher-website" folder. If you are not, use the instructions from [Get Started](/get-started) to change into the correct directory.
+
 To learn how to get your data, open the _README_ file in your text editor. It is written in Markdown: you can see it turned into HTML [here](https://github.com/GeneralProducts/publisher-website/tree/master).
 
 It says:
@@ -109,6 +112,12 @@ SAGE Publications Ltd
 Soaring Penguin Press
 Taylor & Francis
 ```
+
+If you want to see every single book with a cover, you would type two double quotes:
+
+{% highlight terminal %}
+  ruby lib/seed.rb --adaptor onix --publisher ""
+{% endhighlight  %}
 
 Press **enter**. You'll see a message like this:
 

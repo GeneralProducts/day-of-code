@@ -24,6 +24,9 @@ Let's view what the styles looks like currently. In the browser, right-mouse and
 
 ![A screenshot showing the browser's inspector, showing h1 css](assets/images/inspect.png)
 
+> <span class="content__learn-more">Troubleshoot<span>
+* Your panels might be arranged differently, with the code on the right. If you want to rearrange them, in Chrome, click the three dots on the toolbar that contains the words Console, Elements etc then choose your preferred Dock Side option.
+
 The styles panel on the right shows me that the default styles for the `<h1>` HTML tag are that the font size is 2em (as in [em-dash](https://en.wikipedia.org/wiki/Em_(typography))) and the font weight is bold.
 
 > <span class="content__learn-more">The browser's inspector</span>
@@ -42,6 +45,7 @@ Add the following CSS to this file and save:
 {% highlight css %}
   h1 {
     color: red;
+    font-family: sans-serif;
   }
 {% endhighlight %}
 
@@ -52,10 +56,11 @@ So the entire file looks like this:
 
   h1 {
     color: red;
+    font-family: sans-serif;
   }
 {% endhighlight %}
 
-Refresh the browser page. You expect the colour of the heading to go red, right? But it's not changed. What has gone wrong? Let's debug the problem.
+Refresh the browser page. You expect the colour of the heading to go red, and the font to change style, right? But it's not changed. What has gone wrong? Let's debug the problem.
 
 ## Debug the problem
 
