@@ -12,7 +12,7 @@ order: 1
 <!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
-  This article explains the actions you will take on the Day of Code to get your starter kit. This is the first article you'll work through on the Day of Code with your coach.
+  This article explains the first actions you will take on the Day of Code. This is the first article you'll work through on the Day of Code with your coach.
 </p>
 
 ## Navigate to your code folder
