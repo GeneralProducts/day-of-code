@@ -170,7 +170,6 @@ Compare that to the listing in Finder. It's the same thing: a list of files and 
 
 ![The same files, displayed in Mac's Finder](/assets/images/finder.png)
 
-
 Double click on _index.html_ to open it in your text editor. It looks a bit like this:
 
 ![How the index.html page looks](/assets/images/index.png)
