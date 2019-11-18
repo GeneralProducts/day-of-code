@@ -23,11 +23,17 @@ workbox.routing.registerRoute(
 // use `cacheFirst` strategy for images
 workbox.routing.registerRoute(
   /assets\/(img|icons)/,
-  workbox.strategies.cacheFirst()
+  workbox.strategies.networkFirst()
 );
 
-// use `networkFirst` strategy for `*.css`, like all my posts
+// use `networkFirst` strategy for `*.css`
 workbox.routing.registerRoute(
   /\.css$/,
   workbox.strategies.networkFirst()
+);
+
+// third party files
+workbox.routing.registerRoute(
+  /^https?:\/\/cdn.staticfile.org/,
+  workbox.strategies.staleWhileRevalidate()
 );
