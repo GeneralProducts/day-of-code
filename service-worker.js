@@ -25,3 +25,9 @@ workbox.routing.registerRoute(
   /assets\/(img|icons)/,
   workbox.strategies.cacheFirst()
 );
+
+// use `networkFirst` strategy for `*.css`, like all my posts
+workbox.routing.registerRoute(
+  /\.css$/,
+  workbox.strategies.networkFirst()
+);
