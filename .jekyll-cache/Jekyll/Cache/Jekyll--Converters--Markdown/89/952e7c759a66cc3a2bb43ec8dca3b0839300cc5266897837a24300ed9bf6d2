@@ -1,4 +1,4 @@
-I"�(<!-- <span class="tag tag--draft">Not started</span> -->
+I"�(<!-- <span class="tag tag--draft">Not started</span> -->
 <!-- <span class="tag tag--progress">In progress</span> -->
 <!-- <span class="tag tag--review">Ready for review</span> -->
 <!-- <span class="tag tag--approved">Approved</span> -->
@@ -113,7 +113,7 @@
 
 <p>Now you are ready to run the code you have downloaded. You do this by starting a server.  Type the following and press <strong>enter</strong>:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  jekyll serve <span class="nt">--watch</span> <span class="nt">--livereload</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  jekyll serve</code></pre></figure>
 
 <p>Your terminal window looks a bit like this:</p>
 
@@ -132,7 +132,7 @@
 <blockquote>
   <p><span class="content__learn-more">Troubleshoot<span></span></span></p>
   <ul>
-    <li>If the server “hangs” at “Generating…”, press <code class="highlighter-rouge">ctrl+C</code> and rerun the command as <code class="highlighter-rouge">jekyll serve --trace</code> to see what the error is.</li>
+    <li>If the server “hangs” at “Generating…”, press <code class="highlighter-rouge">ctrl+c</code> on Windows, <code class="highlighter-rouge">cmd+c</code> on Mac, and re-run the command as <code class="highlighter-rouge">jekyll serve --trace</code> to see what the error is.</li>
   </ul>
 </blockquote>
 
@@ -148,7 +148,7 @@
 
 <p><img src="/assets/images/editor.png" alt="A text editor view" /></p>
 
-<p>Compare that to the listing in Finder. It’s the same thing: a list of files and folders.</p>
+<p>Compare that to the listing in Finder or File Explorer. It’s the same thing: a list of files and folders.</p>
 
 <p><img src="/assets/images/finder.png" alt="The same files, displayed in Mac's Finder" /></p>
 
