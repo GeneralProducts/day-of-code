@@ -152,7 +152,7 @@ Your terminal window looks a bit like this:
 {% endhighlight%}
 
 > <span class="content__learn-more">Troubleshoot<span>
-* If the server "hangs" at "Generating...", press `ctrl+c` on Windows, `cmd+c` on Mac, and re-run the command as `jekyll serve --trace` to see what the error is.
+* If the server "hangs" at "Generating...", press `ctrl+c` and re-run the command as `jekyll serve --trace` to see what the error is.
 
 ## View the code running in a browser
 
