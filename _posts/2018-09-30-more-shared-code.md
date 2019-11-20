@@ -6,18 +6,29 @@ toc: true
 category: Templating
 order: 2
 ---
-<!-- <span class="tag tag--draft">Not started</span> -->
-<!-- <span class="tag tag--progress">In progress</span> -->
-<!-- <span class="tag tag--review">Ready for review</span> -->
-<!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
   Building on your knowledge of templating, this article adds more shared code to your template.
 </p>
 
-Let's add some navigation links that will appear on every page. Now you have a template, you only have to change shared code in one place.
+You're going to add some navigation links that will appear on every page. Now you have a template, you only have to change shared code in one place.
 
-## Add a reference to navigation links to your template
+## Add the navigation links
+
+Add a folder called __includes_ at the same level as the __layouts_ and __data_ folders. Within your new folder, add a file and name it _navigation.html_. The __includes_ folder must be at the same level as other folders that start with an underscore, such as __layouts_.
+
+Paste the following code in to _navigation.html_, and save the file.
+
+{% highlight html %}
+  <nav>
+    <ul class="nav-item-container ">
+      <li class="nav-item"><a href="/">Home</a></li>
+      <li class="nav-item"><a href="/portfolio/">Books</a></li>
+    </ul>
+  </nav>
+{% endhighlight %}
+
+## Add a reference to these links to your template
 
 Open _layouts/default.html_. Add the following line directly under the opening `<body>` tag:
 
@@ -43,49 +54,17 @@ This makes the full file look like this:
 {% endhighlight %}
 
 
-Refresh the index page in your browser, because the index page uses the default template. You might expect the page to show some navigation links. Hang on: why hasn't anything changed?
-
-## Debug the missing reference
-
-To debug this problem, let's look at the server log. Look at your Terminal, where your server log has been running all this time. There is a big red error message:
-
-![A screenshot of frightening looking errors on the server log](assets/images/errors.png)
-
-If you pick through those words, shouty-red and off-putting though they are, they are actually very descriptive and tell you that you've failed to include a file:
-
-{% highlight term %}
-  Liquid Exception: Could not locate the included file 'navigation.html'
-{% endhighlight %}
-
-So you'll add that file now.
-
-## Add the missing file
-
-Add a folder called __includes_ at the same level as the __layouts_ and __data_ folders. Within your new folder, add a file and name it _navigation.html_. The __includes_ folder must be at the same level as other folders that start with an underscore, such as __layouts_.
-
-Paste the following code in to _navigation.html_, and save the file.
-
-{% highlight html %}
-  <nav>
-    <ul class="nav-item-container ">
-      <li class="nav-item"><a href="/">Home</a></li>
-      <li class="nav-item"><a href="/portfolio/">Books</a></li>
-      <li class="nav-item"><a href="/about/">About</a></li>
-    </ul>
-  </nav>
-{% endhighlight %}
-
-![Showing the nav links being added to the text editor](assets/images/nav.gif)
-
-
-Refresh the browser: you'll see your new nav links. And now you can more easily get around your website: click the "Books" link on your web page.
-
-![Showing the nav links in the browser](assets/images/nav.png)
+Refresh the index page in your browser, because the index page uses the default template. You'll see your new nav links. And now you can more easily get around your website: click the "Books" link on your web page.
 
 ## Do more later
 
 * It's best for users if link labels match the words found at their destination. Amend the word "Books" to "Portfolio", by editing the _navigation.html_ file.
-* Make the "About" link work, in the same way you added the portfolio page.
+* Add an "About" link and an About page, in the same way you added the portfolio page. The link text will look like this:
+{% highlight html %}
+  <li class="nav-item"><a href="/about/">About</a></li>
+{% endhighlight %}
+
+
 * Add in a footer section, using the following code as a starting point:
 
 {% highlight html %}
@@ -128,6 +107,10 @@ Refresh the browser: you'll see your new nav links. And now you can more easily 
 </footer>
 
 {% endhighlight %}
+
+Your page will end up a bit like this:
+
+![Showing the nav links in the browser](assets/images/nav.png)
 
 ## What you’ve learned
 

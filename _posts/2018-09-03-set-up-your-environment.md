@@ -6,10 +6,6 @@ toc: true
 category: Before the Day of Code
 order: 3
 ---
-<!-- <span class="tag tag--draft">Not started</span> -->
-<!-- <span class="tag tag--progress">In progress</span> -->
-<!-- <span class="tag tag--review">Ready for review</span> -->
-<!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
   You’ll use different software to type your code, run your code, and view what your code does. This article introduces the set-up actions you must do, before the Day of Code, on the laptop you'll bring with you on the day.

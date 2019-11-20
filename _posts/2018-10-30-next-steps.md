@@ -6,10 +6,6 @@ toc: true
 category: Reference
 order: 1
 ---
-<!-- <span class="tag tag--draft">Not started</span> -->
-<!-- <span class="tag tag--progress">In progress</span> -->
-<!-- <span class="tag tag--review">Ready for review</span> -->
-<!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
   This article suggests some next steps for the end of the day or for your ongoing journey after the Day of Code.
@@ -29,13 +25,13 @@ Before the Day of Code, you created an account on GitHub. <a href="https://guide
 
 ## Use the Learn More boxes for ideas
 
-Throughout today you will have seen callout boxes headed "Learn more later". It's a great idea to go back through these docs, at your leisure, and explore those ideas further.
+Throughout today you will have seen callout boxes headed "Learn more later" and sections called "Do more later". It's a great idea to go back through these docs, at your leisure, and explore those ideas further.
 
 ## Introverts’ route
 If you are an introvert, you’re most likely to enjoy learning over the internet, from books and from videos. We recommend [Learn Enough](https://www.learnenough.com/) as a great place to get started, followed by [Learn Ruby the Hard Way](https://learnrubythehardway.org/) and [The Rails Tutorial](http://railstutorial.org).
 
 ## Extroverts’ route
-If you prefer learning alongside other people, then Codebar is a great and welcoming event that happens frequently in London, with a new chapter opened in Oxford. Railsgirls London is also another good taster day and the Consonance team volunteer there. General Assembly and Makers’ Academy run crash courses, but they’re not cheap.
+If you prefer learning alongside other people, then [Codebar](https://codebar.io/) is a great and welcoming event that happens frequently in London, with a new chapter opened in Oxford. [Railsgirls](http://railsgirls.com/) is also another good taster day and the Consonance team volunteer there. [General Assembly](https://generalassemb.ly/), [Makers Academy](https://makers.tech/) and [Le Wagon](https://www.lewagon.com/) run crash courses, but they’re not cheap.
 
 ## Coding in publishing
 How can you start to apply what you’ve learned today?
@@ -45,11 +41,9 @@ Whichever way your interests take you, the more knowledge you accrue, the more p
 
 ## Stay in touch
 
-Do stay in touch with us! Here's our [company website](http://generalproducts.co) with links to all the initiatives we do to increase technical literacy in publishing. We blog at [www.consonance.app](https://www.consonancena.app), and tweet at @consonance_app: our staff are Emma @has_many_books, Andy @andypearson, Sara @saramoohead and Dave @databasesponge. Please follow our Publishers’ Advice Bot @bot_publishing.
+Do stay in touch with us! Here's our [company website](http://generalproducts.co) with links to all the initiatives we do to increase technical literacy in publishing. We blog at [www.consonance.app](https://www.consonance.app), and tweet at @consonance_app: our staff are Emma [@has_many_books](https://twitter.com/has_many_books), Andy [@andypearson](https://twitter.com/andypearson), Sara [@saramoohead](https://twitter.com/saramoohead) and Dave [@databasesponge](https://twitter.com/databasesponge). Please follow our [Publishers’ Advice Bot](https://twitter.com/bot_publishing).
 
-Please do give us [feedback on this course](https://emma359024.typeform.com/to/GPkjMu).
-
-And if you need a modern, cloud-based publishing management system, you know who to ask! Visit [Consonance.app](http://consonance.app) to find out what we do.
+And if you need a modern, cloud-based publishing management system, you know where to come! Visit [Consonance.app](http://consonance.app) to find out what we do.
 
 ## What you’ve learned
 

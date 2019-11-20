@@ -7,11 +7,6 @@ category: HTML
 order: 1
 ---
 
-<!-- <span class="tag tag--draft">Not started</span> -->
-<!-- <span class="tag tag--progress">In progress</span> -->
-<!-- <span class="tag tag--review">Ready for review</span> -->
-<!-- <span class="tag tag--approved">Approved</span> -->
-
 <p class="content__abstract">
   Your website is looking pretty bare at the moment. You will use HTML to structure your web page. Before you start to write your code, this article introduces HTML, the language of the web. Read it to learn what HTML tags are and which ones to use, when. You won't type anything in your new web app whilst reading this article.
 </p>

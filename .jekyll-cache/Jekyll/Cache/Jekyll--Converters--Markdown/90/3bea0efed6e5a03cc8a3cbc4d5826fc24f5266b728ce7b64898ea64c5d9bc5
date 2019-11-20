@@ -1,0 +1,118 @@
+I"�'<p class="content__abstract">
+  This article tells you what HTML to add to your web page.
+</p>
+
+<p>Earlier, you double clicked on the <em>index.html</em> filename in your text editor’s sidebar, which opened the file. Go to that file now. It looks like this:</p>
+
+<p><img src="/assets/images/index.png" alt="The index.html page" /></p>
+
+<h2 id="add-some-content">Add some content</h2>
+
+<p>You’re going to replace the contents of the <code class="highlighter-rouge">&lt;body&gt;</code> tag with some new content, then you’ll save the file, either by choosing <strong>File &gt; Save</strong> or pressing <strong>cmd+s</strong> (Mac) or <strong>ctrl+s</strong> (Windows).</p>
+
+<blockquote>
+  <p><span class="content__learn-more">Save your work!</span></p>
+  <ul>
+    <li>You can see if a file needs to be saved because there is a dot in the filename tab in your text editor. Get into the habit of looking for the dot. If there’s a dot, your file isn’t saved!</li>
+    <li>You don’t save work on the Command line. Commands are executed when you press <strong>enter</strong>.</li>
+  </ul>
+</blockquote>
+
+<p>Copy all the following text, and paste it in between the <code class="highlighter-rouge">&lt;body&gt;</code> and <code class="highlighter-rouge">&lt;/body&gt;</code> tags, in <em>index.html</em>. Replace the words “It’s worked”, but keep the <code class="highlighter-rouge">&lt;body&gt;</code> and <code class="highlighter-rouge">&lt;/body&gt;</code> tags:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"primary-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Silver Oak Press<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;aside&gt;</span>New fiction, discovered<span class="nt">&lt;/aside&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Our wonderful books<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Silver Oak Press is an [imaginary] award-winning independent publisher of outstanding new fiction [invented for the purpose of showcasing the FutureBook <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://2019.dayofcode.co.uk"</span><span class="nt">&gt;</span>2019 Day of Code.<span class="nt">&lt;/a&gt;</span>]
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"cover--home"</span> <span class="na">src=</span><span class="s">""</span> <span class="na">alt=</span><span class="s">"Fake book cover for the imaginary Silver Oak Press"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/portfolio/"</span><span class="nt">&gt;</span>View all our books →<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>The best new fiction<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Lorem ipsum dolor sit amiet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/portfolio/"</span><span class="nt">&gt;</span>View all our books →<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/section&gt;</span></code></pre></figure>
+
+<p>So now your <em>index.html</em> file should look like this:</p>
+
+<p><img src="assets/images/edited-index.png" alt="The index.html page with its edits" /></p>
+
+<p>Take the time to indent your HTML until it looks like the screenshot. It won’t affect your browser’s ability to process the HTML, but it will keep your code neat and organised, and help you see the nesting is correct. Save the file.</p>
+
+<blockquote>
+  <p><span class="content__learn-more">Seriously: save your work!</span></p>
+  <ul>
+    <li>Every time you change a file, save it. Try to build up the reflex of automatically pressing <strong>cmd+s</strong> (Mac) or <strong>ctrl+s</strong> (Windows). You don’t have to save command line commands: they run when you press ‘enter’. Remember: look for the dot in your text editor’s filename tab. If you think something “hasn’t worked”, half the time it’s because the file isn’t saved.</li>
+  </ul>
+</blockquote>
+
+<p>Refresh your browser page. Your browser looks like this:</p>
+
+<p><img src="assets/images/index-content.png" alt="The index page with some content added" /></p>
+
+<blockquote>
+  <p><span class="content__learn-more">Troubleshoot<span></span></span></p>
+  <ul>
+    <li>If you get any sort of “not found” error, did you move your code folder’s location on your laptop, or rename it after starting the server? If so, restart your server, and refresh the browser page.</li>
+    <li>If the content of the page stays the same, look at the server log in your Terminal or Command prompt. If you have an old, not-powerful machine, it may take some time for the files to regenerate. Sit tight and when you see “regenerating index.html… done in xx seconds”, refresh the browser again. The author’s son’s rickety old Windows 10 PC takes 15 seconds, whereas her fast Macbook Pro takes under a tenth of a second. The author thinks her son should uninstall all the nonsense games he’s downloaded from the internet. The author’s son thinks his mother should buy him a faster computer. But that’s another story…</li>
+  </ul>
+</blockquote>
+
+<p>OK: you’ve added some content to your web page, but it’s not looking very pretty. That’s because HTML provides structure but CSS provides styling, and you’ve not added any CSS yet.</p>
+
+<p>Moreover, your content has some problems. You have added some links, which don’t go anywhere yet. Click on the link to “View all our books” and you get this:</p>
+
+<p><img src="assets/images/broken-link.png" alt="A broken link page" /></p>
+
+<p>You will fix this in the next article. You also have a broken image link which you’ll fix now.</p>
+
+<h2 id="fix-the-image-link">Fix the image link</h2>
+
+<p>Line 15 in your <em>index.html</em> file looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"cover--home"</span> <span class="na">src=</span><span class="s">""</span> <span class="na">alt=</span><span class="s">"Fake book cover for the imaginary Silver Oak Press"</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">img</code> is an HTML tag that has a <code class="highlighter-rouge">src</code> attribute. <code class="highlighter-rouge">img</code> is short for <strong>Image</strong> and <code class="highlighter-rouge">src</code> is short for <strong>Source</strong>. This code says that the source of the image is blank – it’s an empty string <code class="highlighter-rouge">""</code>, which is why you get the missing image icon on your webpage.</p>
+
+<p>You’re going to fix this broken image reference. Replace the line:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"cover--home"</span> <span class="na">src=</span><span class="s">""</span> <span class="na">alt=</span><span class="s">"Fake book cover for the imaginary Silver Oak Press"</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<p>with a reference to an image file that does exist in your “images” folder: the file called <strong>home_img.jpg</strong>.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"cover--home"</span> <span class="na">src=</span><span class="s">"/images/home_img.jpg"</span> <span class="na">alt=</span><span class="s">"Fake book cover for the imaginary Silver Oak Press"</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<p>Save the file, and refresh your browser. Great: your broken image link is fixed.</p>
+
+<p><img src="assets/images/fixed-img.png" alt="The browser showing an image correctly rendered" /></p>
+
+<h2 id="do-more-later">Do more later</h2>
+
+<ul>
+  <li>After the Day of Code (or if you have finished working through this page early), update the text and image in your index page to match your real publishing company. Here’s what mine looks like:</li>
+</ul>
+
+<p><img src="assets/images/snowbooks1.png" alt="Snowbooks data in place - the text editor view" />
+<img src="assets/images/snowbooks2.png" alt="Snowbooks data and images in place - the browser view" /></p>
+
+<p>Next, you’re going to add another HTML page to fix the broken link.</p>
+
+<h2 id="what-youve-learned">What you’ve learned</h2>
+
+<ul>
+  <li>HTML is a mark up language which you use to write a web page.</li>
+  <li>Browsers display HTML.</li>
+  <li>HTML is not responsible for styling – only structure.</li>
+  <li>Some HTML tags create links, to other pages and to images.</li>
+</ul>
+:ET

@@ -1,0 +1,884 @@
+I"��<p class="content__abstract">
+  This article explains how to add more styles to your website.
+</p>
+
+<h2 id="add-more-css">Add more CSS</h2>
+
+<p>Copy and paste the following in to the <em>main.css</em> file, replacing your <code class="highlighter-rouge">h1</code> definition and all the current contents of the file with all of the 300+ lines of CSS. There are far more styles than you need at the moment here, which will style the HTML that you’ll add throughout the rest of the Day of Code. Doing this now will improve the look of your website and let us focus on more types of programming today.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+</pre></td><td class="code"><pre><span class="c">/* Structure */</span>
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Amiri"</span><span class="p">,</span> <span class="n">Georgia</span><span class="p">,</span> <span class="nb">serif</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">28px</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#232323</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">min-height</span><span class="p">:</span> <span class="m">100vh</span><span class="p">;</span>
+  <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#03a9f4</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.primary-header</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url(/images/bright-flowers.jpg)</span><span class="p">;</span>
+  <span class="nl">background-size</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.secondary-header</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url(/images/flower3.jpg)</span><span class="p">;</span>
+  <span class="nl">background-size</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">section</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="m">1250px</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">1110px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">section</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">800px</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nt">aside</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nt">figure</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">50px</span> <span class="m">0</span> <span class="m">0</span>  <span class="m">5px</span><span class="p">;</span>
+  <span class="nl">flex</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">aside</span> <span class="p">{</span>
+  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">padding-top</span><span class="p">:</span> <span class="m">8px</span><span class="p">;</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">0.95</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">0.7em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Typography */</span>
+<span class="nt">h1</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">0.95</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">1110px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.secondary</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Noto sans"</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">20px</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#2e2e2e</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">8px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h2</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">0.7em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">1110px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">h2</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">1em</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nt">h3</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">0.6em</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">60px</span> <span class="m">0</span> <span class="m">-30px</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Noto sans"</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#232323</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Amiri"</span><span class="p">,</span> <span class="n">Georgia</span><span class="p">,</span> <span class="nb">serif</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">0.75em</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">34px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Links */</span>
+<span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#232323</span><span class="p">;</span>
+  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="m">4px</span> <span class="nb">solid</span> <span class="m">#232323</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.bookstore</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">20px</span> <span class="m">10px</span> <span class="m">10px</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">60px</span><span class="p">;</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="m">3px</span> <span class="nb">solid</span> <span class="m">#e4e4e0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Lists */</span>
+<span class="nt">ul</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">flex-flow</span><span class="p">:</span> <span class="n">row</span> <span class="n">wrap</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">li</span> <span class="p">{</span>
+  <span class="nl">list-style-type</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Navigation */</span>
+<span class="nc">.nav-item-container</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">800</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="n">space-evenly</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.nav-item</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">0.6em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">1110px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.nav-item</span> <span class="p">{</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">30px</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">22px</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.nav-item-container</span> <span class="p">{</span>
+    <span class="nl">max-width</span><span class="p">:</span> <span class="m">800px</span><span class="p">;</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span> <span class="m">0</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c">/* Images */</span>
+<span class="nc">.covers-container</span> <span class="p">{</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="m">1000px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.covers-container</span> <span class="nt">li</span> <span class="p">{</span>
+  <span class="nl">flex</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">1110px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.covers-container</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#eff1f7</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.covers-container</span> <span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="n">space-between</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.covers-container</span> <span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">filter</span><span class="p">:</span> <span class="n">brightness</span><span class="p">(</span><span class="m">1.2</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.covers-container</span>	<span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">10px</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Noto Sans"</span><span class="p">,</span> <span class="nb">sans-serif</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.cover</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">220px</span><span class="p">;</span>
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">2px</span> <span class="m">2px</span> <span class="m">8px</span> <span class="m">#aaaeb9</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">img</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Noto Sans"</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.8</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">98%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.cover--home</span> <span class="p">{</span>
+  <span class="nl">float</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">20px</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">1110px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.cover--home</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">240px</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">5px</span> <span class="nb">solid</span> <span class="m">#000162</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.cover--home</span><span class="nd">:hover</span> <span class="p">{</span>
+  <span class="nl">filter</span><span class="p">:</span> <span class="n">brightness</span><span class="p">(</span><span class="m">1.2</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.cover--large</span> <span class="p">{</span>
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">2px</span> <span class="m">2px</span> <span class="m">8px</span> <span class="m">#aaaeb9</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.cover--large</span><span class="nd">:hover</span> <span class="p">{</span>
+  <span class="nl">filter</span><span class="p">:</span> <span class="n">brightness</span><span class="p">(</span><span class="m">1.2</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c">/* Footer */</span>
+<span class="nt">footer</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">150px</span><span class="p">;</span>
+  <span class="nl">border-top</span><span class="p">:</span> <span class="m">5px</span> <span class="nb">solid</span> <span class="m">#E7EBF4</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#232323</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">footer</span> <span class="nc">.wrapper</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="m">800px</span><span class="p">;</span>
+  <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">footer</span> <span class="nt">ul</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">footer</span> <span class="nt">li</span> <span class="p">{</span>
+  <span class="nl">flex</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+  <span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Noto Sans"</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">footer</span> <span class="nt">li</span> <span class="nt">img</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">footer</span> <span class="nt">li</span><span class="o">,</span> <span class="nt">footer</span> <span class="nt">li</span> <span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">5px</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">1110px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">footer</span> <span class="nt">ul</span><span class="nd">:first-child</span> <span class="p">{</span>
+    <span class="nl">padding-left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nt">footer</span> <span class="nc">.wrapper</span> <span class="p">{</span>
+    <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">row</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nt">footer</span> <span class="nt">li</span> <span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#03a4a6</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Portfolio page */</span>
+<span class="nc">.portfolio-page</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">1110px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.portfolio-page</span> <span class="p">{</span>
+    <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">row</span><span class="p">;</span>
+    <span class="nl">max-width</span><span class="p">:</span> <span class="m">1000px</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">1110px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.portfolio-page</span> <span class="nt">section</span> <span class="p">{</span>
+    <span class="nl">margin-left</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+    <span class="nl">flex</span><span class="p">:</span> <span class="m">2</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.portfolio-page</span> <span class="nt">h1</span> <span class="p">{</span>
+  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">40px</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.1</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.portfolio-page</span> <span class="nt">h2</span> <span class="p">{</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.portfolio-header</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url("/images/shadow.jpg")</span><span class="p">;</span>
+  <span class="nl">background-size</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.metadata</span><span class="o">,</span> <span class="nc">.metadata</span> <span class="nt">span</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Noto sans"</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#839292</span>
+<span class="p">}</span>
+
+<span class="nc">.metadata</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">40px</span> <span class="m">0</span> <span class="m">-30px</span><span class="p">;</span>
+  <span class="nl">border-top</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="m">#f1f1eb</span><span class="p">;</span>
+  <span class="nl">padding-top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">padding-left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">1110px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.metadata</span> <span class="p">{</span>
+    <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">row</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.metadata</span> <span class="nt">li</span> <span class="p">{</span>
+  <span class="nl">padding-right</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.shops</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Noto sans"</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">padding-left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.shops</span> <span class="nt">li</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">-20px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">hr</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="m">#f1f1eb</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.massive</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">120px</span><span class="p">;</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Refresh your browser page, and it’s quite transformed:</p>
+
+<p><img src="assets/images/styled-page.png" alt="Screenshot showing a nicely styled website with a nice blue header" /></p>
+
+<p>That font, however, looks suspiciously like Georgia, and not the one referenced first in the inspector: “Amiri”. Another font, “Noto Sans”, is also referenced in the CSS, on line 78 and other places. These are not fonts which are included in operating systems, and so, to use them, you have to include a reference to those fonts, which are hosted on Google Web Fonts.</p>
+
+<h2 id="include-the-correct-fonts">Include the correct fonts</h2>
+
+<p>Paste the following line into the head of your <em>portfolio.html</em> page, before or after the stylesheet link (the order doesn’t matter).</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css?family=Amiri&amp;display=swap"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;display=swap"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<p>Save the file, and refresh your browser.</p>
+
+<p><img src="assets/images/google-font.png" alt="Screenshot showing the new font applied to the header" /></p>
+
+<p>Ooh, fancy! If you don’t like this serif font, though, you can choose your own.</p>
+
+<h2 id="search-for-and-use-your-own-choice-of-font">Search for and use your own choice of font</h2>
+
+<ul>
+  <li>Go to <a href="https://fonts.google.com/">Google Fonts</a>.</li>
+  <li>Search for a font you like. The Abril Fatface one looks quite jolly.</li>
+</ul>
+
+<p><img src="assets/images/gf.png" alt="A screenshot of the Google Fonts website showing a range of interesting fonts" /></p>
+<ul>
+  <li>Copy the link of the one you like.</li>
+</ul>
+
+<p><img src="assets/images/font.gif" alt="A gif showing the user selecting the font they like on Google Fonts" /></p>
+<ul>
+  <li>Paste the link in between the <code class="highlighter-rouge">&lt;head&gt;</code> and <code class="highlighter-rouge">&lt;/head&gt;</code> tags, as in the previous exercise. You’ll end up with something like this:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css?family=Amiri&amp;display=swap"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;display=swap"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<ul>
+  <li>Reference the new font in your CSS file, in the <code class="highlighter-rouge">body</code> definition.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre>  <span class="c">/* Structure */</span>
+  <span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Abril Fatface"</span><span class="p">,</span> <span class="n">Georgia</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">28px</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#232323</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+    <span class="nl">min-height</span><span class="p">:</span> <span class="m">100vh</span><span class="p">;</span>
+    <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+  <span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<ul>
+  <li>Refresh your browser to see the results.</li>
+</ul>
+
+<p><img src="assets/images/fatface.png" alt="A screenshot of the font the user has selected, in use on the website they're building" /></p>
+
+<p>Another different look! I’m going to switch back to Amiri but you can choose whether to keep your new font or not.</p>
+
+<h2 id="edit-the-styles">Edit the styles</h2>
+
+<p>In <em>assets/css/main.css</em>, find the <code class="highlighter-rouge">body</code> definition that starts on line 2:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre>  <span class="c">/* Structure */</span>
+  <span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Amiri"</span><span class="p">,</span> <span class="n">Georgia</span><span class="p">,</span> <span class="nb">serif</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">28px</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#232323</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+    <span class="nl">min-height</span><span class="p">:</span> <span class="m">100vh</span><span class="p">;</span>
+    <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+  <span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>There is a CSS command called <code class="highlighter-rouge">background-color</code> which is not included in the <code class="highlighter-rouge">body</code> definition. Add it in, and choose a color using hex codes (<a href="https://htmlcolorcodes.com/">here is a website you can use to get them</a>). Your CSS will look something like this (the addition is on line 10):</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre>  <span class="c">/* Structure */</span>
+  <span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Amiri"</span><span class="p">,</span> <span class="n">Georgia</span><span class="p">,</span> <span class="nb">serif</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">28px</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#232323</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+    <span class="nl">min-height</span><span class="p">:</span> <span class="m">100vh</span><span class="p">;</span>
+    <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#eff1f7</span><span class="p">;</span>
+  <span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Save the file and refresh your browser. Repeat until you’re happy with the colour, or delete your addition if you don’t like it. You’re the programmer now, and you’re in control of your design and layout.</p>
+
+<p><img src="assets/images/css-play.png" alt="A personalised version of the website. Blue banner and greyish body colour" /></p>
+
+<h2 id="do-more-later">Do more later</h2>
+
+<p>Change the colours of the headers and body in your CSS to suit your own tastes. I recommend very pale, almost-white colours for backgrounds, and bright colours for headers (strong coloured backgrounds make your website go a bit late-90s).</p>
+
+<h2 id="what-youve-learned">What you’ve learned</h2>
+
+<ul>
+  <li>Using Google Fonts is a matter of pasting a link into your webpage’s head and referencing it in your CSS.</li>
+</ul>
+:ET

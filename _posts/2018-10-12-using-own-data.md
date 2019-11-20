@@ -6,15 +6,12 @@ toc: true
 category: Using data
 order: 4
 ---
-<!-- <span class="tag tag--draft">Not started</span> -->
-<!-- <span class="tag tag--progress">In progress</span> -->
-<!-- <span class="tag tag--review">Ready for review</span> -->
-<!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
   This article tells you how to use your own data.
 </p>
 
+## ONIX
 Nielsen have kindly provided access to the ONIX 3.0 data they hold for delegates today, and we have stored that data in its raw ONIX format in your code repository. The data is in exactly the same file format that your publishing company generates from its publishing management system (a system like our [Consonance](https://consonance.app), or Klopotek or Biblio) and which it sends to data aggregators such as Nielsen, BDS, Bowker, EBSCO, JSTOR, and Amazon. By knowing how to use and reuse assets such as ONIX files to create websites and marketing materials, you get better value out of your investment in systems. You can populate the website you're building today with your own ONIX 3 files, after the Day of Code, by saving your ONIX files in the __data_ folder.
 
 You've been mainly making changes in a text editor so far, and reviewing the results in a browser. Now you're going to use the command line to change the source of data you're using. On the Mac, the command line is called the [Terminal](glossary#terminal). On Windows, it's called the [Command Prompt](glossary#command-prompt). Open the relevant one now.
@@ -29,7 +26,9 @@ Your server is running in one tab, so you'll need to add a new tab to write comm
 > <span class="content__learn-more"> Troubleshoot</span>
 * Make sure you are in the correct directory. Your prompt should show you are in the "publisher-website" folder. If you are not, use the instructions from [Get Started](/get-started) to change into the correct directory.
 
-To learn how to get your data, open the _README_ file in your text editor. It is written in Markdown: you can see it turned into HTML [here](https://github.com/GeneralProducts/publisher-website/tree/master).
+## Transforming ONIX into JSON
+
+To learn how to transform your ONIX data into the JSON format that your Liquid code will understand, open the _README_ file (found at the root of your _repo_ folder) in your text editor. It is written in Markdown: you can see it turned into HTML [here](https://github.com/GeneralProducts/publisher-website/tree/master).
 
 It says:
 
@@ -132,7 +131,7 @@ Now refresh your browser window and you'll see your own data being used. Note th
 
 > <span class="content__learn-more"> Where does this data come from?</span>
 * As sponsors of Day of Code, Nielsen kindly allowed the Consonance team, who put together this course, access to their database of book data. The Consonance team ran searches by the publisher name of each of the delegates attending the Day of Code, to get a range of familiar products, which the team downloaded in ONIX 3 form. The code you ran to process that ONIX excludes products which do not have a cover on Nielsen, removes duplicates, and makes the publisher query case-insensitive and fuzzy (it checks to see if the publisher name `contains`, rather than `is equal to`, the query). The code is in `lib/adaptors/onix/v3/reference.rb`, in the `products` method.
-* Additionally, for the Consonance clients at Day of Code, we have used ONIX 3 data straight out of Consonance.
+* Additionally, for the Consonance clients at Day of Code, we have used ONIX 3 data straight out of [Consonance](https://consonance.app).
 
 ## VERY IMPORTANT: take a screenshot!
 

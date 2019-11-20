@@ -7,11 +7,6 @@ category: Before the Day of Code
 order: 2
 ---
 
-<!-- <span class="tag tag--draft">Not started</span> -->
-<!-- <span class="tag tag--progress">In progress</span> -->
-<!-- <span class="tag tag--review">Ready for review</span> -->
-<!-- <span class="tag tag--approved">Approved</span> -->
-
 <p class="content__abstract">
   There are lots of different programming languages and software tools, and
 more are being created all the time. This article introduces the ones we will use. Please read it before the Day of Code, although there is nothing you need to do on your computer.

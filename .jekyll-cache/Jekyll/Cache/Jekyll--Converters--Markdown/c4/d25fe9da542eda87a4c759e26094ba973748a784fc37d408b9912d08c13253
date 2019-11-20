@@ -1,0 +1,46 @@
+I"I<!-- <span class="tag tag--draft">Not started</span> -->
+<!-- <span class="tag tag--progress">In progress</span> -->
+<!-- <span class="tag tag--review">Ready for review</span> -->
+<!-- <span class="tag tag--approved">Approved</span> -->
+
+<p class="content__abstract">
+  This article introduces Jekyll and the templating language it uses, Liquid. You won't add anything to your code whilst reading through this article.
+</p>
+
+<h2 id="jekyll">Jekyll</h2>
+
+<p><a href="https://jekyllrb.com/">Jekyll</a> is a type of “static site generator”. Developers use static site generators to combine content with templates to produce HTML pages programmatically. <a href="https://learn.cloudcannon.com/jekyll/why-use-a-static-site-generator/">Read more later about Jekyll and its uses.</a></p>
+
+<p>Back when you were <a href="/get-started">getting started</a>, you ran <code class="highlighter-rouge">bundle</code> to install the Jekyll gem, amongst others. You also started a Jekyll server, which you have been running ever since, whilst you have been building up your website.</p>
+
+<p>You have already used Jekyll’s <a href="https://jekyllrb.com/docs/front-matter/">front matter feature</a> to <a href="/dry-up-your-code">DRY up your code</a>. In the next article, you are going to use another feature of Jekyll, and use Liquid in your HTML.</p>
+
+<p><a href="https://shopify.github.io/liquid/">Liquid</a> is a templating language, created by the eCommerce platform provider Shopify, written in <a href="/glossary#ruby">Ruby</a>. Liquid uses a combination of tags, objects, and filters to load dynamic content. They are used inside Liquid template files. Liquid tags are the programming logic that tell templates what to do. <a href="https://help.shopify.com/en/themes/liquid/basics">Learn more about Jekyll later.</a></p>
+
+<h2 id="liquid">Liquid</h2>
+<p>Your challenge, which you’ll be walked through in the next article, is to replace the static HTML in the <em>portfolio.html</em> file with Liquid tags that will loop through all your books and display them. To do that, you’ll need to know Liquid’s syntax.</p>
+
+<h2 id="liquid-tags">Liquid tags</h2>
+<p>Tags make up the programming logic that tells templates what to do.</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">  <span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">book</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">books</span><span class="w"> </span><span class="p">%}</span>
+    <span class="p">{{</span><span class="w"> </span><span class="nv">book</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span>
+  <span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
+
+<p>If you want to print values onto the page in HTML, the syntax is a <code class="highlighter-rouge">{{</code> at the start of the command, and a <code class="highlighter-rouge">}}</code> at the end. Anything between those characters will be interpreted as a command. The code will run, and the result is printed to the screen. You’ll get a piece of data, such as the book’s title, appearing on the page.</p>
+
+<p>If you want to run some logic but not print values onto the page in HTML, the syntax is a <code class="highlighter-rouge">{%</code> at the start of the tag, and a <code class="highlighter-rouge">%}</code> at the end. Anything between those characters will be interpreted as a Liquid command. The code will run, but the result will not be printed to the screen.</p>
+
+<p><a href="https://learn.cloudcannon.com/jekyll/introduction-to-liquid/">Learn more about using Liquid later.</a></p>
+
+<h2 id="a-note-on-the-data-source">A note on the data source</h2>
+
+<p>In a while, you are going to use your own ONIX XML as a data source, but for now we have prepared a bit of sample data for you to use. Go to the next article to get started in using this data source on your website, rather than typing directly into HTML, by using Liquid tags.</p>
+
+<h2 id="what-youve-learned">What you’ve learned</h2>
+
+<ul>
+  <li>You are using Jekyll, a static site generator, which uses a templating language called Liquid.</li>
+  <li>Jekyll’s Liquid language uses tags to produce HTML.</li>
+</ul>
+:ET

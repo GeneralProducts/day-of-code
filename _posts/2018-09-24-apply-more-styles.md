@@ -7,392 +7,385 @@ category: CSS
 order: 2
 ---
 
-<!-- <span class="tag tag--draft">Not started</span> -->
-<!-- <span class="tag tag--progress">In progress</span> -->
-<!-- <span class="tag tag--review">Ready for review</span> -->
-<!-- <span class="tag tag--approved">Approved</span> -->
-
 <p class="content__abstract">
   This article explains how to add more styles to your website.
 </p>
 
 ## Add more CSS
 
-Paste the following in to the _main.css_ file, replacing your `h1` definition and all the current contents of the file.
+Copy and paste the following in to the _main.css_ file, replacing your `h1` definition and all the current contents of the file with all of the 300+ lines of CSS. There are far more styles than you need at the moment here, which will style the HTML that you'll add throughout the rest of the Day of Code. However, adding them all in to your website now will improve the look of your website and let us focus on more types of programming today.
 
 {% highlight css linenos%}
 
-  /* Structure */
-  body {
-    margin: 0;
-    font-family: "Amiri", Georgia, serif;
-    font-size: 28px;
-    color: #232323;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+/* Structure */
+body {
+  margin: 0;
+  font-family: "Amiri", Georgia, serif;
+  font-size: 28px;
+  color: #232323;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
-  header {
-    padding: 50px;
-    text-align: center;
-    text-transform: uppercase;
-    background-color: #03a9f4;
-  }
+header {
+  padding: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #03a9f4;
+}
 
-  .primary-header {
-    background-image: url(/images/bright-flowers.jpg);
-    background-size: 100%;
-  }
+.primary-header {
+  background-image: url(/images/bright-flowers.jpg);
+  background-size: 100%;
+}
 
-  .secondary-header {
-    background-image: url(/images/flower3.jpg);
-    background-size: 100%;
-  }
+.secondary-header {
+  background-image: url(/images/flower3.jpg);
+  background-size: 100%;
+}
 
+section {
+  margin: 0 auto;
+  max-width: 1250px;
+  padding: 0 20px;
+}
+
+@media (min-width: 1110px) {
   section {
-    margin: 0 auto;
-    max-width: 1250px;
-    padding: 0 20px;
-  }
-
-  @media (min-width: 1110px) {
-    section {
-      width: 800px;
-    }
-
-    aside {
-      width: 50%;
-    }
-  }
-
-  figure {
-    margin: 50px 0 0  5px;
-    flex: 1;
+    width: 800px;
   }
 
   aside {
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    background-color: white;
-    margin: 0 auto;
-    margin-top: 10px;
-    padding-top: 8px;
-    opacity: 0.95;
-    font-size: 0.7em;
+    width: 50%;
   }
+}
 
-  /* Typography */
+figure {
+  margin: 50px 0 0  5px;
+  flex: 1;
+}
+
+aside {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-top: 8px;
+  opacity: 0.95;
+  font-size: 0.7em;
+}
+
+/* Typography */
+h1 {
+  background-color: white;
+  opacity: 0.95;
+  font-size: 1em;
+}
+
+@media (min-width: 1110px) {
   h1 {
-    background-color: white;
-    opacity: 0.95;
+    letter-spacing: 10px;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 2em;
+  }
+}
+
+.secondary {
+  font-family: "Noto sans", Arial, sans-serif;
+  font-size: 20px !important;
+  color: #2e2e2e;
+  padding: 8px;
+}
+
+h2 {
+  font-size: 0.7em;
+}
+
+@media (min-width: 1110px) {
+  h2 {
     font-size: 1em;
   }
+}
 
-  @media (min-width: 1110px) {
-    h1 {
-      letter-spacing: 10px;
-      width: 50%;
-      margin: 0 auto;
-      font-size: 2em;
-    }
-  }
+h3 {
+  font-size: 0.6em;
+  margin: 60px 0 -30px 0;
+  font-family: "Noto sans", Arial, sans-serif;
+}
 
-  .secondary {
-    font-family: "Noto sans", Arial, sans-serif;
-    font-size: 20px !important;
-    color: #2e2e2e;
-    padding: 8px;
-  }
+p {
+  color: #232323;
+  font-family: "Amiri", Georgia, serif;
+  font-size: 0.75em;
+  line-height: 34px;
+}
 
-  h2 {
-    font-size: 0.7em;
-  }
+/* Links */
+a {
+  color: #232323;
+  text-decoration: none;
+}
 
-  @media (min-width: 1110px) {
-    h2 {
-      font-size: 1em;
-    }
-  }
+a:hover {
+  border-bottom: 4px solid #232323;
+}
 
-  h3 {
-    font-size: 0.6em;
-    margin: 60px 0 -30px 0;
-    font-family: "Noto sans", Arial, sans-serif;
-  }
+.bookstore {
+  margin: 20px 10px 10px 0;
+  line-height: 60px;
+  border-bottom: 3px solid #e4e4e0;
+}
 
-  p {
-    color: #232323;
-    font-family: "Amiri", Georgia, serif;
-    font-size: 0.75em;
-    line-height: 34px;
-  }
+/* Lists */
+ul {
+  display: flex;
+  flex-flow: row wrap;
+}
 
-  /* Links */
-  a {
-    color: #232323;
-    text-decoration: none;
-  }
+li {
+  list-style-type: none;
+  font-size: 16px;
+  margin: 0;
+}
 
-  a:hover {
-    border-bottom: 4px solid #232323;
-  }
+/* Navigation */
+.nav-item-container {
+  padding: 0;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-evenly;
+}
 
-  .bookstore {
-    margin: 20px 10px 10px 0;
-    line-height: 60px;
-    border-bottom: 3px solid #e4e4e0;
-  }
+.nav-item {
+  font-size: 0.6em;
+}
 
-  /* Lists */
-  ul {
-    display: flex;
-    flex-flow: row wrap;
-  }
-
-  li {
-    list-style-type: none;
-    font-size: 16px;
-    margin: 0;
-  }
-
-  /* Navigation */
-  .nav-item-container {
-    padding: 0;
-    font-weight: 800;
-    display: flex;
-    justify-content: space-evenly;
-  }
-
+@media (min-width: 1110px) {
   .nav-item {
-    font-size: 0.6em;
+    padding: 0 30px;
+    font-size: 22px;
   }
 
-  @media (min-width: 1110px) {
-    .nav-item {
-      padding: 0 30px;
-      font-size: 22px;
-    }
-
-    .nav-item-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 10px 0;
-    }
-  }
-
-  /* Images */
-  .covers-container {
-    max-width: 1000px;
+  .nav-item-container {
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0;
+    padding: 10px 0;
   }
+}
 
+/* Images */
+.covers-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.covers-container li {
+  flex: 1;
+  display: flex;
+  padding: 10px;
+  margin: 5px;
+}
+
+@media (min-width: 1110px) {
   .covers-container li {
-    flex: 1;
-    display: flex;
-    padding: 10px;
-    margin: 5px;
+    background-color: #eff1f7;
   }
+}
 
-  @media (min-width: 1110px) {
-    .covers-container li {
-      background-color: #eff1f7;
-    }
-  }
+.covers-container a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+}
 
-  .covers-container a {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0 auto;
-  }
+.covers-container a:hover {
+  border-bottom: none;
+  filter: brightness(1.2);
+}
 
-  .covers-container a:hover {
-    border-bottom: none;
-    filter: brightness(1.2);
-  }
+.covers-container	p {
+  margin: 10px 0 0;
+  font-family: "Noto Sans", sans-serif !important;
+  font-size: 16px;
+  line-height: 1.3;
+}
 
-  .covers-container	p {
-    margin: 10px 0 0;
-    font-family: "Noto Sans", sans-serif !important;
-    font-size: 16px;
-    line-height: 1.3;
-  }
+.cover {
+  width: 220px;
+  box-shadow: 2px 2px 8px #aaaeb9;
+}
 
-  .cover {
-    width: 220px;
-    box-shadow: 2px 2px 8px #aaaeb9;
-  }
+img {
+  font-family: "Noto Sans", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.8;
+  width: 98%;
+}
 
-  img {
-    font-family: "Noto Sans", Arial, sans-serif;
-    font-size: 12px;
-    line-height: 1.8;
-    width: 98%;
-  }
+.cover--home {
+  float: right;
+  width: 100%;
+  margin: 20px 0;
+}
 
+@media (min-width: 1110px) {
   .cover--home {
-    float: right;
-    width: 100%;
-    margin: 20px 0;
+    width: 240px;
+    border: 5px solid #000162;
   }
+}
 
-  @media (min-width: 1110px) {
-    .cover--home {
-      width: 240px;
-      border: 5px solid #000162;
-    }
-  }
+.cover--home:hover {
+  filter: brightness(1.2);
+}
 
-  .cover--home:hover {
-    filter: brightness(1.2);
-  }
+.cover--large {
+  box-shadow: 2px 2px 8px #aaaeb9;
+}
 
-  .cover--large {
-    box-shadow: 2px 2px 8px #aaaeb9;
-  }
+.cover--large:hover {
+  filter: brightness(1.2);
+}
 
-  .cover--large:hover {
-    filter: brightness(1.2);
-  }
+/* Footer */
+footer {
+  position: relative;
+  top: 150px;
+  border-top: 5px solid #E7EBF4;
+  background-color: #232323;
+}
 
-  /* Footer */
-  footer {
-    position: relative;
-    top: 150px;
-    border-top: 5px solid #E7EBF4;
-    background-color: #232323;
+footer .wrapper {
+  display: flex;
+  margin: 0 auto;
+  max-width: 800px;
+  flex-direction: column;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+}
+
+footer li {
+  flex: 1;
+  list-style: none;
+  font-family: "Noto Sans", Arial, sans-serif;
+}
+
+footer li img {
+  background-color: white;
+  width: 30px;
+}
+
+footer li, footer li a {
+  color: white;
+  padding: 5px 0;
+}
+
+@media (min-width: 1110px) {
+  footer ul:first-child {
+    padding-left: 0;
   }
 
   footer .wrapper {
-    display: flex;
-    margin: 0 auto;
-    max-width: 800px;
-    flex-direction: column;
+    flex-direction: row;
   }
+}
 
-  footer ul {
-    display: flex;
-    flex-direction: column;
-  }
+footer li a:hover {
+  color: #03a4a6;
+}
 
-  footer li {
-    flex: 1;
-    list-style: none;
-    font-family: "Noto Sans", Arial, sans-serif;
-  }
+/* Portfolio page */
+.portfolio-page {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
 
-  footer li img {
-    background-color: white;
-    width: 30px;
-  }
-
-  footer li, footer li a {
-    color: white;
-    padding: 5px 0;
-  }
-
-  @media (min-width: 1110px) {
-    footer ul:first-child {
-      padding-left: 0;
-    }
-
-    footer .wrapper {
-      flex-direction: row;
-    }
-  }
-
-  footer li a:hover {
-    color: #03a4a6;
-  }
-
-  /* Portfolio page */
+@media (min-width: 1110px) {
   .portfolio-page {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+    flex-direction: row;
+    max-width: 1000px !important;
   }
+}
 
-  @media (min-width: 1110px) {
-    .portfolio-page {
-      flex-direction: row;
-      max-width: 1000px !important;
-    }
+@media (min-width: 1110px) {
+  .portfolio-page section {
+    margin-left: 30px;
+    flex: 2;
   }
+}
 
-  @media (min-width: 1110px) {
-    .portfolio-page section {
-      margin-left: 30px;
-      flex: 2;
-    }
-  }
+.portfolio-page h1 {
+  letter-spacing: normal;
+  margin: 40px 0;
+  line-height: 1.1;
+  width: 100%;
+}
 
-  .portfolio-page h1 {
-    letter-spacing: normal;
-    margin: 40px 0;
-    line-height: 1.1;
-    width: 100%;
-  }
+.portfolio-page h2 {
+  line-height: 1.1;
+}
 
-  .portfolio-page h2 {
-    line-height: 1.1;
-  }
+.portfolio-header {
+  background-image: url("/images/shadow.jpg");
+  background-size: 100%;
+  padding: 30px;
+}
 
-  .portfolio-header {
-    background-image: url("/images/shadow.jpg");
-    background-size: 100%;
-    padding: 30px;
-  }
+.metadata, .metadata span {
+  display: flex;
+  font-family: "Noto sans", Arial, sans-serif;
+  font-size: 14px;
+  color: #839292
+}
 
-  .metadata, .metadata span {
-    display: flex;
-    font-family: "Noto sans", Arial, sans-serif;
-    font-size: 14px;
-    color: #839292
-  }
+.metadata {
+  display: flex;
+  margin: 40px 0 -30px;
+  border-top: 2px solid #f1f1eb;
+  padding-top: 10px;
+  padding-left: 0;
+  flex-direction: column;
+}
 
+@media (min-width: 1110px) {
   .metadata {
-    display: flex;
-    margin: 40px 0 -30px;
-    border-top: 2px solid #f1f1eb;
-    padding-top: 10px;
-    padding-left: 0;
-    flex-direction: column;
+    flex-direction: row;
   }
+}
 
-  @media (min-width: 1110px) {
-    .metadata {
-      flex-direction: row;
-    }
-  }
+.metadata li {
+  padding-right: 20px;
+}
 
-  .metadata li {
-    padding-right: 20px;
-  }
+.shops {
+  font-family: "Noto sans", Arial, sans-serif;
+  padding-left: 0;
+}
 
-  .shops {
-    font-family: "Noto sans", Arial, sans-serif;
-    padding-left: 0;
-  }
+.shops li {
+  margin: 0 0 -20px;
+}
 
-  .shops li {
-    margin: 0 0 -20px;
-  }
+hr {
+  border: 2px solid #f1f1eb;
+}
 
-  hr {
-    border: 2px solid #f1f1eb;
-  }
-
-  .massive {
-    font-size: 120px;
-    position: relative;
-    top: 30px;
-  }
+.massive {
+  font-size: 120px;
+  position: relative;
+  top: 30px;
+}
 
 {% endhighlight %}
-
-There are more styles than you necessarily need at the moment here, but this will improve the look of your website and let us focus on more types of programming today.
 
 Refresh your browser page, and it's quite transformed:
 

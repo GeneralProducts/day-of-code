@@ -6,10 +6,6 @@ toc: true
 category: Before the Day of Code
 order: 6
 ---
-<!-- <span class="tag tag--draft">Not started</span> -->
-<!-- <span class="tag tag--progress">In progress</span> -->
-<!-- <span class="tag tag--review">Ready for review</span> -->
-<!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
   This article explains how to get the starter kit. It's a large file, so please run through this article before the Day of Code so you don't have to wait for a large download on the day.

@@ -7,11 +7,6 @@ category: HTML
 order: 3
 ---
 
-<!-- <span class="tag tag--draft">Not started</span> -->
-<!-- <span class="tag tag--progress">In progress</span> -->
-<!-- <span class="tag tag--review">Ready for review</span> -->
-<!-- <span class="tag tag--approved">Approved</span> -->
-
 <p class="content__abstract">
   This article tells you how to create another web page.
 </p>

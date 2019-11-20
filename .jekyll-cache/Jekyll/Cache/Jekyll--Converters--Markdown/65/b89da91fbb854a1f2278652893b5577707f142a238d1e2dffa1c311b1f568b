@@ -1,0 +1,109 @@
+I"�<!-- <span class="tag tag--draft">Not started</span> -->
+<!-- <span class="tag tag--progress">In progress</span> -->
+<!-- <span class="tag tag--review">Ready for review</span> -->
+<!-- <span class="tag tag--approved">Approved</span> -->
+
+<p class="content__abstract">
+  This article introduces CSS, the language used to style web pages. Read it to learn how to apply CSS rules to your website.
+</p>
+
+<p>Your website has some content, but it’s using the default styling that comes with your browser. You can override these defaults with CSS. CSS stands for Cascading Style Sheets, so-called because some rules override other ones, in a cascade.</p>
+
+<h2 id="view-the-browsers-default-styles">View the browser’s default styles</h2>
+
+<p>Let’s view what the styles looks like currently. In the browser, right-mouse and click on <strong>Inspect</strong>. Expand the nested HTML on the left, so you can see the <code class="highlighter-rouge">&lt;h1&gt;</code> tag.</p>
+
+<p><img src="assets/images/inspect.png" alt="A screenshot showing the browser's inspector, showing h1 css" /></p>
+
+<blockquote>
+  <p><span class="content__learn-more">Troubleshoot<span></span></span></p>
+  <ul>
+    <li>Your panels might be arranged differently, with the code on the right. If you want to rearrange them, in Chrome, click the three dots on the toolbar that contains the words Console, Elements etc then choose your preferred Dock Side option.</li>
+  </ul>
+</blockquote>
+
+<p>The styles panel on the right shows me that the default styles for the <code class="highlighter-rouge">&lt;h1&gt;</code> HTML tag are that the font size is 2em (as in <a href="https://en.wikipedia.org/wiki/Em_(typography)">em-dash</a>) and the font weight is bold.</p>
+
+<blockquote>
+  <p><span class="content__learn-more">The browser’s inspector</span></p>
+  <ul>
+    <li>Notice too that raw HTML is also displayed in the Inspect panel, in the Elements tab, on Chrome (other browsers may be a little different, but essentially do the same thing). Compare the HTML here with the HTML in your file. It’s the same, give or take some whitespace. The Inspector is a good place to go to troubleshoot and debug your code when problems arise.</li>
+  </ul>
+</blockquote>
+
+<h2 id="add-css-to-override-the-default-style">Add CSS to override the default style</h2>
+
+<p>You’re going to override the default style with some styles of your own.</p>
+
+<p>Open the file called <em>main.css</em> in the <em>assets/css/</em> folder:</p>
+
+<p><img src="assets/images/main-css.png" alt="Screenshot showing the empty file where the reader will put their css code" /></p>
+
+<p>Add the following CSS to this file and save:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">  <span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="p">}</span></code></pre></figure>
+
+<p>So the entire file looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">  <span class="c">/* You will put CSS style information here. */</span>
+
+  <span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="p">}</span></code></pre></figure>
+
+<h2 id="tell-the-html-file-about-the-css">Tell the HTML file about the CSS</h2>
+
+<p>Next you need to tell the HTML to use your new CSS rules. In the <em>portfolio.html</em> file, add the following line between the <code class="highlighter-rouge">&lt;head&gt;</code> and <code class="highlighter-rouge">&lt;/head&gt;</code> tags and save:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/css/main.css"</span><span class="nt">/&gt;</span></code></pre></figure>
+
+<p>Your file now looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="cp">&lt;!doctype html&gt;</span>
+  <span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+      <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/css/main.css"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+      <span class="nt">&lt;header&gt;</span>
+        <span class="nt">&lt;h1&gt;</span>
+          Portfolio
+        <span class="nt">&lt;/h1&gt;</span>
+      <span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;main&gt;</span>
+        Book list goes here
+      <span class="nt">&lt;/main&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+  <span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>Refresh your browser and now you’ll see the changes applied:</p>
+
+<p><img src="assets/images/css-red.png" alt="The css now works as the screenshot shows the h1 rendered in red" /></p>
+
+<h2 id="use-the-inspector-to-make-temporary-edits">Use the inspector to make temporary edits</h2>
+
+<p>You can temporarily make changes in the Inspector to see how they’d look on the page. Have a go: make the <code class="highlighter-rouge">&lt;h1&gt;</code> text display in a different font, or change the colour to blue. To edit colour, right-mouse on the colour chip to bring up the colour editor:</p>
+
+<p><img src="assets/images/css-blue.gif" alt="A gif showing the user changing the color of the text in the inspector" /></p>
+
+<blockquote>
+  <p><span class="content__learn-more">Learn more later<span></span></span></p>
+  <ul>
+    <li>Try styling the <code class="highlighter-rouge">&lt;p&gt;</code> tag as well.</li>
+  </ul>
+</blockquote>
+
+<h2 id="what-youve-learned">What you’ve learned</h2>
+
+<ul>
+  <li>Browsers have default styling, but it’s not pretty</li>
+  <li>You use CSS to override these default styles, and add new ones</li>
+  <li>The HTML page needs to know where its CSS stylesheet is, via a link in the <code class="highlighter-rouge">&lt;head&gt;</code> of the HTML file</li>
+  <li>The inspector is a handy tool for debugging and trying out changes to the CSS.</li>
+  <li>CSS rules are applied in a cascade, hence the name.</li>
+</ul>
+:ET

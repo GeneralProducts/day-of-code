@@ -7,11 +7,6 @@ category: Before the Day of Code
 order: 1
 ---
 
-<!-- <span class="tag tag--draft">Not started</span> -->
-<!-- <span class="tag tag--progress">In progress</span> -->
-<!-- <span class="tag tag--review">Ready for review</span> -->
-<!-- <span class="tag tag--approved">Approved</span> -->
-
 <p class="content__abstract">
   These are the step-by-step guides for the Day of Code. You're going to get some programming experience, and leave having built a real website. This article explains the background to the day.
 </p>

@@ -6,10 +6,6 @@ toc: true
 category: Before the Day of Code
 order: 5
 ---
-<!-- <span class="tag tag--draft">Not started</span> -->
-<!-- <span class="tag tag--progress">In progress</span> -->
-<!-- <span class="tag tag--review">Ready for review</span> -->
-<!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
   Instructions for Windows set up. If you are on Mac, ignore this article and read the previous one.

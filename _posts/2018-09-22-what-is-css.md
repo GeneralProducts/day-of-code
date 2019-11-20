@@ -7,11 +7,6 @@ category: CSS
 order: 1
 ---
 
-<!-- <span class="tag tag--draft">Not started</span> -->
-<!-- <span class="tag tag--progress">In progress</span> -->
-<!-- <span class="tag tag--review">Ready for review</span> -->
-<!-- <span class="tag tag--approved">Approved</span> -->
-
 <p class="content__abstract">
   This article introduces CSS, the language used to style web pages. Read it to learn how to apply CSS rules to your website.
 </p>
@@ -34,7 +29,7 @@ The styles panel on the right shows me that the default styles for the `<h1>` HT
 
 ## Add CSS to override the default style
 
-You're going to try to override the default style. But heads up: it's not going to work at first. You will have the opportunity to debug the problem.
+You're going to override the default style with some styles of your own.
 
 Open the file called _main.css_ in the _assets/css/_ folder:
 
@@ -60,28 +55,9 @@ So the entire file looks like this:
   }
 {% endhighlight %}
 
-Refresh the browser page. You expect the colour of the heading to go red, and the font to change style, right? But it's not changed. What has gone wrong? Let's debug the problem.
+## Tell the HTML file about the CSS
 
-## Debug the problem
-
-First, look in your Inspector, in the HTML Elements panel. Is the HTML tag indeed `<h1>`? Yes, that is correct. The word "Portfolio" is surrounded by `<h1>` tags:
-
-{% highlight html %}
-  <h1>
-    Portfolio
-  </h1>
-{% endhighlight %}
-
-Now look at the `<h1>` style definition in the Inspector.
-
-![Using the inspector to show that the css styles aren't being applied. The screenshot shows that the new styles do not appear in the browser's inspector](assets/images/inspect.png)
-
-Does the `color: red` instruction appear? No: the code you wrote isn't getting referenced. That's the clue you need to figure out what's going wrong. The solution is to add a reference to the CSS file so that the browser knows to run it when it interprets the HTML file.
-
-> <span class="content__learn-more">Troubleshooting</span>
-* Things go wrong in programming all the time. The trick is not to panic, and to look for clues. It can be, believe it or not, fun.
-
-In the _portfolio.html_ file, add the following line between the `<head>` and `</head>` tags and save:
+Next you need to tell the HTML to use your new CSS rules. In the _portfolio.html_ file, add the following line between the `<head>` and `</head>` tags and save:
 
 {% highlight html %}
   <link rel="stylesheet" href="/assets/css/main.css"/>
@@ -117,6 +93,10 @@ Refresh your browser and now you'll see the changes applied:
 You can temporarily make changes in the Inspector to see how they'd look on the page. Have a go: make the `<h1>` text display in a different font, or change the colour to blue. To edit colour, right-mouse on the colour chip to bring up the colour editor:
 
 ![A gif showing the user changing the color of the text in the inspector](assets/images/css-blue.gif)
+
+> <span class="content__learn-more">Learn more later<span>
+* Try styling the `<p>` tag as well by adding styling to the _main.css_ file, like this:
+* ` p { color: blue } `
 
 ## What you’ve learned
 

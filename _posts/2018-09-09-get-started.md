@@ -6,10 +6,6 @@ toc: true
 category: On the Day of Code
 order: 1
 ---
-<!-- <span class="tag tag--draft">Not started</span> -->
-<!-- <span class="tag tag--progress">In progress</span> -->
-<!-- <span class="tag tag--review">Ready for review</span> -->
-<!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
   This article explains the first actions you will take on the Day of Code. This is the first article you'll work through on the Day of Code with your coach.
@@ -67,7 +63,7 @@ You are now within the _publisher-website_ directory.
 
 ## Process the files
 
-You are going to run a command to make the Ruby code libraries (known as "gems", rather charmingly) in the Gemfile file work on your computer. Type the following and press **enter**:
+You are going to run a command to download the Ruby code libraries (known as "gems", rather charmingly) listed in the Gemfile that are needed for this project, and make them run on your computer. Type the following and press **enter**:
 
 {% highlight bash %}
   bundle

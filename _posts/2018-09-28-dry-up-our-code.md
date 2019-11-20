@@ -6,10 +6,6 @@ toc: true
 category: Templating
 order: 1
 ---
-<!-- <span class="tag tag--draft">Not started</span> -->
-<!-- <span class="tag tag--progress">In progress</span> -->
-<!-- <span class="tag tag--review">Ready for review</span> -->
-<!-- <span class="tag tag--approved">Approved</span> -->
 
 <p class="content__abstract">
   This article explains how to keep your code well-organised so it's maintainable.
@@ -84,7 +80,7 @@ Which is what you see in the browser, too:
 
 Notice too that `primary-header` has a higher priority than `header`, so the bright-flowers instruction overrides the blue instruction. This is because of the CSS specificity rules, which determine which style "wins". [Read more about that later.](https://blog.logrocket.com/how-css-works-understanding-the-cascade-d181cd89a4d8/)
 
-This is how CSS works: the keywords in the CSS match the HTML, and more specific commands override more generic ones.
+This is how CSS works. The selectors in the CSS match the elements in the HTML. More specific selectors override more generic ones. This is what is meant by the **Cascade** in **C**ascading **S**tyle **S**heets.
 
 Additionally, HTML classes get referenced in CSS with a preceeding `.`, HTML ids get referenced with a `#`, and HTML tags get referenced as their name, with no `<` `>`.
 * `<header class="primary-header">` gets referenced in CSS as `.primary-header`
@@ -175,11 +171,20 @@ Save your file and refresh your browser. Great: the styles are back again.
 
 ## Do more later 1: choose your own background
 
-If you have time now, or later after the Day of Code, choose your own background for the home page banner and amend the CSS to use it. There are some in the _images_ folder, and the [Unsplash website](https://unsplash.com/photos/7G7RagQTqi4) is a useful resource. Find an image you like and get its link, making sure it's the image file not the website page URL by right-mouse-selecting "Copy Image address", not "Copy link address", and reference it in your CSS:
+If you have time now, or later after the Day of Code, choose your own background for the home page banner and amend the CSS to use it. There are some in the _images_ folder, and the [Unsplash website](https://unsplash.com/s/photos/winter) is a useful resource. Find an image you like and get its link, making sure it's the image file not the website page URL by right-mouse-selecting "Copy Image address", not "Copy link address", and reference it in your CSS:
 
 {% highlight css %}
   .primary-header {
-    background-image: url(https://images.unsplash.com/photo-1572467313081-e5451bcd2131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+    background-image: url(https://images.unsplash.com/photo-1572467313081-e5451bcd2131);
+    background-size: 100%;
+  }
+{% endhighlight %}
+
+Even better, download the image to your _assets/images/_ folder and reference this file in your CSS like this:
+
+{% highlight css %}
+  .primary-header {
+    background-image: url(/images/bright-flowers.jpg);
     background-size: 100%;
   }
 {% endhighlight %}
@@ -189,6 +194,7 @@ Refresh the page to see the effect:
 ![Browser with a new header image](assets/images/unsplash-rendered.png)
 
 You might want to add `background-position: 50%` into your CSS definition to position the image better.
+
 
 
 ## Do more later 2: Google analytics
