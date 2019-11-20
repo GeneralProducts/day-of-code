@@ -81,22 +81,23 @@ to develop web applications by hiding a lot of repetitive
 complexity from the developer. The publishing management
 system [Consonance](https://consonance.app), written by the people behind Day of Code, is written in Ruby on Rails, as is Github, Basecamp, Kickstarter, Goodreads and Airbnb. Today you won't be using Rails, but a Ruby-based static site generator, called Jekyll. You will also be using Ruby methods to process raw book data. Ruby looks like this:
 
-{% highlight ruby linenos%}
-  def hello_world(name)
-    puts "Hello, #{name}!"
-  end
+{% highlight ruby %}
+  > "emma".upcase
+  => EMMA
 {% endhighlight %}
 
-You can run that Ruby on the command line. `irb` stands for 'Interactive Ruby'. Typing `irb` in to a console window and pressing **enter** starts a Ruby command line which can run Ruby.
+and this:
 
-{% highlight bash %}
-  $ irb
-  > hello_world("Emma")
-  Hello, Emma!
-
-  > hello_world("Rosie")
-  Hello, Rosie!
+{% highlight ruby %}
+  > 42.times do
+  >   "Publishers make great programmers"
+  > end
+  Publishers make great programmers
+  Publishers make great programmers
+  Publishers make great programmers
+  ...
 {% endhighlight %}
+
 
 > <span class="content__learn-more">Learn more later</span>
 * [Learn Enough Ruby to Be Dangerous](https://www.learnenough.com/ruby-tutorial/hello_world)

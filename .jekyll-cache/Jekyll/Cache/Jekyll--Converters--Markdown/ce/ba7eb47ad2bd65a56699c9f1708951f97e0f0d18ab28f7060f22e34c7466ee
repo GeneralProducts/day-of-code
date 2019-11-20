@@ -1,0 +1,189 @@
+I"C1<p class="content__abstract">
+  There are lots of different programming languages and software tools, and
+more are being created all the time. This article introduces the ones we will use. Please read it before the Day of Code, although there is nothing you need to do on your computer.
+</p>
+<p>In this course you’ll be using four programming languages:</p>
+
+<ul>
+  <li><strong>HTML</strong> to structure information</li>
+  <li><strong>CSS</strong> to style information</li>
+  <li><strong>Ruby</strong> to dynamically generate information</li>
+  <li><strong>Liquid</strong> to insert that dynamic information into your HTML</li>
+</ul>
+
+<p>You’ll also use some software development tools:</p>
+
+<ul>
+  <li><strong>Terminal</strong> (Mac), or</li>
+  <li><strong>Command Prompt</strong> (Windows)</li>
+  <li><strong>A text editor</strong></li>
+</ul>
+
+<p>One of the most interesting and heartwarming features
+of the modern programming world is the open source
+movement. We build on the shoulders of giants, reusing
+code that the community have built, tested and released for
+use at no charge. These are not hobbyist resources: open
+source has the benefit of being more thoroughly and widely
+tested than closed, proprietary software.
+HTML, CSS, Ruby and Liquid are open source programming languages. You will also be using an open source static site generator called <a href="https://jekyllrb.com/">Jekyll</a>.</p>
+
+<h2 id="html">HTML</h2>
+<p><strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage is the language of the web. Every single website
+you’ve ever been on<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> is made from HTML, and ePubs<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> are
+made from it, too. It is a markup language for describing web
+pages. HTML looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span></code></pre></figure>
+
+<blockquote>
+  <p><span class="content__learn-more">Learn more later<span></span></span></p>
+  <ul>
+    <li><a href="https://www.learnenough.com/html">Learn Enough HTML to be Dangerous</a>
+– <a href="https://www.learnenough.com">LearnEnough.com</a> is a very well-written resource, and their course on HTML is a great way to learn to speak the universal language of the web.</li>
+    <li>If you are sociable, <a href="https://tutorials.codebar.io/">CodeBar</a> is a great event to learn at.</li>
+  </ul>
+</blockquote>
+
+<h2 id="css">CSS</h2>
+<p>CSS is a style sheet language<sup id="fnref:4"><a href="#fn:4" class="footnote">3</a></sup> used for describing the
+presentation of a document written in a markup language,
+such as HTML. CSS stands for Cascading Style Sheets, because you can provide multiple contradictory style instructions, but have the browser sort out their priority, in a cascade, according to a set of rules. In other words you can override the brower’s default styles, and you can override your own styles in certain situations, too, such as at different browser sizes. CSS looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre>  <span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+  <span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<blockquote>
+  <p><span class="content__learn-more">Learn more later<span></span></span></p>
+  <ul>
+    <li><a href="https://www.learnenough.com/css">Learn Enough CSS &amp; Layout to be Dangerous</a></li>
+    <li><a href="https://css-tricks.com/">CSS Tricks</a> – our go-to site for pragmatic uses of CSS.</li>
+    <li><a href="https://blog.logrocket.com/how-css-works-understanding-the-cascade-d181cd89a4d8/">Understanding the cascade</a></li>
+  </ul>
+</blockquote>
+
+<h2 id="ruby">Ruby</h2>
+<p>Ruby has been around since 1993, making it a comparatively mature language. Ruby became
+very popular as a language for developing web applications<sup id="fnref:3"><a href="#fn:3" class="footnote">4</a></sup> about ten
+years ago, after the release of a web application framework
+written in Ruby, called Ruby on Rails.
+The aim of Ruby on Rails was to make it quicker
+to develop web applications by hiding a lot of repetitive
+complexity from the developer. The publishing management
+system <a href="https://consonance.app">Consonance</a>, written by the people behind Day of Code, is written in Ruby on Rails, as is Github, Basecamp, Kickstarter, Goodreads and Airbnb. Today you won’t be using Rails, but a Ruby-based static site generator, called Jekyll. You will also be using Ruby methods to process raw book data. Ruby looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre>  <span class="o">&gt;</span> <span class="s2">"emma"</span><span class="p">.</span><span class="nf">upcase</span>
+  <span class="o">=&gt;</span> <span class="no">EMMA</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>and this:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">  <span class="o">&gt;</span> <span class="mi">42</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+  <span class="o">&gt;</span>   <span class="s2">"Publishers make great programmers"</span>
+  <span class="o">&gt;</span> <span class="k">end</span>
+  <span class="no">Publishers</span> <span class="n">make</span> <span class="n">great</span> <span class="n">programmers</span>
+  <span class="no">Publishers</span> <span class="n">make</span> <span class="n">great</span> <span class="n">programmers</span>
+  <span class="no">Publishers</span> <span class="n">make</span> <span class="n">great</span> <span class="n">programmers</span>
+  <span class="o">...</span></code></pre></figure>
+
+<blockquote>
+  <p><span class="content__learn-more">Learn more later</span></p>
+  <ul>
+    <li><a href="https://www.learnenough.com/ruby-tutorial/hello_world">Learn Enough Ruby to Be Dangerous</a></li>
+    <li><a href="https://www.learnenough.com/ruby-on-rails-4th-edition">The Rails Tutorial</a> – A resource close to the <a href="http://twitter.com/has_many_books">author of these guide</a>’s heart, as she finally knuckled down and learned programming with this book, now in its 4th edition. It’s best to have a firm grasp of the basics before embarking on this tutorial. The following from <a href="https://www.learnenough.com/">Learn Enough</a> are recommended:</li>
+    <li>Learn Enough Command Line to Be Dangerous</li>
+    <li>Learn Enough Text Editor to Be Dangerous</li>
+    <li>Learn Enough Git to Be Dangerous</li>
+    <li>Learn Enough HTML to Be Dangerous</li>
+    <li>Learn Enough CSS &amp; Layout to Be Dangerous</li>
+    <li><a href="http://railsgirls.com/events.html">RailsGirls</a> are wonderful events where you build an app in a day. The Consonance team volunteer at each London event: see you there?</li>
+  </ul>
+</blockquote>
+
+<h2 id="liquid">Liquid</h2>
+<p><a href="https://shopify.github.io/liquid/">Liquid</a> is an open-source template language<sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup> created by the eCommerce platform company Shopify and written in Ruby. Lots of web services use Liquid as a way for programmers to load dynamic content onto websites. As well as Shopify, they include Salesforce Desk, Zendesk, <a href="https://web.500px.com/">500px</a> and <a href="https://github.com/Shopify/liquid/wiki#who-uses-liquid">more</a>. We have chosen to use Liquid in the Day of Code tutorial as knowing it will enable you to edit Shopify stores, often used by publishers for their website. Liquid looks like this (the bit with two curly braces on line 2):</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre>  <span class="nt">&lt;h1&gt;</span>
+    {{ title }}
+  <span class="nt">&lt;/h1&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>If <code class="highlighter-rouge">title</code> is a variable that stands for the words “Home page”, this turns into the following HTML:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre>  <span class="nt">&lt;h1&gt;</span>
+    Home page
+  <span class="nt">&lt;/h1&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="command-line">Command line</h2>
+
+<p>The <a href="/glossary#terminal">Terminal</a> app (Mac) or <a href="/glossary#command-prompt">Command Prompt</a> program (Windows) is where you type instructions to the computer to run code. It looks something like this in light mode, and can also start in dark mode:</p>
+
+<p><img src="/assets/images/terminal.png" alt="A terminal window" /></p>
+
+<p>You type commands where the <code class="highlighter-rouge">$</code> is, which is called the ‘command line’.</p>
+
+<h2 id="text-editor">Text editor</h2>
+
+<p>You don’t use Microsoft Word to write code: instead you use a purpose-built text editor. Programmers sometimes have strong opinions on the best choice, but it comes down to personal preference. Popular choices are:</p>
+
+<ul>
+  <li>VS Code</li>
+  <li>Atom</li>
+  <li>Sublime</li>
+</ul>
+
+<p>Text editors look something like this. They can also run in light mode. Notice the file menu down the left hand side: this is for file navigation, just like in Finder (Mac) or File Explorer (Windows).</p>
+
+<p><img src="/assets/images/text-editor.png" alt="image of a text editor" /></p>
+
+<h2 id="a-publisher-website">A publisher website</h2>
+<p>On the Day of Code, you will write a website which displays book data on
+a series of web pages. You’ll be using all the tools and technologies described
+on this page.</p>
+
+<h2 id="what-youve-learned">What you’ve learned</h2>
+<ul>
+  <li>You tell computers what to do by using a programming
+language.</li>
+  <li>You can use more than one programming language at a
+time</li>
+  <li>There are lots of different sorts of programming languages,
+each written with a particular speciality in mind.</li>
+  <li>Learning to program takes time and there are lots of resources out there to fit your learning style.</li>
+</ul>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Even ones from the olden days that were Flash-based were still HTML docs. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>An ePub is a zip file whose contents include HTML and CSS files. Open one with <a href="https://springy.en.softonic.com/mac">Springy</a> on a Mac or <a href="https://www.winzip.com/win/en/">WinZip</a> on Windows and take a look. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>For an example of CSS in action, you can look at the <a href="https://github.com/GeneralProducts/day-of-code">repo for the website you’re reading now</a>. It uses <a href="https://sass-lang.com/">SASS</a>, which bills itself as “CSS with superpowers”. If you are interested in styling CSS in a way which avoids code reuse and allows you to structure your styles nicely, we’d recommend checking it out for your later projects. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Web applications are websites that users can interact with. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>Learning Liquid today will mean it’s familiar if you need to edit Shopify or Jekyll websites later. If you go on to write Rails apps, you’ll level-up to use <a href="https://ruby-doc.org/stdlib-1.9.3/libdoc/erb/rdoc/ERB.html">ERB</a>, (“<b>E</b>mbedded <b>R</b>u<b>B</b>y”) and which is a more powerful templating language. Both Liquid and ERB do the same sort of thing: allow you to run code within your HTML files. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET
