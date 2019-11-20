@@ -39,6 +39,13 @@ The JSON data that you used today is a good example of structured book data. The
 
 Whichever way your interests take you, the more knowledge you accrue, the more power you have. Any step towards demystifying code gives you power in third party relationships, on any digital project. You might find that the bug really bites you and that you want to delve deeper into programming -- but any technical knowledge improves your position. You don’t need to be a professional programmer, but programming knowledge will make you a wiser project manager, editor, marketer, designer and reader advocate. You will know what’s possible.
 
+## Enjoy your mug
+You got a mug at the Day of Code featuring this artwork:
+
+![Mug artwork from the Day of Code, with Ruby programming printed on it and a link to https://github.com/generalproducts/mug](/assets/images/mug-art.png)
+
+There's more code to extend the functionality of your mug on [GitHub](https://github.com/generalproducts/mug). Intrigued? Go and have a look, and see if you can glug your beverage of choice from your mug, programmatically!
+
 ## Stay in touch
 
 Do stay in touch with us! Here's our [company website](http://generalproducts.co) with links to all the initiatives we do to increase technical literacy in publishing. We blog at [www.consonance.app](https://www.consonance.app), and tweet at @consonance_app: our staff are Emma [@has_many_books](https://twitter.com/has_many_books), Andy [@andypearson](https://twitter.com/andypearson), Sara [@saramoohead](https://twitter.com/saramoohead) and Dave [@databasesponge](https://twitter.com/databasesponge). Please follow our [Publishers’ Advice Bot](https://twitter.com/bot_publishing).
