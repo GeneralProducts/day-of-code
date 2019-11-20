@@ -17,7 +17,7 @@ order: 2
 
 Back when you were [getting started](/get-started), you ran `bundle` to install the Jekyll gem, amongst others. You also started a Jekyll server, which you have been running ever since, whilst you have been building up your website.
 
-You have already used Jekyll's [front matter feature](https://jekyllrb.com/docs/front-matter/) to [DRY up your code](/dry-up-your-code). In the next article, you are going to use another feature of Jekyll, and use Liquid in your HTML.
+[You have already used](/dry-up-your-code) Jekyll's [front matter templating feature](https://jekyllrb.com/docs/front-matter/) to [DRY up your code](/dry-up-your-code). In the next article, you are going to use another feature of Jekyll, and use Liquid in your HTML.
 
 ## Liquid
 
