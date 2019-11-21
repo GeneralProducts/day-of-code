@@ -145,10 +145,11 @@ Your terminal window looks a bit like this:
   Configuration file: /Users/Emma/repos/publisher-website/_config.yml
       Server address: http://127.0.0.1:4000/
     Server running... press ctrl-c to stop.
-{% endhighlight%}
+{% endhighlight %}
 
 > <span class="content__learn-more">Troubleshoot<span>
 * If the server "hangs" at "Generating...", press `ctrl+c` and re-run the command as `jekyll serve --trace` to see what the error is.
+* Try `bundle exec jekyll serve` if you get a gem-version-related error
 
 ## View the code running in a browser
 

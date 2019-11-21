@@ -1,4 +1,4 @@
-I"<p class="content__abstract">
+I"C<p class="content__abstract">
   This article introduces Jekyll and the templating language it uses, Liquid. You won't add anything to your code whilst reading through this article.
 </p>
 
@@ -8,7 +8,7 @@
 
 <p>Back when you were <a href="/get-started">getting started</a>, you ran <code class="highlighter-rouge">bundle</code> to install the Jekyll gem, amongst others. You also started a Jekyll server, which you have been running ever since, whilst you have been building up your website.</p>
 
-<p>You have already used Jekyll’s <a href="https://jekyllrb.com/docs/front-matter/">front matter feature</a> to <a href="/dry-up-your-code">DRY up your code</a>. In the next article, you are going to use another feature of Jekyll, and use Liquid in your HTML.</p>
+<p><a href="/dry-up-your-code">You have already used</a> Jekyll’s <a href="https://jekyllrb.com/docs/front-matter/">front matter templating feature</a> to <a href="/dry-up-your-code">DRY up your code</a>. In the next article, you are going to use another feature of Jekyll, and use Liquid in your HTML.</p>
 
 <h2 id="liquid">Liquid</h2>
 

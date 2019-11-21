@@ -46,6 +46,10 @@ You got a mug at the Day of Code featuring this artwork:
 
 There's more code to extend the functionality of your mug on [GitHub](https://github.com/generalproducts/mug). Intrigued? Go and have a look, and see if you can glug your beverage of choice from your mug, programmatically!
 
+## Feedback
+
+Please kindly [give us feedback](https://emma359024.typeform.com/to/wytEwc) so we can run an even better Day of Code in 2020!
+
 ## Stay in touch
 
 Do stay in touch with us! Here's our [company website](http://generalproducts.co) with links to all the initiatives we do to increase technical literacy in publishing. We blog at [www.consonance.app](https://www.consonance.app), and tweet at @consonance_app: our staff are Emma [@has_many_books](https://twitter.com/has_many_books), Andy [@andypearson](https://twitter.com/andypearson), Sara [@saramoohead](https://twitter.com/saramoohead) and Dave [@databasesponge](https://twitter.com/databasesponge). Please follow our [Publishers’ Advice Bot](https://twitter.com/bot_publishing).

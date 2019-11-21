@@ -1,4 +1,4 @@
-I"� <p class="content__abstract">
+I"� <p class="content__abstract">
   Your website is looking pretty bare at the moment. You will use HTML to structure your web page. Before you start to write your code, this article introduces HTML, the language of the web. Read it to learn what HTML tags are and which ones to use, when. You won't type anything in your new web app whilst reading this article.
 </p>
 
@@ -115,7 +115,7 @@
 <p><strong>Image</strong></p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-</pre></td><td class="code"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">'/assets/images/cover.png'</span> <span class="na">alt=</span><span class="s">'Shakespeare vs Cthulhu cover image'</span> <span class="nt">/&gt;</span>
+</pre></td><td class="code"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">'/images/home_img.jpg'</span> <span class="na">alt=</span><span class="s">'Book cover image'</span> <span class="nt">/&gt;</span>
 </pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Code which points to a file location of an image to display. <code class="highlighter-rouge">src</code> means source – the file location. Notice that it is <code class="highlighter-rouge">src</code>, not <code class="highlighter-rouge">scr</code> – an easy typo to make! <code class="highlighter-rouge">alt</code> means alternative text – vital for accessibility. The <code class="highlighter-rouge">img</code> tag is self-closing – you don’t put an <code class="highlighter-rouge">&lt;/img&gt;</code> tag at the end, only a <code class="highlighter-rouge">/&gt;</code>.</p>

@@ -1,4 +1,4 @@
-I"�'<p class="content__abstract">
+I"T(<p class="content__abstract">
   This article explains the first actions you will take on the Day of Code. This is the first article you'll work through on the Day of Code with your coach.
 </p>
 
@@ -128,6 +128,7 @@
   <p><span class="content__learn-more">Troubleshoot<span></span></span></p>
   <ul>
     <li>If the server “hangs” at “Generating…”, press <code class="highlighter-rouge">ctrl+c</code> and re-run the command as <code class="highlighter-rouge">jekyll serve --trace</code> to see what the error is.</li>
+    <li>Try <code class="highlighter-rouge">bundle exec jekyll serve</code> if you get a gem-version-related error</li>
   </ul>
 </blockquote>
 
