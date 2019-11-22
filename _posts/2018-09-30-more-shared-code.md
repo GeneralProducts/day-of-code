@@ -97,7 +97,7 @@ Refresh the index page in your browser, because the index page uses the default 
         <a href="https://www.hachette.co.uk/">Hachette UK</a>
       </li>
       <li>
-        <a href="hhttps://www.nielsen.com/uk/en/">Nielsen</a>
+        <a href="https://www.nielsen.com/uk/en/">Nielsen</a>
       </li>
       <li>
         <a href="https://www.thebookseller.com/">The Bookseller</a>
