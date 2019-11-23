@@ -1,0 +1,31 @@
+---
+layout: default
+title: Day of Code, 2019
+---
+
+<section class="section">
+  <div class="section__container">
+    <div class="section__content">
+      <div class="heading-card">
+        <div class="heading-card-header">
+          <h1>Showcase</h1>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <h2>Publishers are great at coding</h2>
+      <p>
+         The imagination and brilliance of the 2019 Day of Code delegates has to be seen to be believed. Here is a showcase of what they achieved in just one day.
+      </p>
+
+      <div class="flexbox">
+        {% for item in site.data.carousel.images %}
+          <div class="item">
+            <img src='{{item.image}}' />
+          </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</section>

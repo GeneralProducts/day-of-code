@@ -483,3 +483,29 @@ button {
 .highlight .s { color: $railscasts-orange } /* Literal.String */
 .highlight .na { color: $railscasts-grey } /* Name.Attribute */
 .highlight .nt { color: $railscasts-green; font-weight: bold } /* Name.Tag */
+
+
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5px;
+
+  .item {
+    // padding: 6px;
+    margin: 5px;
+    border: 5px solid #ebebeb;
+
+    @media (min-width: $large-screen) {
+      width: 48%;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+
+
+  }
+}
