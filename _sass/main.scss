@@ -112,7 +112,7 @@ hr {
 }
 
 .navigation__item {
-  padding: 0 20px 0 10px;
+  padding: 2px 20px 0 10px;
   align-self: left;
 
   a {
@@ -226,7 +226,7 @@ hr {
 
 .container {
   flex: 1 0 auto;
-  padding: 120px 0;
+  padding: 150px 0;
 
   @media (min-width: $large-screen) {
     padding: 80px 0;
