@@ -19,3 +19,6 @@ Bundle the gems:
 Visit localhost:4000 in your browser. 
 
 
+License
+
+This repo is copyright General Products Ltd. You are welcome to use it but please ensure you include a credit back to https://generalproducts.co. 
