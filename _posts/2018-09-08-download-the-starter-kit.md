@@ -24,7 +24,7 @@ Go to our [GitHub repo](https://github.com/GeneralProducts/publisher-website) an
 
 ![Extracting the files on Windows](/assets/images/extract-win.JPG)
 
-* Remove the "-master" from the end of the folder name, so it is called "publisher-website". ("master" refers to the version, or branch, of the code on GitHub and is unnecessarily wordy for your local version of the code.)
+* Remove the "-main" from the end of the folder name, so it is called "publisher-website". ("main" refers to the version, or branch, of the code on GitHub and is unnecessarily wordy for your local version of the code.)
 
 The folder should be located like this:
 
@@ -35,7 +35,7 @@ The folder should be located like this:
 * In Finder, find the ZIP file that you have downloaded and double click to expand.
 * Create a new folder on your computer called `repos`, in your home folder.
 * Drag the unzipped folder into the new `repos` folder.
-* Remove the "-master" from the end of the folder name, so it is called "publisher-website". ("master" refers to the version, or branch, of the code on GitHub and is unnecessarily wordy for your local version of the code.)
+* Remove the "-main" from the end of the folder name, so it is called "publisher-website". ("main" refers to the version, or branch, of the code on GitHub and is unnecessarily wordy for your local version of the code.)
 
 The folder should be located in Users > [username] > repos > publisher-website, like this:
 

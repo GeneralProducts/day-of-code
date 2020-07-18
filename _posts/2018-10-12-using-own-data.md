@@ -28,7 +28,7 @@ Your server is running in one tab, so you'll need to add a new tab to write comm
 
 ## Transforming ONIX into JSON
 
-To learn how to transform your ONIX data into the JSON format that your Liquid code will understand, open the _README_ file (found at the root of your _repo_ folder) in your text editor. It is written in Markdown: you can see it turned into HTML [here](https://github.com/GeneralProducts/publisher-website/tree/master).
+To learn how to transform your ONIX data into the JSON format that your Liquid code will understand, open the _README_ file (found at the root of your _repo_ folder) in your text editor. It is written in Markdown: you can see it turned into HTML [here](https://github.com/GeneralProducts/publisher-website).
 
 It says:
 
